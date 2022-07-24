@@ -25,5 +25,5 @@
     <string name="finish">Finish</string>
 
     <!-- Library -->
-    <string name="questions">Questions: $1%s</string>
+    <string name="questions">Questions: %1$s</string>
 </resources>

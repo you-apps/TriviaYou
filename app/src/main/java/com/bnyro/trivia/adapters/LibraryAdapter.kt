@@ -19,10 +19,13 @@ class LibraryAdapter : RecyclerView.Adapter<LibraryViewHolder>() {
     override fun onBindViewHolder(holder: LibraryViewHolder, position: Int) {
         val quiz = quizzes[position]
         holder.binding.apply {
-            quizName.text = root.context.getString(R.string.questions, quiz.name)
-            quizSize.text = quiz.questions?.size?.toString()
+            quizName.text = quiz.name
+            quizSize.text = root.context.getString(
+                R.string.questions,
+                quiz.questions?.size
+            )
             quizType.setImageResource(
-                if (quiz.isCreator == true) R.drawable.ic_bookmark
+                if (quiz.creator == true) R.drawable.ic_bookmark
                 else R.drawable.ic_public
             )
         }

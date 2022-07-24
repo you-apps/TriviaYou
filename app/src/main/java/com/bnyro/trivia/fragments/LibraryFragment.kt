@@ -1,7 +1,6 @@
 package com.bnyro.trivia.fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +9,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bnyro.trivia.adapters.LibraryAdapter
 import com.bnyro.trivia.databinding.FragmentLibraryBinding
 import com.bnyro.trivia.dialogs.CreateQuizDialog
-import com.bnyro.trivia.util.PreferenceHelper
 
 class LibraryFragment : Fragment() {
     private lateinit var binding: FragmentLibraryBinding
