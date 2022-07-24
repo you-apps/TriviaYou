@@ -73,7 +73,7 @@ class CreateQuizFragment : Fragment() {
 
         binding.finish.setOnClickListener {
             if (questions.isNotEmpty()) {
-                PreferenceHelper.saveQuiz(quizName, questions)
+                PreferenceHelper.saveQuiz(quizName, true, questions)
             }
             findNavController().navigate(R.id.library)
         }

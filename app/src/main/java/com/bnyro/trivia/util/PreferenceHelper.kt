@@ -24,12 +24,12 @@ object PreferenceHelper {
         return settings.getString(key, defaultValue)!!
     }
 
-    fun saveQuiz(name: String, questions: List<Question>) {
+    fun saveQuiz(name: String, isCreator: Boolean, questions: List<Question>) {
         val quizzes = getQuizzes().toMutableList()
-        quizzes += Quiz(name, questions)
+        quizzes += Quiz(name, isCreator, questions)
 
         val json = mapper.writeValueAsString(quizzes)
-        editor.putString("quizzes", json)
+        editor.putString("quizzes", json).commit()
     }
 
     fun getQuizzes(): List<Quiz> {
@@ -38,6 +38,7 @@ object PreferenceHelper {
         return try {
             mapper.readValue(json, type)
         } catch (e: Exception) {
+            e.printStackTrace()
             listOf()
         }
     }
