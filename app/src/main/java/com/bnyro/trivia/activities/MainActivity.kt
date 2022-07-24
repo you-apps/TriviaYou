@@ -11,6 +11,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.ActivityMainBinding
+import com.bnyro.trivia.util.PreferenceHelper
 import com.google.android.material.color.DynamicColors
 
 class MainActivity : AppCompatActivity() {
@@ -20,7 +21,12 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         WindowCompat.setDecorFitsSystemWindows(window, false)
+
+        // apply material you colors
         DynamicColors.applyToActivityIfAvailable(this)
+
+        // save context to the preference helper
+        PreferenceHelper.setContext(this)
 
         super.onCreate(savedInstanceState)
 

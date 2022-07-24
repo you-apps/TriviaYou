@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Preferences Keys -->
+    <string name="difficulty_key">difficulty</string>
+
+    <!-- Preferences default Values -->
+    <string name="difficulty_default">random</string>
+</resources>

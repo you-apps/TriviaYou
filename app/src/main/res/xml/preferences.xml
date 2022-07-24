@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ListPreference
-        android:defaultValue="random"
+        android:defaultValue="@string/difficulty_default"
         android:entries="@array/difficulties"
         android:entryValues="@array/difficultiesValues"
         android:icon="@drawable/ic_check"
-        app:key="difficulty"
+        app:key="@string/difficulty_key"
         app:title="@string/difficulty"
         app:useSimpleSummaryProvider="true" />
 

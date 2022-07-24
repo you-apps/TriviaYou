@@ -9,7 +9,8 @@ interface TriviaApi {
     @GET("api/questions")
     suspend fun getQuestions(
         @Query("limit") limit: Int,
-        @Query("categories") categories: String?
+        @Query("categories") categories: String?,
+        @Query("difficulty") difficulty: String?
     ): ArrayList<Question>
 
     @GET("api/categories")

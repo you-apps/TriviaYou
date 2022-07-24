@@ -12,6 +12,7 @@ import androidx.lifecycle.lifecycleScope
 import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.FragmentHomeBinding
 import com.bnyro.trivia.obj.Question
+import com.bnyro.trivia.util.PreferenceHelper
 import com.bnyro.trivia.util.RetrofitInstance
 import com.bnyro.trivia.util.ThemeHelper
 import kotlinx.coroutines.delay
@@ -29,6 +30,7 @@ class HomeFragment : Fragment() {
     private var buttonTextColor = 0
 
     private var category: String? = null
+    private var difficulty: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,6 +50,16 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // set the difficulty
+        val difficultyPref = PreferenceHelper.getString(
+            getString(R.string.difficulty_key),
+            getString(R.string.difficulty_default)
+        )
+        difficulty = when (difficultyPref) {
+            "random" -> null
+            else -> difficultyPref
+        }
+
         optionButtons = listOf(
             binding.optionA,
             binding.optionB,
@@ -63,7 +75,7 @@ class HomeFragment : Fragment() {
     private fun fetchQuestions() {
         lifecycleScope.launchWhenCreated {
             questions = try {
-                RetrofitInstance.api.getQuestions(50, category)
+                RetrofitInstance.api.getQuestions(50, category, difficulty)
             } catch (e: Exception) {
                 Log.e("error", "error")
                 return@launchWhenCreated
