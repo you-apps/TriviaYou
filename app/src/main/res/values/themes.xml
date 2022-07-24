@@ -1,9 +1,11 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.TriviaYou" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+<resources>
+
+    <style name="Theme.TriviaYou" parent="Theme.Material3.Light.NoActionBar">
+
+        <!-- Preference Dialog Theme -->
+        <item name="alertDialogTheme">@style/ThemeOverlay.Material3.MaterialAlertDialog</item>
+        <item name="dialogCornerRadius">28dp</item>
+
     </style>
 
-    <style name="Theme.TriviaYou" parent="Base.Theme.TriviaYou" />
 </resources>

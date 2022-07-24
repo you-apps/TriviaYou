@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ListPreference
+        android:defaultValue="random"
+        android:entries="@array/difficulties"
+        android:entryValues="@array/difficultiesValues"
+        android:icon="@drawable/ic_check"
+        app:key="difficulty"
+        app:title="@string/difficulty"
+        app:useSimpleSummaryProvider="true" />
+
+</PreferenceScreen>
