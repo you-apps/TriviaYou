@@ -14,7 +14,6 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 class CreateQuizDialog : DialogFragment() {
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-
         // build the view of the dialog
         val container = LinearLayout(requireContext())
         container.orientation = LinearLayout.VERTICAL

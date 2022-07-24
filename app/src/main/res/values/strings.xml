@@ -17,6 +17,7 @@
     <!-- Custom Quiz -->
     <string name="quiz_name">Name</string>
     <string name="name_empty">Name can\'t be empty!</string>
+    <string name="item_empty">Please fill out all fields!</string>
     <string name="question">Question</string>
     <string name="correct_answer">Correct Answer</string>
     <string name="incorrect_answers">Incorrect Answers</string>

@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.FragmentLibraryBinding
 import com.bnyro.trivia.dialogs.CreateQuizDialog
 
