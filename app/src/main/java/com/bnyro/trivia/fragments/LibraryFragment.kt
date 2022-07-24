@@ -32,7 +32,7 @@ class LibraryFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.libraryRV.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+        binding.libraryRV.layoutManager = LinearLayoutManager(context)
         binding.libraryRV.adapter = LibraryAdapter(parentFragmentManager)
 
         binding.createFAB.setOnClickListener {

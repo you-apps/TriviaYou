@@ -36,8 +36,12 @@ class HomeFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         category = arguments?.getString(BundleArguments.category)
-        libraryIndex = arguments?.getInt(BundleArguments.libraryIndex)
+
+        // circumvent 0 being returned although it's null
+        libraryIndex = arguments?.getInt(BundleArguments.libraryIndex, Int.MAX_VALUE)
+        if (libraryIndex == Int.MAX_VALUE) libraryIndex = null
     }
 
     override fun onCreateView(

@@ -49,21 +49,7 @@ class CreateQuizFragment : Fragment() {
 
         binding.save.setOnClickListener {
             if (allFieldsFilled()) {
-                questions += Question(
-                    category = null,
-                    correctAnswer = binding.correctAnswerET.text.toString(),
-                    difficulty = null,
-                    id = null,
-                    incorrectAnswers = listOf(
-                        binding.incorrectAnswerOne.text.toString(),
-                        binding.incorrectAnswerTwo.text.toString(),
-                        binding.incorrectAnswerThree.text.toString()
-                    ),
-                    question = binding.questionNameET.text.toString(),
-                    regions = null,
-                    tags = null,
-                    type = null
-                )
+                appendQuestionToList()
                 editTextViews.forEach {
                     it.text?.clear()
                 }
@@ -74,10 +60,29 @@ class CreateQuizFragment : Fragment() {
 
         binding.finish.setOnClickListener {
             if (questions.isNotEmpty()) {
+                if (allFieldsFilled()) appendQuestionToList()
                 PreferenceHelper.saveQuiz(quizName, true, questions)
             }
             findNavController().navigate(R.id.library)
         }
+    }
+
+    private fun appendQuestionToList() {
+        questions += Question(
+            category = null,
+            correctAnswer = binding.correctAnswerET.text.toString(),
+            difficulty = null,
+            id = null,
+            incorrectAnswers = listOf(
+                binding.incorrectAnswerOne.text.toString(),
+                binding.incorrectAnswerTwo.text.toString(),
+                binding.incorrectAnswerThree.text.toString()
+            ),
+            question = binding.questionNameET.text.toString(),
+            regions = null,
+            tags = null,
+            type = null
+        )
     }
 
     private fun allFieldsFilled(): Boolean {
