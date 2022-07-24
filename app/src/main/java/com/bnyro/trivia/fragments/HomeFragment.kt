@@ -107,6 +107,9 @@ class HomeFragment : Fragment() {
                 checkAnswer(index)
             }
         }
+
+        binding.progress.visibility = View.GONE
+        binding.questionLL.visibility = View.VISIBLE
     }
 
     private fun checkAnswer(selectedAnswerIndex: Int) {
