@@ -33,7 +33,7 @@ class LibraryFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.libraryRV.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-        binding.libraryRV.adapter = LibraryAdapter()
+        binding.libraryRV.adapter = LibraryAdapter(parentFragmentManager)
 
         binding.createFAB.setOnClickListener {
             CreateQuizDialog().show(childFragmentManager, null)

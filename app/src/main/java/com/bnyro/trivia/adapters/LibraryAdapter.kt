@@ -1,13 +1,19 @@
 package com.bnyro.trivia.adapters
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.RowQuizBinding
+import com.bnyro.trivia.fragments.HomeFragment
 import com.bnyro.trivia.util.PreferenceHelper
 
-class LibraryAdapter : RecyclerView.Adapter<LibraryViewHolder>() {
+class LibraryAdapter(
+    private val fragmentManager: FragmentManager
+) : RecyclerView.Adapter<LibraryViewHolder>() {
+
     private var quizzes = PreferenceHelper.getQuizzes()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LibraryViewHolder {
@@ -28,6 +34,16 @@ class LibraryAdapter : RecyclerView.Adapter<LibraryViewHolder>() {
                 if (quiz.creator == true) R.drawable.ic_bookmark
                 else R.drawable.ic_public
             )
+            root.setOnClickListener {
+                val homeFragment = HomeFragment()
+                val bundle = Bundle()
+                bundle.putInt("libraryIndex", position)
+                homeFragment.arguments = bundle
+                fragmentManager.beginTransaction()
+                    .replace(R.id.fragment, homeFragment)
+                    .addToBackStack(null)
+                    .commit()
+            }
         }
     }
 

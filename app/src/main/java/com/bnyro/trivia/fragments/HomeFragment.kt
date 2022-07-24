@@ -31,10 +31,12 @@ class HomeFragment : Fragment() {
 
     private var category: String? = null
     private var difficulty: String? = null
+    private var libraryIndex: Int? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         category = arguments?.getString("category")
+        libraryIndex = arguments?.getInt("libraryIndex")
     }
 
     override fun onCreateView(
@@ -69,7 +71,14 @@ class HomeFragment : Fragment() {
 
         buttonTextColor = optionButtons[0].currentTextColor
 
-        fetchQuestions()
+        if (libraryIndex != null) {
+            binding.progress.visibility = View.GONE
+            binding.questionLL.visibility = View.VISIBLE
+            questions = PreferenceHelper.getQuizzes()[libraryIndex!!].questions!!
+            showQuestion()
+        } else {
+            fetchQuestions()
+        }
     }
 
     private fun fetchQuestions() {
@@ -132,11 +141,12 @@ class HomeFragment : Fragment() {
         lifecycleScope.launchWhenCreated {
             delay(800)
             if (questionIndex + 1 != questions.size) {
+                // load next question
                 questionIndex += 1
                 showQuestion()
             } else {
                 questionIndex = 0
-                fetchQuestions()
+                if (libraryIndex == null) fetchQuestions()
             }
         }
     }
