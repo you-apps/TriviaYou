@@ -25,12 +25,14 @@ class HomeFragment : Fragment() {
 
     private lateinit var answers: ArrayList<String>
     private var correctAnswerCount = 0
+
     private var buttonTextColor = 0
+
+    private var category: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-        }
+        category = arguments?.getString("category")
     }
 
     override fun onCreateView(
@@ -61,7 +63,7 @@ class HomeFragment : Fragment() {
     private fun fetchQuestions() {
         lifecycleScope.launchWhenCreated {
             questions = try {
-                RetrofitInstance.api.getQuestions(5)
+                RetrofitInstance.api.getQuestions(50, category)
             } catch (e: Exception) {
                 Log.e("error", "error")
                 return@launchWhenCreated
