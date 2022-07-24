@@ -1,23 +1,31 @@
 package com.bnyro.trivia.fragments
 
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
+import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.FragmentHomeBinding
 import com.bnyro.trivia.obj.Question
 import com.bnyro.trivia.util.RetrofitInstance
+import com.bnyro.trivia.util.ThemeHelper
+import kotlinx.coroutines.delay
 
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
 
+    private lateinit var optionButtons: List<Button>
     private lateinit var questions: List<Question>
     private var questionIndex = 0
+
+    private lateinit var answers: ArrayList<String>
+    private var correctAnswerCount = 0
+    private var buttonTextColor = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +45,16 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        optionButtons = listOf(
+            binding.optionA,
+            binding.optionB,
+            binding.optionC,
+            binding.optionD
+        )
+
+        buttonTextColor = optionButtons[0].currentTextColor
+
         fetchQuestions()
     }
 
@@ -48,38 +66,61 @@ class HomeFragment : Fragment() {
                 Log.e("error", "error")
                 return@launchWhenCreated
             }
-            showQuestion(questions[0])
+            showQuestion()
         }
     }
 
-    private fun showQuestion(question: Question) {
+    private fun showQuestion() {
+        val question = questions[questionIndex]
         binding.questionTV.text = question.question
 
-        val answers = arrayListOf(question.correctAnswer!!)
+        answers = arrayListOf(question.correctAnswer!!)
         // append all incorrect answers
         question.incorrectAnswers?.forEach {
             answers += it
         }
         answers.shuffle()
 
-        val optionButtons = listOf<Button>(
-            binding.optionA,
-            binding.optionB,
-            binding.optionC,
-            binding.optionD
-        )
-
         optionButtons.forEachIndexed { index, button ->
+            // reset button style
+            button.setTextColor(buttonTextColor)
+            button.setBackgroundColor(Color.TRANSPARENT)
+
+            // set text and onclick listener
             val answer = answers[index]
             button.text = answer
             button.setOnClickListener {
-                checkAnswer(answer)
+                checkAnswer(index)
             }
         }
     }
 
-    private fun checkAnswer(answer: String) {
-        val isAnswerCorrect = questions[questionIndex].correctAnswer == answer
-        Toast.makeText(context, isAnswerCorrect.toString(), Toast.LENGTH_LONG).show()
+    private fun checkAnswer(selectedAnswerIndex: Int) {
+        val correctAnswerIndex = answers.indexOf(questions[questionIndex].correctAnswer)
+        val isAnswerCorrect = correctAnswerIndex == selectedAnswerIndex
+        val secondaryColor = ThemeHelper.getThemeColor(requireContext(), android.R.attr.colorAccent)
+        optionButtons[correctAnswerIndex].apply {
+            setTextColor(Color.WHITE)
+            setBackgroundColor(secondaryColor)
+        }
+        if (isAnswerCorrect) {
+            correctAnswerCount += 1
+        } else {
+            val colorError = ThemeHelper.getThemeColor(requireContext(), com.google.android.material.R.attr.colorError)
+            optionButtons[selectedAnswerIndex].apply {
+                setTextColor(Color.WHITE)
+                setBackgroundColor(colorError)
+            }
+        }
+        lifecycleScope.launchWhenCreated {
+            delay(800)
+            if (questionIndex + 1 != questions.size) {
+                questionIndex += 1
+                showQuestion()
+            } else {
+                questionIndex = 0
+                fetchQuestions()
+            }
+        }
     }
 }
