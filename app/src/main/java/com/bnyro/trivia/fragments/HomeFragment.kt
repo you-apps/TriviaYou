@@ -12,6 +12,7 @@ import androidx.lifecycle.lifecycleScope
 import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.FragmentHomeBinding
 import com.bnyro.trivia.obj.Question
+import com.bnyro.trivia.util.BundleArguments
 import com.bnyro.trivia.util.PreferenceHelper
 import com.bnyro.trivia.util.RetrofitInstance
 import com.bnyro.trivia.util.ThemeHelper
@@ -35,8 +36,8 @@ class HomeFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        category = arguments?.getString("category")
-        libraryIndex = arguments?.getInt("libraryIndex")
+        category = arguments?.getString(BundleArguments.category)
+        libraryIndex = arguments?.getInt(BundleArguments.libraryIndex)
     }
 
     override fun onCreateView(

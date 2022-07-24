@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.FragmentCreateQuizBinding
 import com.bnyro.trivia.obj.Question
+import com.bnyro.trivia.util.BundleArguments
 import com.bnyro.trivia.util.PreferenceHelper
 import com.google.android.material.textfield.TextInputEditText
 
@@ -22,7 +23,7 @@ class CreateQuizFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        quizName = arguments?.getString("name")!!
+        quizName = arguments?.getString(BundleArguments.quizName)!!
     }
 
     override fun onCreateView(

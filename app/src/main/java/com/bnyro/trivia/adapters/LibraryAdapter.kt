@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.RowQuizBinding
 import com.bnyro.trivia.fragments.HomeFragment
+import com.bnyro.trivia.util.BundleArguments
 import com.bnyro.trivia.util.PreferenceHelper
 
 class LibraryAdapter(
@@ -37,7 +38,7 @@ class LibraryAdapter(
             root.setOnClickListener {
                 val homeFragment = HomeFragment()
                 val bundle = Bundle()
-                bundle.putInt("libraryIndex", position)
+                bundle.putInt(BundleArguments.libraryIndex, position)
                 homeFragment.arguments = bundle
                 fragmentManager.beginTransaction()
                     .replace(R.id.fragment, homeFragment)

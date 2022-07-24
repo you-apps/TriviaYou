@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.FragmentCategoriesBinding
+import com.bnyro.trivia.util.BundleArguments
 
 class CategoriesFragment : Fragment() {
     private lateinit var binding: FragmentCategoriesBinding
@@ -60,7 +61,7 @@ class CategoriesFragment : Fragment() {
                 val category = categoryQueries[index]
                 val homeFragment = HomeFragment()
                 val bundle = Bundle()
-                bundle.putString("category", category)
+                bundle.putString(BundleArguments.category, category)
                 homeFragment.arguments = bundle
 
                 parentFragmentManager.beginTransaction()
