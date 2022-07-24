@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.FragmentLibraryBinding
+import com.bnyro.trivia.dialogs.CreateQuizDialog
 
 class LibraryFragment : Fragment() {
     private lateinit var binding: FragmentLibraryBinding
@@ -31,10 +32,7 @@ class LibraryFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.createFAB.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment, CreateFragment())
-                .addToBackStack(null)
-                .commit()
+            CreateQuizDialog().show(childFragmentManager, null)
         }
     }
 }

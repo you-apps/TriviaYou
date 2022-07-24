@@ -7,13 +7,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.bnyro.trivia.databinding.FragmentCreateBinding
 
-class CreateFragment : Fragment() {
+class CreateQuizFragment : Fragment() {
     private lateinit var binding: FragmentCreateBinding
+    private lateinit var quizName: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-        }
+        quizName = arguments?.getString("name")!!
     }
 
     override fun onCreateView(
