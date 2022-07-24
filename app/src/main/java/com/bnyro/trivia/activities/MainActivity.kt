@@ -1,15 +1,14 @@
-package com.bnyro.trivia
+package com.bnyro.trivia.activities
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
+import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import android.view.Menu
-import android.view.MenuItem
+import androidx.navigation.ui.setupWithNavController
+import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -26,14 +25,23 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
 
-        val navController = findNavController(R.id.nav_host_fragment_content_main)
-        appBarConfiguration = AppBarConfiguration(navController.graph)
-        setupActionBarWithNavController(navController, appBarConfiguration)
+        val navController = findNavController(R.id.fragment)
+        binding.bottomNavigationView.setupWithNavController(navController)
 
-        binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAnchorView(R.id.fab)
-                .setAction("Action", null).show()
+        binding.bottomNavigationView.setOnItemSelectedListener {
+            // set menu item on click listeners
+            when (it.itemId) {
+                R.id.home -> {
+                    navController.navigate(R.id.homeFragment)
+                }
+                R.id.categories -> {
+                    navController.navigate(R.id.categoriesFragment)
+                }
+                R.id.library -> {
+                    navController.navigate(R.id.libraryFragment)
+                }
+            }
+            false
         }
     }
 
@@ -51,11 +59,5 @@ class MainActivity : AppCompatActivity() {
             R.id.action_settings -> true
             else -> super.onOptionsItemSelected(item)
         }
-    }
-
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment_content_main)
-        return navController.navigateUp(appBarConfiguration)
-                || super.onSupportNavigateUp()
     }
 }
