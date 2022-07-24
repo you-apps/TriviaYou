@@ -32,13 +32,13 @@ class MainActivity : AppCompatActivity() {
             // set menu item on click listeners
             when (it.itemId) {
                 R.id.home -> {
-                    navController.navigate(R.id.homeFragment)
+                    navController.navigate(R.id.home)
                 }
                 R.id.categories -> {
-                    navController.navigate(R.id.categoriesFragment)
+                    navController.navigate(R.id.categories)
                 }
                 R.id.library -> {
-                    navController.navigate(R.id.libraryFragment)
+                    navController.navigate(R.id.library)
                 }
             }
             false
