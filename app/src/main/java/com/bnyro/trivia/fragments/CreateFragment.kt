@@ -5,11 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.bnyro.trivia.R
-import com.bnyro.trivia.databinding.FragmentLibraryBinding
+import com.bnyro.trivia.databinding.FragmentCreateBinding
 
-class LibraryFragment : Fragment() {
-    private lateinit var binding: FragmentLibraryBinding
+class CreateFragment : Fragment() {
+    private lateinit var binding: FragmentCreateBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,19 +21,12 @@ class LibraryFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentLibraryBinding.inflate(layoutInflater, container, false)
+        binding = FragmentCreateBinding.inflate(layoutInflater, container, false)
         // Inflate the layout for this fragment
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        binding.createFAB.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment, CreateFragment())
-                .addToBackStack(null)
-                .commit()
-        }
     }
 }

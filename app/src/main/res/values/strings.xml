@@ -13,4 +13,11 @@
     <string name="easy">Easy</string>
     <string name="medium">Medium</string>
     <string name="hard">Hard</string>
+
+    <!-- Custom Quiz -->
+    <string name="question">Question</string>
+    <string name="correct_answer">Correct Answer</string>
+    <string name="incorrect_answers">Incorrect Answers</string>
+    <string name="save">Save</string>
+    <string name="finish">Finish</string>
 </resources>
