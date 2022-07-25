@@ -120,8 +120,8 @@ object PreferenceHelper {
         )
 
         return when (apiPref) {
-            "TheTriviaDB" -> ApiType.theTriviaApi
-            "OpenTriviaAPI" -> ApiType.openTriviaApi
+            "TheTriviaAPI" -> ApiType.theTriviaApi
+            "OpenTriviaDB" -> ApiType.openTriviaApi
             else -> ApiType.theTriviaApi
         }
     }

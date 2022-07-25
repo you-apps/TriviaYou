@@ -8,8 +8,8 @@ import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.bnyro.trivia.R
-import com.bnyro.trivia.api.thetriviaapi.TheTriviaApiHelper
 import com.bnyro.trivia.databinding.FragmentStatsBinding
+import com.bnyro.trivia.util.ApiHelper
 
 class ApiStatsFragment : Fragment() {
     private lateinit var binding: FragmentStatsBinding
@@ -28,7 +28,7 @@ class ApiStatsFragment : Fragment() {
 
         lifecycleScope.launchWhenCreated {
             val stats = try {
-                TheTriviaApiHelper.getStats()
+                ApiHelper().getStats()
             } catch (e: Exception) {
                 return@launchWhenCreated
             }

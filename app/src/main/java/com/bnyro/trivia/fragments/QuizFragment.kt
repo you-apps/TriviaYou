@@ -16,6 +16,7 @@ import com.bnyro.trivia.util.ApiHelper
 import com.bnyro.trivia.util.BundleArguments
 import com.bnyro.trivia.util.PreferenceHelper
 import com.bnyro.trivia.util.ThemeHelper
+import com.bnyro.trivia.util.toHTML
 import kotlinx.coroutines.delay
 
 class QuizFragment : Fragment() {
@@ -32,8 +33,6 @@ class QuizFragment : Fragment() {
     private var buttonTextColor = 0
 
     private var category: String? = null
-    private var difficulty: String? = null
-    private var limit: Int = 50
 
     private var quizType: Int = -1
     private var libraryIndex: Int? = null
@@ -63,18 +62,14 @@ class QuizFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // set the difficulty
-        difficulty = PreferenceHelper.getDifficultyQuery()
-        limit = PreferenceHelper.getLimit()
-
-        optionButtons = listOf(
+        optionButtons = mutableListOf(
             binding.optionA,
             binding.optionB,
             binding.optionC,
             binding.optionD
         )
 
-        buttonTextColor = optionButtons[0].currentTextColor
+        buttonTextColor = binding.optionA.currentTextColor
 
         if (quizType == QuizType.OFFLINE) {
             binding.progress.visibility = View.GONE
@@ -99,7 +94,7 @@ class QuizFragment : Fragment() {
 
     private fun loadQuestion() {
         val question = questions[questionIndex]
-        binding.questionTV.text = question.question
+        binding.questionTV.text = question.question.toHTML()
 
         answers = arrayListOf(question.correctAnswer!!)
         // append all incorrect answers
@@ -108,16 +103,30 @@ class QuizFragment : Fragment() {
         }
         answers.shuffle()
 
-        optionButtons.forEachIndexed { index, button ->
+        val tempOptionButtons = optionButtons.toMutableList()
+        tempOptionButtons.forEachIndexed { _, button ->
             // reset button style
             button.setTextColor(buttonTextColor)
             button.setBackgroundColor(Color.TRANSPARENT)
+            button.visibility = View.VISIBLE
+        }
 
+        if (answers.size <= 3) {
+            binding.optionA.visibility = View.VISIBLE
+            tempOptionButtons.removeAt(0)
+        }
+
+        if (answers.size == 2) {
+            binding.optionD.visibility = View.VISIBLE
+            tempOptionButtons.removeAt(2)
+        }
+
+        tempOptionButtons.forEachIndexed { index, button ->
             // set text and onclick listener
             val answer = answers[index]
-            button.text = answer
+            button.text = answer.toHTML()
             button.setOnClickListener {
-                checkAnswer(index)
+                checkAnswer(index, tempOptionButtons)
             }
         }
 
@@ -125,7 +134,7 @@ class QuizFragment : Fragment() {
         binding.questionLL.visibility = View.VISIBLE
     }
 
-    private fun checkAnswer(selectedAnswerIndex: Int) {
+    private fun checkAnswer(selectedAnswerIndex: Int, tempOptionButtons: List<Button>) {
         val correctAnswerIndex = answers.indexOf(questions[questionIndex].correctAnswer)
         val isAnswerCorrect = correctAnswerIndex == selectedAnswerIndex
 
@@ -133,7 +142,7 @@ class QuizFragment : Fragment() {
         val colorError = ThemeHelper.getThemeColor(requireContext(), com.google.android.material.R.attr.colorError)
         val textColor = ThemeHelper.getThemeColor(requireContext(), android.R.attr.colorBackground)
 
-        optionButtons[correctAnswerIndex].apply {
+        tempOptionButtons[correctAnswerIndex].apply {
             setTextColor(textColor)
             setBackgroundColor(secondaryColor)
         }
@@ -141,7 +150,7 @@ class QuizFragment : Fragment() {
         if (isAnswerCorrect) {
             correctAnswerCount += 1
         } else {
-            optionButtons[selectedAnswerIndex].apply {
+            tempOptionButtons[selectedAnswerIndex].apply {
                 setTextColor(textColor)
                 setBackgroundColor(colorError)
             }
