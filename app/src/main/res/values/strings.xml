@@ -31,4 +31,9 @@
 
     <!-- Download -->
     <string name="download">Download</string>
+
+    <!-- Result -->
+    <string name="result_great">Great Job!</string>
+    <string name="result_average">Average performance</string>
+    <string name="result_fail">Fail</string>
 </resources>

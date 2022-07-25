@@ -26,6 +26,7 @@ class QuizFragment : Fragment() {
     private var questionIndex = 0
 
     private lateinit var answers: ArrayList<String>
+    private var totalAnswersCount = 0
     private var correctAnswerCount = 0
 
     private var buttonTextColor = 0
@@ -127,20 +128,24 @@ class QuizFragment : Fragment() {
     private fun checkAnswer(selectedAnswerIndex: Int) {
         val correctAnswerIndex = answers.indexOf(questions[questionIndex].correctAnswer)
         val isAnswerCorrect = correctAnswerIndex == selectedAnswerIndex
+
         val secondaryColor = ThemeHelper.getThemeColor(requireContext(), android.R.attr.colorAccent)
+        val colorError = ThemeHelper.getThemeColor(requireContext(), com.google.android.material.R.attr.colorError)
+
         optionButtons[correctAnswerIndex].apply {
             setTextColor(Color.WHITE)
             setBackgroundColor(secondaryColor)
         }
+        totalAnswersCount += 1
         if (isAnswerCorrect) {
             correctAnswerCount += 1
         } else {
-            val colorError = ThemeHelper.getThemeColor(requireContext(), com.google.android.material.R.attr.colorError)
             optionButtons[selectedAnswerIndex].apply {
                 setTextColor(Color.WHITE)
                 setBackgroundColor(colorError)
             }
         }
+
         lifecycleScope.launchWhenCreated {
             delay(800)
             if (questionIndex + 1 != questions.size) {
@@ -150,6 +155,17 @@ class QuizFragment : Fragment() {
             } else {
                 questionIndex = 0
                 if (quizType == QuizType.ONLINE) fetchQuestions()
+                else {
+                    val resultFragment = ResultFragment()
+                    val bundle = Bundle()
+                    bundle.putInt(BundleArguments.questionsCount, totalAnswersCount)
+                    bundle.putInt(BundleArguments.correctAnswers, correctAnswerCount)
+                    resultFragment.arguments = bundle
+                    parentFragmentManager.beginTransaction()
+                        .replace(R.id.fragment, resultFragment)
+                        .addToBackStack(null)
+                        .commit()
+                }
             }
         }
     }
