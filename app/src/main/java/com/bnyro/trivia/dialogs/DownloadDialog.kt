@@ -14,7 +14,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class DownloadDialog: DialogFragment() {
+class DownloadDialog : DialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         // build the view of the dialog
         val container = LinearLayout(requireContext())
@@ -23,7 +23,7 @@ class DownloadDialog: DialogFragment() {
             LinearLayout.LayoutParams.MATCH_PARENT,
             LinearLayout.LayoutParams.WRAP_CONTENT
         )
-        lp.setMargins(60, 0, 60, 0)
+        lp.setMargins(60, 30, 60, 0)
         val input = EditText(requireContext())
         input.layoutParams = lp
         input.inputType = InputType.TYPE_CLASS_TEXT
@@ -36,6 +36,7 @@ class DownloadDialog: DialogFragment() {
             .setPositiveButton(android.R.string.ok) { _, _ ->
                 downloadQuestions(input.text.toString())
             }
+            .setView(container)
         return dialog.create()
     }
 

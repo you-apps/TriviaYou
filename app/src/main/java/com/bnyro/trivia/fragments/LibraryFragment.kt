@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bnyro.trivia.adapters.LibraryAdapter
 import com.bnyro.trivia.databinding.FragmentLibraryBinding
 import com.bnyro.trivia.dialogs.CreateQuizDialog
+import com.bnyro.trivia.dialogs.DownloadDialog
 
 class LibraryFragment : Fragment() {
     private lateinit var binding: FragmentLibraryBinding
@@ -33,7 +34,11 @@ class LibraryFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.libraryRV.layoutManager = LinearLayoutManager(context)
-        binding.libraryRV.adapter = LibraryAdapter(parentFragmentManager)
+        binding.libraryRV.adapter = LibraryAdapter(this)
+
+        binding.downloadFAB.setOnClickListener {
+            DownloadDialog().show(childFragmentManager, null)
+        }
 
         binding.createFAB.setOnClickListener {
             CreateQuizDialog().show(childFragmentManager, null)

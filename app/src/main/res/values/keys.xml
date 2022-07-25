@@ -3,6 +3,7 @@
     <!-- Preferences Keys -->
     <string name="difficulty_key">difficulty</string>
     <string name="limit_key">limit</string>
+    <string name="quizzes_key">quizzes</string>
 
     <!-- Preferences default Values -->
     <string name="difficulty_default">random</string>

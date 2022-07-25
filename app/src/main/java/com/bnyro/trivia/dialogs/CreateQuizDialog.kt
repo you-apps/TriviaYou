@@ -22,7 +22,7 @@ class CreateQuizDialog : DialogFragment() {
             LinearLayout.LayoutParams.MATCH_PARENT,
             LinearLayout.LayoutParams.WRAP_CONTENT
         )
-        lp.setMargins(60, 0, 60, 0)
+        lp.setMargins(60, 30, 60, 0)
         val input = EditText(requireContext())
         input.layoutParams = lp
         input.inputType = InputType.TYPE_CLASS_TEXT

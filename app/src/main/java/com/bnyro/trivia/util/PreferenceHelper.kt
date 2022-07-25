@@ -30,11 +30,11 @@ object PreferenceHelper {
         quizzes += Quiz(name, isCreator, questions)
 
         val json = mapper.writeValueAsString(quizzes)
-        editor.putString("quizzes", json).commit()
+        editor.putString(context.getString(R.string.quizzes_key), json).commit()
     }
 
     fun getQuizzes(): List<Quiz> {
-        val json = settings.getString("quizzes", "")
+        val json = settings.getString(context.getString(R.string.quizzes_key), "")
         val type = object : TypeReference<List<Quiz>>() {}
         return try {
             mapper.readValue(json, type)
@@ -42,6 +42,16 @@ object PreferenceHelper {
             e.printStackTrace()
             listOf()
         }
+    }
+
+    fun deleteQuiz(index: Int) {
+        val quizzes = getQuizzes().toMutableList()
+        quizzes.removeAt(index)
+        val json = mapper.writeValueAsString(quizzes)
+        editor.putString(
+            context.getString(R.string.quizzes_key),
+            json
+        ).commit()
     }
 
     fun getDifficultyQuery(): String? {
