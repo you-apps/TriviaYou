@@ -20,12 +20,12 @@
 
 ## Screenshots
 
-[<img src="fastlane/metadata/android/en-US/images/quiz.png" width=33%>](fastlane/metadata/android/en-US/images/quiz.png)
-[<img src="fastlane/metadata/android/en-US/images/categories.png" width=33%>](fastlane/metadata/android/en-US/images/categories.png)
-[<img src="fastlane/metadata/android/en-US/images/library.png" width=33%>](fastlane/metadata/android/en-US/images/library.png)
-[<img src="fastlane/metadata/android/en-US/images/create.png" width=33%>](fastlane/metadata/android/en-US/images/create.png)
-[<img src="fastlane/metadata/android/en-US/images/settings.png" width=33%>](fastlane/metadata/android/en-US/images/settings.png)
-[<img src="fastlane/metadata/android/en-US/images/stats.png" width=33%>](fastlane/metadata/android/en-US/images/stats.png)
+[<img src="fastlane/metadata/android/en-US/images/quiz.png" width=30%>](fastlane/metadata/android/en-US/images/quiz.png)
+[<img src="fastlane/metadata/android/en-US/images/categories.png" width=30%>](fastlane/metadata/android/en-US/images/categories.png)
+[<img src="fastlane/metadata/android/en-US/images/library.png" width=30%>](fastlane/metadata/android/en-US/images/library.png)
+[<img src="fastlane/metadata/android/en-US/images/create.png" width=30%>](fastlane/metadata/android/en-US/images/create.png)
+[<img src="fastlane/metadata/android/en-US/images/settings.png" width=30%>](fastlane/metadata/android/en-US/images/settings.png)
+[<img src="fastlane/metadata/android/en-US/images/stats.png" width=30%>](fastlane/metadata/android/en-US/images/stats.png)
 
 
 ## Supported APIs
