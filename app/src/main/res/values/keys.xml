@@ -2,7 +2,9 @@
 <resources>
     <!-- Preferences Keys -->
     <string name="difficulty_key">difficulty</string>
+    <string name="limit_key">limit</string>
 
     <!-- Preferences default Values -->
     <string name="difficulty_default">random</string>
+    <string name="limit_default">50</string>
 </resources>

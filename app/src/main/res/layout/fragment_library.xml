@@ -9,6 +9,15 @@
         android:layout_height="wrap_content" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/downloadFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_save" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/createFAB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

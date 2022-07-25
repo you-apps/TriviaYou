@@ -32,6 +32,8 @@ class HomeFragment : Fragment() {
 
     private var category: String? = null
     private var difficulty: String? = null
+    private var limit: Int = 50
+
     private var libraryIndex: Int? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -58,14 +60,8 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // set the difficulty
-        val difficultyPref = PreferenceHelper.getString(
-            getString(R.string.difficulty_key),
-            getString(R.string.difficulty_default)
-        )
-        difficulty = when (difficultyPref) {
-            "random" -> null
-            else -> difficultyPref
-        }
+        difficulty = PreferenceHelper.getDifficultyQuery()
+        limit = PreferenceHelper.getLimit()
 
         optionButtons = listOf(
             binding.optionA,
@@ -89,7 +85,7 @@ class HomeFragment : Fragment() {
     private fun fetchQuestions() {
         lifecycleScope.launchWhenCreated {
             questions = try {
-                RetrofitInstance.api.getQuestions(50, category, difficulty)
+                RetrofitInstance.api.getQuestions(limit, category, difficulty)
             } catch (e: Exception) {
                 Log.e("error", "error")
                 return@launchWhenCreated

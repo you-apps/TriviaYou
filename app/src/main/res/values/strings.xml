@@ -26,4 +26,7 @@
 
     <!-- Library -->
     <string name="questions">Questions: %1$s</string>
+
+    <!-- Download -->
+    <string name="download">Download</string>
 </resources>

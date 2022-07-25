@@ -3,6 +3,7 @@ package com.bnyro.trivia.util
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.preference.PreferenceManager
+import com.bnyro.trivia.R
 import com.bnyro.trivia.obj.Question
 import com.bnyro.trivia.obj.Quiz
 import com.fasterxml.jackson.core.type.TypeReference
@@ -20,7 +21,7 @@ object PreferenceHelper {
         editor = settings.edit()
     }
 
-    fun getString(key: String, defaultValue: String): String {
+    private fun getString(key: String, defaultValue: String): String {
         return settings.getString(key, defaultValue)!!
     }
 
@@ -41,5 +42,23 @@ object PreferenceHelper {
             e.printStackTrace()
             listOf()
         }
+    }
+
+    fun getDifficultyQuery(): String? {
+        val difficultyPref = getString(
+            context.getString(R.string.difficulty_key),
+            context.getString(R.string.difficulty_default)
+        )
+        return when (difficultyPref) {
+            "random" -> null
+            else -> difficultyPref
+        }
+    }
+
+    fun getLimit(): Int {
+        return getString(
+            context.getString(R.string.limit_key),
+            context.getString(R.string.limit_default)
+        ).toInt()
     }
 }
