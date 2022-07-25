@@ -69,19 +69,13 @@ class CreateQuizFragment : Fragment() {
 
     private fun appendQuestionToList() {
         questions += Question(
-            category = null,
+            question = binding.questionNameET.text.toString(),
             correctAnswer = binding.correctAnswerET.text.toString(),
-            difficulty = null,
-            id = null,
             incorrectAnswers = listOf(
                 binding.incorrectAnswerOne.text.toString(),
                 binding.incorrectAnswerTwo.text.toString(),
                 binding.incorrectAnswerThree.text.toString()
-            ),
-            question = binding.questionNameET.text.toString(),
-            regions = null,
-            tags = null,
-            type = null
+            )
         )
     }
 

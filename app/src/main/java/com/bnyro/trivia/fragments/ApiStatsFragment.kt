@@ -9,8 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.FragmentStatsBinding
-import com.bnyro.trivia.util.RetrofitInstance
-import com.fasterxml.jackson.databind.ObjectMapper
+import com.bnyro.trivia.util.TheTriviaApiHelper
 import java.util.*
 
 class ApiStatsFragment : Fragment() {
@@ -29,42 +28,12 @@ class ApiStatsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         lifecycleScope.launchWhenCreated {
-            val metadata = try {
-                RetrofitInstance.api.getMetadata()
+            val stats = try {
+                TheTriviaApiHelper.getStats()
             } catch (e: Exception) {
                 return@launchWhenCreated
             }
             kotlin.runCatching {
-                val stats = mutableListOf<String>()
-                val mapper = ObjectMapper()
-
-                val stateJson = mapper.writeValueAsString(metadata.byState)
-                val stateStats = mapper.readTree(stateJson)
-
-                stateStats.fields().forEach { field ->
-                    stats += field.toString().replace("=", ": ")
-                        .replaceFirstChar {
-                            if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString()
-                        }
-                }
-
-                val categoryJson = mapper.writeValueAsString(metadata.byCategory)
-                val categoryStats = mapper.readTree(categoryJson)
-
-                categoryStats.fields().forEach {
-                    stats += it.toString().replace("=", ": ")
-                }
-
-                val difficultyJson = mapper.writeValueAsString(metadata.byDifficulty)
-                val difficultyStats = mapper.readTree(difficultyJson)
-
-                difficultyStats.fields().forEach { field ->
-                    stats += field.toString().replace("=", ": ")
-                        .replaceFirstChar {
-                            if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString()
-                        }
-                }
-
                 val adapter = ArrayAdapter(requireContext(), R.layout.list_item, stats)
                 binding.apiStats.adapter = adapter
 

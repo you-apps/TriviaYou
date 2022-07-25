@@ -14,7 +14,7 @@ import com.bnyro.trivia.obj.Question
 import com.bnyro.trivia.obj.QuizType
 import com.bnyro.trivia.util.BundleArguments
 import com.bnyro.trivia.util.PreferenceHelper
-import com.bnyro.trivia.util.RetrofitInstance
+import com.bnyro.trivia.util.TheTriviaApiHelper
 import com.bnyro.trivia.util.ThemeHelper
 import kotlinx.coroutines.delay
 
@@ -89,7 +89,7 @@ class QuizFragment : Fragment() {
     private fun fetchQuestions() {
         lifecycleScope.launchWhenCreated {
             questions = try {
-                RetrofitInstance.api.getQuestions(limit, category, difficulty)
+                TheTriviaApiHelper.getQuestions(limit, category, difficulty)
             } catch (e: Exception) {
                 return@launchWhenCreated
             }

@@ -6,9 +6,9 @@ import retrofit2.converter.jackson.JacksonConverterFactory
 object RetrofitInstance {
     private const val url = "https://the-trivia-api.com/"
 
-    val api: TriviaApi = Retrofit.Builder()
+    val theTriviaApi: TheTriviaApi = Retrofit.Builder()
         .baseUrl(url)
         .addConverterFactory(JacksonConverterFactory.create())
         .build()
-        .create(TriviaApi::class.java)
+        .create(TheTriviaApi::class.java)
 }

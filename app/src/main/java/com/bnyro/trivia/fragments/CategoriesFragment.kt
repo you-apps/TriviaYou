@@ -11,9 +11,7 @@ import androidx.lifecycle.lifecycleScope
 import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.FragmentCategoriesBinding
 import com.bnyro.trivia.util.BundleArguments
-import com.bnyro.trivia.util.RetrofitInstance
-import com.fasterxml.jackson.core.JsonParser
-import com.fasterxml.jackson.databind.ObjectMapper
+import com.bnyro.trivia.util.TheTriviaApiHelper
 
 class CategoriesFragment : Fragment() {
     private lateinit var binding: FragmentCategoriesBinding
@@ -41,44 +39,29 @@ class CategoriesFragment : Fragment() {
 
     private fun fetchCategories() {
         lifecycleScope.launchWhenCreated {
-            val categories = try {
-                RetrofitInstance.api.getCategories()
+            val (categoryNames, categoryQueries) = try {
+                TheTriviaApiHelper.getCategories()
             } catch (e: Exception) {
                 return@launchWhenCreated
             }
-            val mapper = ObjectMapper()
-            kotlin.runCatching {
-                mapper.configure(JsonParser.Feature.ALLOW_UNQUOTED_FIELD_NAMES, true)
-                val answer = mapper.readTree(
-                    mapper.writeValueAsString(categories)
-                )
-                val categoryNames = mutableListOf<String>()
-                val categoryQueries = mutableListOf<String>()
-                answer.fieldNames().forEach {
-                    categoryNames += it.toString()
-                }
-                answer.elements().forEach {
-                    categoryQueries += it[0].toString()
-                }
 
-                val categoriesAdapter = ArrayAdapter(requireContext(), R.layout.list_item, categoryNames)
-                binding.categoriesLV.adapter = categoriesAdapter
+            val categoriesAdapter = ArrayAdapter(requireContext(), R.layout.list_item, categoryNames)
+            binding.categoriesLV.adapter = categoriesAdapter
 
-                binding.progress.visibility = View.GONE
-                binding.categoriesLV.visibility = View.VISIBLE
+            binding.progress.visibility = View.GONE
+            binding.categoriesLV.visibility = View.VISIBLE
 
-                binding.categoriesLV.onItemClickListener = OnItemClickListener { _, _, index, _ ->
-                    val category = categoryQueries[index]
-                    val quizFragment = QuizFragment()
-                    val bundle = Bundle()
-                    bundle.putString(BundleArguments.category, category)
-                    quizFragment.arguments = bundle
+            binding.categoriesLV.onItemClickListener = OnItemClickListener { _, _, index, _ ->
+                val category = categoryQueries[index]
+                val quizFragment = QuizFragment()
+                val bundle = Bundle()
+                bundle.putString(BundleArguments.category, category)
+                quizFragment.arguments = bundle
 
-                    parentFragmentManager.beginTransaction()
-                        .replace(R.id.fragment, quizFragment)
-                        .addToBackStack(null)
-                        .commit()
-                }
+                parentFragmentManager.beginTransaction()
+                    .replace(R.id.fragment, quizFragment)
+                    .addToBackStack(null)
+                    .commit()
             }
         }
     }

@@ -6,7 +6,7 @@ import androidx.fragment.app.DialogFragment
 import com.bnyro.trivia.R
 import com.bnyro.trivia.util.DialogHelper
 import com.bnyro.trivia.util.PreferenceHelper
-import com.bnyro.trivia.util.RetrofitInstance
+import com.bnyro.trivia.util.TheTriviaApiHelper
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -31,7 +31,7 @@ class DownloadDialog : DialogFragment() {
     private fun downloadQuestions(name: String) {
         CoroutineScope(Dispatchers.IO).launch {
             val questions = try {
-                RetrofitInstance.api.getQuestions(
+                TheTriviaApiHelper.getQuestions(
                     PreferenceHelper.getLimit(),
                     null,
                     PreferenceHelper.getDifficultyQuery()
