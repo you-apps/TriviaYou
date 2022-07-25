@@ -58,6 +58,13 @@ object PreferenceHelper {
         ).commit()
     }
 
+    fun deleteAllQuizzes() {
+        editor.putString(
+            context.getString(R.string.quizzes_key),
+            ""
+        ).commit()
+    }
+
     fun getDifficultyQuery(): String? {
         val difficultyPref = getString(
             context.getString(R.string.difficulty_key),
@@ -99,5 +106,9 @@ object PreferenceHelper {
         userStats.correctAnswers += correctAnswers
         val json = mapper.writeValueAsString(userStats)
         editor.putString(context.getString(R.string.stats_key), json).commit()
+    }
+
+    fun resetTotalStats() {
+        editor.putString(context.getString(R.string.stats_key), "")
     }
 }

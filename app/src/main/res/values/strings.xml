@@ -38,6 +38,11 @@
     <string name="labeled">Labeled</string>
     <string name="unlabeled">Unlabeled</string>
 
+    <!-- Other Settings -->
+    <string name="reset_stats">Reset stats</string>
+    <string name="clear_library">Clear library</string>
+    <string name="irreversible">Are you sure? This can\'t be undone!</string>
+
     <!-- Custom Quiz -->
     <string name="create_quiz">Create Quiz</string>
     <string name="quiz_name">Name</string>

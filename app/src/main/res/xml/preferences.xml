@@ -56,4 +56,19 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory>
+
+        <Preference
+            android:icon="@drawable/ic_reset"
+            app:key="@string/reset_stats_key"
+            app:title="@string/reset_stats" />
+
+        <Preference
+            android:icon="@drawable/ic_clear"
+            app:key="@string/clear_library_key"
+            app:title="@string/clear_library" />
+
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

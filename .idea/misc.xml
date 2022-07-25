@@ -11,6 +11,7 @@
         <entry key="app/src/main/res/drawable/ic_bookmark.xml" value="0.177" />
         <entry key="app/src/main/res/drawable/ic_categories.xml" value="0.2975" />
         <entry key="app/src/main/res/drawable/ic_check.xml" value="0.177" />
+        <entry key="app/src/main/res/drawable/ic_clear.xml" value="0.1395" />
         <entry key="app/src/main/res/drawable/ic_extension.xml" value="0.1395" />
         <entry key="app/src/main/res/drawable/ic_github.xml" value="0.2975" />
         <entry key="app/src/main/res/drawable/ic_gnu.xml" value="0.2975" />
@@ -18,6 +19,7 @@
         <entry key="app/src/main/res/drawable/ic_label.xml" value="0.1395" />
         <entry key="app/src/main/res/drawable/ic_library.xml" value="0.2975" />
         <entry key="app/src/main/res/drawable/ic_public.xml" value="0.177" />
+        <entry key="app/src/main/res/drawable/ic_reset.xml" value="0.1395" />
         <entry key="app/src/main/res/drawable/ic_save.xml" value="0.2975" />
         <entry key="app/src/main/res/drawable/ic_theme.xml" value="0.1395" />
         <entry key="app/src/main/res/layout/activity_about.xml" value="0.33" />

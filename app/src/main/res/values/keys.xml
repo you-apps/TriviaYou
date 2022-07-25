@@ -14,6 +14,10 @@
     <string name="theme_mode_default">system</string>
     <string name="label_visibility_default">selected</string>
 
+    <!-- Preference Action Keys -->
+    <string name="reset_stats_key">reset_stats</string>
+    <string name="clear_library_key">clear_library</string>
+
     <!-- Storage keys -->
     <string name="quizzes_key">quizzes</string>
     <string name="stats_key">stats</string>
