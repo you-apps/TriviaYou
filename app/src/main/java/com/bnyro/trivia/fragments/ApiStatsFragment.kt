@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
+import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.FragmentStatsBinding
 import com.bnyro.trivia.util.RetrofitInstance
 import com.fasterxml.jackson.databind.ObjectMapper
@@ -64,7 +65,7 @@ class ApiStatsFragment : Fragment() {
                         }
                 }
 
-                val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, stats)
+                val adapter = ArrayAdapter(requireContext(), R.layout.list_item, stats)
                 binding.apiStats.adapter = adapter
 
                 binding.progress.visibility = View.GONE

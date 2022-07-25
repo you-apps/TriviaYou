@@ -61,7 +61,7 @@ class CategoriesFragment : Fragment() {
                     categoryQueries += it[0].toString()
                 }
 
-                val categoriesAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, categoryNames)
+                val categoriesAdapter = ArrayAdapter(requireContext(), R.layout.list_item, categoryNames)
                 binding.categoriesLV.adapter = categoriesAdapter
 
                 binding.progress.visibility = View.GONE
