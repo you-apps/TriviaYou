@@ -16,6 +16,7 @@
     <string name="limit">Limit</string>
 
     <!-- Custom Quiz -->
+    <string name="create_quiz">Create Quiz</string>
     <string name="quiz_name">Name</string>
     <string name="name_empty">Name can\'t be empty!</string>
     <string name="item_empty">Please fill out all fields!</string>
@@ -30,7 +31,7 @@
     <string name="delete">Delete</string>
 
     <!-- Download -->
-    <string name="download">Download</string>
+    <string name="download">Download Quiz</string>
 
     <!-- Result -->
     <string name="result_great">Great Job!</string>

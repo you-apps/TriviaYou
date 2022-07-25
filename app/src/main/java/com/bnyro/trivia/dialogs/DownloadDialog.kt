@@ -15,6 +15,7 @@ import kotlinx.coroutines.launch
 class DownloadDialog : DialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val (container, input) = DialogHelper.getTextInput(requireContext())
+        input.hint = context?.getString(R.string.quiz_name)
 
         // build the dialog
         val dialog = MaterialAlertDialogBuilder(requireContext())

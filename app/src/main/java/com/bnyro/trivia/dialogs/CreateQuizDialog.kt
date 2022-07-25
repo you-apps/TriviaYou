@@ -14,10 +14,11 @@ class CreateQuizDialog : DialogFragment() {
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val (container, input) = DialogHelper.getTextInput(requireContext())
+        input.hint = context?.getString(R.string.quiz_name)
 
         // build the dialog
         val builder = MaterialAlertDialogBuilder(requireContext())
-            .setTitle(getString(R.string.quiz_name))
+            .setTitle(getString(R.string.create_quiz))
             .setView(container)
             .setPositiveButton(android.R.string.ok) { _, _ ->
                 if (input.text.toString() != "") {
