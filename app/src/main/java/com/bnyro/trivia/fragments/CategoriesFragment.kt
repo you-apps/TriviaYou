@@ -59,7 +59,7 @@ class CategoriesFragment : Fragment() {
 
             binding.categoriesLV.onItemClickListener = OnItemClickListener { _, _, index, _ ->
                 val category = categoryQueries[index]
-                val homeFragment = HomeFragment()
+                val homeFragment = QuizFragment()
                 val bundle = Bundle()
                 bundle.putString(BundleArguments.category, category)
                 homeFragment.arguments = bundle

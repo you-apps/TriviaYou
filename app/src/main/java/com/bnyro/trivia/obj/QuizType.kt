@@ -1,3 +1,6 @@
 package com.bnyro.trivia.obj
 
-object QuizType
+object QuizType {
+    const val ONLINE = 0
+    const val OFFLINE = 1
+}

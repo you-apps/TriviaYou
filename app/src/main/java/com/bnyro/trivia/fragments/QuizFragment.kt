@@ -11,13 +11,14 @@ import androidx.lifecycle.lifecycleScope
 import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.FragmentHomeBinding
 import com.bnyro.trivia.obj.Question
+import com.bnyro.trivia.obj.QuizType
 import com.bnyro.trivia.util.BundleArguments
 import com.bnyro.trivia.util.PreferenceHelper
 import com.bnyro.trivia.util.RetrofitInstance
 import com.bnyro.trivia.util.ThemeHelper
 import kotlinx.coroutines.delay
 
-class HomeFragment : Fragment() {
+class QuizFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
 
     private lateinit var optionButtons: List<Button>
@@ -33,6 +34,7 @@ class HomeFragment : Fragment() {
     private var difficulty: String? = null
     private var limit: Int = 50
 
+    private var quizType: Int = -1
     private var libraryIndex: Int? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,6 +45,8 @@ class HomeFragment : Fragment() {
         // circumvent 0 being returned although it's null
         libraryIndex = arguments?.getInt(BundleArguments.libraryIndex, Int.MAX_VALUE)
         if (libraryIndex == Int.MAX_VALUE) libraryIndex = null
+
+        quizType = if (libraryIndex != null) QuizType.OFFLINE else QuizType.ONLINE
     }
 
     override fun onCreateView(
@@ -71,7 +75,7 @@ class HomeFragment : Fragment() {
 
         buttonTextColor = optionButtons[0].currentTextColor
 
-        if (libraryIndex != null) {
+        if (quizType == QuizType.OFFLINE) {
             binding.progress.visibility = View.GONE
             binding.questionLL.visibility = View.VISIBLE
             questions = PreferenceHelper.getQuizzes()[libraryIndex!!].questions!!
@@ -145,7 +149,7 @@ class HomeFragment : Fragment() {
                 showQuestion()
             } else {
                 questionIndex = 0
-                if (libraryIndex == null) fetchQuestions()
+                if (quizType == QuizType.ONLINE) fetchQuestions()
             }
         }
     }

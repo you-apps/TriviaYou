@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.RowQuizBinding
 import com.bnyro.trivia.dialogs.QuizOptionsDialog
-import com.bnyro.trivia.fragments.HomeFragment
+import com.bnyro.trivia.fragments.QuizFragment
 import com.bnyro.trivia.util.BundleArguments
 import com.bnyro.trivia.util.PreferenceHelper
 
@@ -37,7 +37,7 @@ class LibraryAdapter(
                 else R.drawable.ic_public
             )
             root.setOnClickListener {
-                val homeFragment = HomeFragment()
+                val homeFragment = QuizFragment()
                 val bundle = Bundle()
                 bundle.putInt(BundleArguments.libraryIndex, position)
                 homeFragment.arguments = bundle
