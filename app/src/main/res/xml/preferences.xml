@@ -11,4 +11,13 @@
         app:title="@string/difficulty"
         app:useSimpleSummaryProvider="true" />
 
+    <ListPreference
+        android:defaultValue="@string/limit_default"
+        android:entries="@array/limits"
+        android:entryValues="@array/limits"
+        android:icon="@drawable/ic_archive"
+        app:key="@string/limit_key"
+        app:title="@string/limit"
+        app:useSimpleSummaryProvider="true" />
+
 </PreferenceScreen>
