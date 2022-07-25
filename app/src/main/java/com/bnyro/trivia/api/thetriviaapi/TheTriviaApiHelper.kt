@@ -1,17 +1,16 @@
-package com.bnyro.trivia.api
+package com.bnyro.trivia.api.thetriviaapi
 
 import com.bnyro.trivia.obj.Question
 import com.bnyro.trivia.util.PreferenceHelper
 import com.bnyro.trivia.util.RetrofitInstance
-import com.bnyro.trivia.util.capitalized
-import com.fasterxml.jackson.core.JsonParser
+import com.bnyro.trivia.util.formatStats
 import com.fasterxml.jackson.databind.ObjectMapper
 
-object OpenTriviaApiHelper {
+object TheTriviaApiHelper {
     private val mapper = ObjectMapper()
 
     suspend fun getQuestions(category: String?): List<Question> {
-        val theTriviaApiQuestions =
+        val apiQuestions =
             RetrofitInstance.theTriviaApi.getQuestions(
                 PreferenceHelper.getLimit(),
                 category,
@@ -19,7 +18,7 @@ object OpenTriviaApiHelper {
             )
         val questions = mutableListOf<Question>()
 
-        theTriviaApiQuestions.forEach {
+        apiQuestions.forEach {
             questions += Question(
                 question = it.question,
                 correctAnswer = it.correctAnswer,
@@ -31,7 +30,6 @@ object OpenTriviaApiHelper {
 
     suspend fun getCategories(): Pair<List<String>, List<String>> {
         val categories = RetrofitInstance.theTriviaApi.getCategories()
-        mapper.configure(JsonParser.Feature.ALLOW_UNQUOTED_FIELD_NAMES, true)
 
         kotlin.runCatching {
             val answer = mapper.readTree(
@@ -51,31 +49,34 @@ object OpenTriviaApiHelper {
     }
 
     suspend fun getStats(): List<String> {
-        val metadata = RetrofitInstance.theTriviaApi.getMetadata()
+        val metadata = RetrofitInstance.theTriviaApi.getStats()
 
         val stats = mutableListOf<String>()
         val mapper = ObjectMapper()
 
         kotlin.runCatching {
-            val stateJson = mapper.writeValueAsString(metadata.byState)
-            val stateStats = mapper.readTree(stateJson)
+            val stateStats = mapper.readTree(
+                mapper.writeValueAsString(metadata.byState)
+            )
 
             stateStats.fields().forEach { field ->
-                stats += field.toString().replace("=", ": ").capitalized()
+                stats += field.formatStats()
             }
 
-            val categoryJson = mapper.writeValueAsString(metadata.byCategory)
-            val categoryStats = mapper.readTree(categoryJson)
+            val categoryStats = mapper.readTree(
+                mapper.writeValueAsString(metadata.byCategory)
+            )
 
             categoryStats.fields().forEach {
-                stats += it.toString().replace("=", ": ").capitalized()
+                stats += it.formatStats()
             }
 
-            val difficultyJson = mapper.writeValueAsString(metadata.byDifficulty)
-            val difficultyStats = mapper.readTree(difficultyJson)
+            val difficultyStats = mapper.readTree(
+                mapper.writeValueAsString(metadata.byDifficulty)
+            )
 
             difficultyStats.fields().forEach { field ->
-                stats += field.toString().replace("=", ": ").capitalized()
+                stats += field.formatStats()
             }
             return stats
         }

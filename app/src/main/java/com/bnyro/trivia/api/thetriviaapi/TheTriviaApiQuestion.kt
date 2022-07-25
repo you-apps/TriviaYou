@@ -1,4 +1,4 @@
-package com.bnyro.trivia.obj
+package com.bnyro.trivia.api.thetriviaapi
 
 data class TheTriviaApiQuestion(
     val category: String? = null,

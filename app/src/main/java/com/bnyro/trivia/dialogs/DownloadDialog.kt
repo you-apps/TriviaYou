@@ -4,7 +4,7 @@ import android.app.Dialog
 import android.os.Bundle
 import androidx.fragment.app.DialogFragment
 import com.bnyro.trivia.R
-import com.bnyro.trivia.api.TheTriviaApiHelper
+import com.bnyro.trivia.api.thetriviaapi.TheTriviaApiHelper
 import com.bnyro.trivia.util.DialogHelper
 import com.bnyro.trivia.util.PreferenceHelper
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
