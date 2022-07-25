@@ -11,6 +11,7 @@
 
     <!-- About -->
     <string name="github">Github</string>
+    <string name="authors">Authors</string>
     <string name="license">License</string>
 
     <!-- General Settings -->

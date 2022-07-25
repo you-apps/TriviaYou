@@ -11,4 +11,4 @@ const val OPEN_TRIVIA_URL = "https://opentdb.com/"
  */
 const val GITHUB_URL = "https://github.com/Bnyro/TriviaYou"
 const val LICENSE_URL = "https://gnu.org"
-const val API_URL = "https://the-trivia-api.com"
+const val AUTHOR_URL = "$GITHUB_URL/graphs/contributors"

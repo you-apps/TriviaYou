@@ -119,13 +119,13 @@
             android:layout_weight="1">
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/api"
+                android:id="@+id/author"
                 style="@style/Widget.Material3.Button.ElevatedButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:contentDescription="@string/api"
-                android:src="@drawable/ic_api" />
+                android:contentDescription="@string/authors"
+                android:src="@drawable/ic_author" />
 
         </FrameLayout>
 

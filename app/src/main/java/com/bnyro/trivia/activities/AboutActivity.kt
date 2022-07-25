@@ -4,7 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.bnyro.trivia.API_URL
+import com.bnyro.trivia.AUTHOR_URL
 import com.bnyro.trivia.BuildConfig
 import com.bnyro.trivia.GITHUB_URL
 import com.bnyro.trivia.LICENSE_URL
@@ -27,8 +27,8 @@ class AboutActivity : AppCompatActivity() {
             openBrowserIntent(GITHUB_URL)
         }
 
-        binding.api.setOnClickListener {
-            openBrowserIntent(API_URL)
+        binding.author.setOnClickListener {
+            openBrowserIntent(AUTHOR_URL)
         }
 
         binding.license.setOnClickListener {
