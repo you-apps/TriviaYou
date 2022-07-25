@@ -63,7 +63,7 @@ class CreateQuizFragment : Fragment() {
             if (questions.isNotEmpty()) {
                 PreferenceHelper.saveQuiz(quizName, true, questions)
             }
-            findNavController().navigate(R.id.library)
+            findNavController().navigate(R.id.libraryFragment)
         }
     }
 

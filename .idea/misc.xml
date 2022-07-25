@@ -23,6 +23,7 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_settings.xml" value="0.5" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.3476923076923077" />
+        <entry key="app/src/main/res/layout/fragment_api_stats.xml" value="0.3466666666666667" />
         <entry key="app/src/main/res/layout/fragment_categories.xml" value="0.3476923076923077" />
         <entry key="app/src/main/res/layout/fragment_create.xml" value="0.353125" />
         <entry key="app/src/main/res/layout/fragment_create_quiz.xml" value="0.353125" />

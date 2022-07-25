@@ -37,12 +37,12 @@ class LibraryAdapter(
                 else R.drawable.ic_public
             )
             root.setOnClickListener {
-                val homeFragment = QuizFragment()
+                val quizFragment = QuizFragment()
                 val bundle = Bundle()
                 bundle.putInt(BundleArguments.libraryIndex, position)
-                homeFragment.arguments = bundle
+                quizFragment.arguments = bundle
                 parentFragment.parentFragmentManager.beginTransaction()
-                    .replace(R.id.fragment, homeFragment)
+                    .replace(R.id.fragment, quizFragment)
                     .addToBackStack(null)
                     .commit()
             }

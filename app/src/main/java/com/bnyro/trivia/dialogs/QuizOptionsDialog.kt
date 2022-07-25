@@ -21,7 +21,7 @@ class QuizOptionsDialog(
                 when (index) {
                     0 -> {
                         PreferenceHelper.deleteQuiz(libraryIndex)
-                        findNavController().navigate(R.id.library)
+                        findNavController().navigate(R.id.libraryFragment)
                     }
                 }
             }

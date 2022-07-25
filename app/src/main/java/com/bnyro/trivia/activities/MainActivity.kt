@@ -48,14 +48,14 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavigationView.setOnItemSelectedListener {
             // set menu item on click listeners
             when (it.itemId) {
-                R.id.home -> {
-                    navController.navigate(R.id.home)
+                R.id.homeFragment -> {
+                    navController.navigate(R.id.homeFragment)
                 }
-                R.id.categories -> {
-                    navController.navigate(R.id.categories)
+                R.id.categoriesFragment -> {
+                    navController.navigate(R.id.categoriesFragment)
                 }
-                R.id.library -> {
-                    navController.navigate(R.id.library)
+                R.id.libraryFragment -> {
+                    navController.navigate(R.id.libraryFragment)
                 }
             }
             false
@@ -81,6 +81,10 @@ class MainActivity : AppCompatActivity() {
             R.id.action_about -> {
                 val aboutIntent = Intent(this, AboutActivity::class.java)
                 startActivity(aboutIntent)
+                true
+            }
+            R.id.action_api_stats -> {
+                navController.navigate(R.id.apiStatsFragment)
                 true
             }
             else -> super.onOptionsItemSelected(item)

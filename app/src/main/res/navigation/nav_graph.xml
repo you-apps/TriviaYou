@@ -3,23 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/home">
+    app:startDestination="@id/homeFragment">
 
     <fragment
-        android:id="@+id/home"
+        android:id="@+id/homeFragment"
         android:name="com.bnyro.trivia.fragments.QuizFragment"
         android:label="@string/home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/categories"
+        android:id="@+id/categoriesFragment"
         android:name="com.bnyro.trivia.fragments.CategoriesFragment"
         android:label="@string/home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/library"
+        android:id="@+id/libraryFragment"
         android:name="com.bnyro.trivia.fragments.LibraryFragment"
         android:label="@string/home"
         tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/apiStatsFragment"
+        android:name="com.bnyro.trivia.fragments.ApiStatsFragment"
+        android:label="@string/api_stats"
+        tools:layout="@layout/fragment_stats" />
 </navigation>

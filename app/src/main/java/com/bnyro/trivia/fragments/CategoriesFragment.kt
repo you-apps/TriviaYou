@@ -69,13 +69,13 @@ class CategoriesFragment : Fragment() {
 
                 binding.categoriesLV.onItemClickListener = OnItemClickListener { _, _, index, _ ->
                     val category = categoryQueries[index]
-                    val homeFragment = QuizFragment()
+                    val quizFragment = QuizFragment()
                     val bundle = Bundle()
                     bundle.putString(BundleArguments.category, category)
-                    homeFragment.arguments = bundle
+                    quizFragment.arguments = bundle
 
                     parentFragmentManager.beginTransaction()
-                        .replace(R.id.fragment, homeFragment)
+                        .replace(R.id.fragment, quizFragment)
                         .addToBackStack(null)
                         .commit()
                 }
