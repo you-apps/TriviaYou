@@ -14,5 +14,5 @@ interface TriviaApi {
     ): ArrayList<Question>
 
     @GET("api/categories")
-    suspend fun getCategories(): String
+    suspend fun getCategories(): Any
 }

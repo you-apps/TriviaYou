@@ -11,6 +11,9 @@ import androidx.lifecycle.lifecycleScope
 import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.FragmentCategoriesBinding
 import com.bnyro.trivia.util.BundleArguments
+import com.bnyro.trivia.util.RetrofitInstance
+import com.fasterxml.jackson.core.JsonParser
+import com.fasterxml.jackson.databind.ObjectMapper
 
 class CategoriesFragment : Fragment() {
     private lateinit var binding: FragmentCategoriesBinding
@@ -38,36 +41,44 @@ class CategoriesFragment : Fragment() {
 
     private fun fetchCategories() {
         lifecycleScope.launchWhenCreated {
-            /*
             val categories = try {
                 RetrofitInstance.api.getCategories()
             } catch (e: Exception) {
                 return@launchWhenCreated
             }
-            Log.e("categories", categories.toString())
-            */
+            val mapper = ObjectMapper()
+            kotlin.runCatching {
+                mapper.configure(JsonParser.Feature.ALLOW_UNQUOTED_FIELD_NAMES, true)
+                val answer = mapper.readTree(
+                    mapper.writeValueAsString(categories)
+                )
+                val categoryNames = mutableListOf<String>()
+                val categoryQueries = mutableListOf<String>()
+                answer.fieldNames().forEach {
+                    categoryNames += it.toString()
+                }
+                answer.elements().forEach {
+                    categoryQueries += it[0].toString()
+                }
 
-            val categoryNames = listOf(
-                "Arts & Literature", "Film & TV", "Food & Drink", "General Knowledge", "Geography", "History", "Music", "Science", "Society & Culture", "Sport & Leisure"
-            )
-            val categoryQueries = listOf(
-                "arts", "film", "food", "general_knowledge", "geography", "history", "music", "science", "culture", "sports"
-            )
+                val categoriesAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, categoryNames)
+                binding.categoriesLV.adapter = categoriesAdapter
 
-            val categoriesAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, categoryNames)
-            binding.categoriesLV.adapter = categoriesAdapter
+                binding.progress.visibility = View.GONE
+                binding.categoriesLV.visibility = View.VISIBLE
 
-            binding.categoriesLV.onItemClickListener = OnItemClickListener { _, _, index, _ ->
-                val category = categoryQueries[index]
-                val homeFragment = QuizFragment()
-                val bundle = Bundle()
-                bundle.putString(BundleArguments.category, category)
-                homeFragment.arguments = bundle
+                binding.categoriesLV.onItemClickListener = OnItemClickListener { _, _, index, _ ->
+                    val category = categoryQueries[index]
+                    val homeFragment = QuizFragment()
+                    val bundle = Bundle()
+                    bundle.putString(BundleArguments.category, category)
+                    homeFragment.arguments = bundle
 
-                parentFragmentManager.beginTransaction()
-                    .replace(R.id.fragment, homeFragment)
-                    .addToBackStack(null)
-                    .commit()
+                    parentFragmentManager.beginTransaction()
+                        .replace(R.id.fragment, homeFragment)
+                        .addToBackStack(null)
+                        .commit()
+                }
             }
         }
     }
