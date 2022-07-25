@@ -3,6 +3,7 @@ package com.bnyro.trivia.util
 import android.text.Html
 import android.text.Spanned
 import java.util.*
+import kotlin.math.round
 
 fun Any?.formatStats(): String {
     return this!!.toString()
@@ -20,4 +21,10 @@ fun Any?.toHTML(): Spanned {
     } else {
         Html.fromHtml(this.toString())
     }
+}
+
+fun Double.round(decimals: Int): Double {
+    var multiplier = 1.0
+    repeat(decimals) { multiplier *= 10 }
+    return round(this * multiplier) / multiplier
 }

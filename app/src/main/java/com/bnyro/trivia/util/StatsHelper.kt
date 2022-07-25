@@ -19,14 +19,15 @@ object StatsHelper {
                 userCreatedQuestionsCount += it.questions.size
             }
         }
+        val correctAnswerRate: Double =
+            if (totalStats.totalAnswers != 0) (totalStats.correctAnswers.toDouble() / totalStats.totalAnswers.toDouble() * 100).round(2)
+            else 100F.toDouble()
 
         return listOf(
             "${context.getString(R.string.answered_questions)}: ${totalStats.totalAnswers}",
             "${context.getString(R.string.correct_answers)}: ${totalStats.correctAnswers}",
             "${context.getString(R.string.incorrect_answers)}: ${totalStats.totalAnswers - totalStats.correctAnswers}",
-            "${context.getString(R.string.percentage_correct_answers)}: ${
-            if (totalStats.totalAnswers != 0) totalStats.correctAnswers / totalStats.totalAnswers * 100 else 100
-            }%",
+            "${context.getString(R.string.percentage_correct_answers)}: $correctAnswerRate%",
             "${context.getString(R.string.library_quizzes)}: ${quizzes.size}",
             "${context.getString(R.string.library_questions)}: $libraryQuestions",
             "${context.getString(R.string.created_quizzes)}: $userCreatedQuizzesCount",
