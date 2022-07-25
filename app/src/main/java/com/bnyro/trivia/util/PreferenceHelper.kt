@@ -98,6 +98,6 @@ object PreferenceHelper {
         userStats.totalAnswers += totalQuestions
         userStats.correctAnswers += correctAnswers
         val json = mapper.writeValueAsString(userStats)
-        editor.putString(context.getString(R.string.stats_key), json)
+        editor.putString(context.getString(R.string.stats_key), json).commit()
     }
 }

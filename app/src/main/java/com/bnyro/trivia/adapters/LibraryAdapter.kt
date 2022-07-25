@@ -20,7 +20,7 @@ class LibraryAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LibraryViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
-        val binding = RowQuizBinding.inflate(layoutInflater)
+        val binding = RowQuizBinding.inflate(layoutInflater, parent, false)
         return LibraryViewHolder(binding)
     }
 
