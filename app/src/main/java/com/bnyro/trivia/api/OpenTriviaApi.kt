@@ -1,4 +1,4 @@
-package com.bnyro.trivia.util
+package com.bnyro.trivia.api
 
 import com.bnyro.trivia.obj.TheTriviaApiQuestion
 import com.bnyro.trivia.obj.TheTriviaApiStats
@@ -6,7 +6,7 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 import kotlin.collections.ArrayList
 
-interface TheTriviaApi {
+interface OpenTriviaApi {
     @GET("api/questions")
     suspend fun getQuestions(
         @Query("limit") limit: Int,

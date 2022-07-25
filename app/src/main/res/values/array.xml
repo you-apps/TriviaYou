@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string-array name="api">
+        <item>The Trivia API</item>
+        <item>Open Trivia DB</item>
+    </string-array>
+
+    <string-array name="apiValues">
+        <item>TheTriviaAPI</item>
+        <item>OpenTriviaDB</item>
+    </string-array>
+
     <string-array name="difficulties">
         <item>@string/random</item>
         <item>@string/easy</item>

@@ -8,9 +8,8 @@ import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.bnyro.trivia.R
+import com.bnyro.trivia.api.TheTriviaApiHelper
 import com.bnyro.trivia.databinding.FragmentStatsBinding
-import com.bnyro.trivia.util.TheTriviaApiHelper
-import java.util.*
 
 class ApiStatsFragment : Fragment() {
     private lateinit var binding: FragmentStatsBinding

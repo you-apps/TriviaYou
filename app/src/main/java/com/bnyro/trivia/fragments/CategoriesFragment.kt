@@ -10,8 +10,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.FragmentCategoriesBinding
+import com.bnyro.trivia.util.ApiHelper
 import com.bnyro.trivia.util.BundleArguments
-import com.bnyro.trivia.util.TheTriviaApiHelper
 
 class CategoriesFragment : Fragment() {
     private lateinit var binding: FragmentCategoriesBinding
@@ -40,7 +40,7 @@ class CategoriesFragment : Fragment() {
     private fun fetchCategories() {
         lifecycleScope.launchWhenCreated {
             val (categoryNames, categoryQueries) = try {
-                TheTriviaApiHelper.getCategories()
+                ApiHelper().getCategories()
             } catch (e: Exception) {
                 return@launchWhenCreated
             }

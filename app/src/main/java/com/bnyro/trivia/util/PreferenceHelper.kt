@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import androidx.preference.PreferenceManager
 import com.bnyro.trivia.R
+import com.bnyro.trivia.obj.ApiType
 import com.bnyro.trivia.obj.Question
 import com.bnyro.trivia.obj.Quiz
 import com.bnyro.trivia.obj.UserStats
@@ -110,5 +111,18 @@ object PreferenceHelper {
 
     fun resetTotalStats() {
         editor.putString(context.getString(R.string.stats_key), "")
+    }
+
+    fun getApi(): Int {
+        val apiPref = getString(
+            context.getString(R.string.api_key),
+            context.getString(R.string.api_default)
+        )
+
+        return when (apiPref) {
+            "TheTriviaDB" -> ApiType.theTriviaApi
+            "OpenTriviaAPI" -> ApiType.openTriviaApi
+            else -> ApiType.theTriviaApi
+        }
     }
 }

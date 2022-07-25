@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Preferences Keys -->
+    <string name="api_key">api</string>
     <string name="difficulty_key">difficulty</string>
     <string name="limit_key">limit</string>
     <string name="unlimited_mode_key">unlimited_mode</string>
@@ -8,6 +9,7 @@
     <string name="label_visibility_key">label_visibility</string>
 
     <!-- Preferences default Values -->
+    <string name="api_default">TheTriviaAPI</string>
     <string name="difficulty_default">random</string>
     <string name="limit_default">50</string>
     <string name="unlimited_mode_default">true</string>

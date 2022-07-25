@@ -1,19 +1,22 @@
-package com.bnyro.trivia.util
+package com.bnyro.trivia.api
 
 import com.bnyro.trivia.obj.Question
+import com.bnyro.trivia.util.PreferenceHelper
+import com.bnyro.trivia.util.RetrofitInstance
+import com.bnyro.trivia.util.capitalized
 import com.fasterxml.jackson.core.JsonParser
 import com.fasterxml.jackson.databind.ObjectMapper
 
-object TheTriviaApiHelper {
+object OpenTriviaApiHelper {
     private val mapper = ObjectMapper()
 
-    suspend fun getQuestions(
-        limit: Int,
-        category: String?,
-        difficulty: String?
-    ): List<Question> {
+    suspend fun getQuestions(category: String?): List<Question> {
         val theTriviaApiQuestions =
-            RetrofitInstance.theTriviaApi.getQuestions(limit, category, difficulty)
+            RetrofitInstance.theTriviaApi.getQuestions(
+                PreferenceHelper.getLimit(),
+                category,
+                PreferenceHelper.getDifficultyQuery()
+            )
         val questions = mutableListOf<Question>()
 
         theTriviaApiQuestions.forEach {
