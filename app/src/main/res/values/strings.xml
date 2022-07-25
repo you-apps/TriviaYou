@@ -3,16 +3,20 @@
     <string name="settings">Settings</string>
     <string name="about">About</string>
 
-    <!-- bottom navigation menu -->
+    <!-- Bottom Navigation Menu -->
     <string name="home">Home</string>
     <string name="categories">Categories</string>
     <string name="library">Library</string>
 
-    <!-- general settings -->
+    <!-- About -->
+    <string name="github">Github</string>
+    <string name="license">License</string>
+
+    <!-- General Settings -->
     <string name="general">General</string>
     <string name="unlimited_mode">Unlimited mode</string>
 
-    <!-- api settings -->
+    <!-- API Settings -->
     <string name="api">API</string>
     <string name="difficulty">Difficulty</string>
     <string name="random">Random</string>
@@ -21,7 +25,7 @@
     <string name="hard">Hard</string>
     <string name="limit">Limit</string>
 
-    <!-- appearance settings -->
+    <!-- Appearance Settings -->
     <string name="appearance">Appearance</string>
     <string name="themeMode">Theme</string>
     <string name="systemTheme">System</string>

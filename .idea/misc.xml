@@ -4,19 +4,22 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/ic_add.xml" value="0.177" />
+        <entry key="app/src/main/res/drawable/ic_api.xml" value="0.2975" />
         <entry key="app/src/main/res/drawable/ic_archive.xml" value="0.2975" />
         <entry key="app/src/main/res/drawable/ic_arrow_back.xml" value="0.177" />
         <entry key="app/src/main/res/drawable/ic_bookmark.xml" value="0.177" />
         <entry key="app/src/main/res/drawable/ic_categories.xml" value="0.2975" />
         <entry key="app/src/main/res/drawable/ic_check.xml" value="0.177" />
         <entry key="app/src/main/res/drawable/ic_extension.xml" value="0.1395" />
+        <entry key="app/src/main/res/drawable/ic_github.xml" value="0.2975" />
+        <entry key="app/src/main/res/drawable/ic_gnu.xml" value="0.2975" />
         <entry key="app/src/main/res/drawable/ic_home.xml" value="0.2975" />
         <entry key="app/src/main/res/drawable/ic_label.xml" value="0.1395" />
         <entry key="app/src/main/res/drawable/ic_library.xml" value="0.2975" />
         <entry key="app/src/main/res/drawable/ic_public.xml" value="0.177" />
         <entry key="app/src/main/res/drawable/ic_save.xml" value="0.2975" />
         <entry key="app/src/main/res/drawable/ic_theme.xml" value="0.1395" />
-        <entry key="app/src/main/res/layout/activity_about.xml" value="0.3466666666666667" />
+        <entry key="app/src/main/res/layout/activity_about.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_settings.xml" value="0.5" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.3476923076923077" />
