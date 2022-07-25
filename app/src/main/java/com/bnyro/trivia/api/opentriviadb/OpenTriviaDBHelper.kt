@@ -45,16 +45,15 @@ object OpenTriviaDBHelper {
 
     suspend fun getStats(): List<String> {
         val metadata = RetrofitInstance.openTriviaApi.getStats()
-        val categories = getCategories()
 
         val stats = mutableListOf<String>()
         val mapper = ObjectMapper()
 
         kotlin.runCatching {
-            val overallJson = mapper.readTree(
-                mapper.writeValueAsString(metadata)
+            val json = mapper.readTree(
+                mapper.writeValueAsString(metadata.overall)
             )
-            overallJson.fields().forEach {
+            json.fields().forEach {
                 stats += it.formatStats()
             }
             return stats
