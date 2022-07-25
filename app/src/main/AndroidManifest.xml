@@ -29,6 +29,11 @@
             android:enabled="true"
             android:exported="false" />
 
+        <activity
+            android:name=".activities.AboutActivity"
+            android:enabled="true"
+            android:exported="false" />
+
     </application>
 
 </manifest>

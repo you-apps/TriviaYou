@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Trivia You</string>
     <string name="settings">Settings</string>
+    <string name="about">About</string>
 
     <!-- bottom navigation menu -->
     <string name="home">Home</string>
