@@ -12,7 +12,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.ActivityMainBinding
 import com.bnyro.trivia.util.PreferenceHelper
-import com.google.android.material.color.DynamicColors
+import com.google.android.material.navigation.NavigationBarView
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,12 +21,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         WindowCompat.setDecorFitsSystemWindows(window, false)
-
-        // apply material you colors
-        DynamicColors.applyToActivityIfAvailable(this)
-
-        // save context to the preference helper
-        PreferenceHelper.setContext(this)
 
         super.onCreate(savedInstanceState)
 
@@ -37,6 +31,19 @@ class MainActivity : AppCompatActivity() {
 
         navController = findNavController(R.id.fragment)
         binding.bottomNavigationView.setupWithNavController(navController)
+
+        binding.bottomNavigationView.labelVisibilityMode =
+            when (
+                PreferenceHelper.getString(
+                    getString(R.string.label_visibility_key),
+                    getString(R.string.label_visibility_default)
+                )
+            ) {
+                "selected" -> NavigationBarView.LABEL_VISIBILITY_SELECTED
+                "labeled" -> NavigationBarView.LABEL_VISIBILITY_LABELED
+                "unlabeled" -> NavigationBarView.LABEL_VISIBILITY_UNLABELED
+                else -> NavigationBarView.LABEL_VISIBILITY_AUTO
+            }
 
         binding.bottomNavigationView.setOnItemSelectedListener {
             // set menu item on click listeners

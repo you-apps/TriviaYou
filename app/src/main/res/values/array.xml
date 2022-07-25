@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string-array name="difficulties">
         <item>@string/random</item>
         <item>@string/easy</item>
@@ -21,4 +22,29 @@
         <item>30</item>
         <item>50</item>
     </string-array>
+
+    <string-array name="themeMode">
+        <item>@string/systemTheme</item>
+        <item>@string/lightTheme</item>
+        <item>@string/darkTheme</item>
+    </string-array>
+
+    <string-array name="themeModeValues">
+        <item>system</item>
+        <item>light</item>
+        <item>dark</item>
+    </string-array>
+
+    <string-array name="labelVisibility">
+        <item>@string/selected</item>
+        <item>@string/labeled</item>
+        <item>@string/unlabeled</item>
+    </string-array>
+
+    <string-array name="labelVisibilityValues">
+        <item>selected</item>
+        <item>labeled</item>
+        <item>unlabeled</item>
+    </string-array>
+
 </resources>

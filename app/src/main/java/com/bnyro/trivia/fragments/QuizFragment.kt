@@ -80,7 +80,7 @@ class QuizFragment : Fragment() {
             binding.progress.visibility = View.GONE
             binding.questionLL.visibility = View.VISIBLE
             questions = PreferenceHelper.getQuizzes()[libraryIndex!!].questions!!
-            showQuestion()
+            loadQuestion()
         } else {
             fetchQuestions()
         }
@@ -93,11 +93,11 @@ class QuizFragment : Fragment() {
             } catch (e: Exception) {
                 return@launchWhenCreated
             }
-            showQuestion()
+            loadQuestion()
         }
     }
 
-    private fun showQuestion() {
+    private fun loadQuestion() {
         val question = questions[questionIndex]
         binding.questionTV.text = question.question
 
@@ -151,22 +151,27 @@ class QuizFragment : Fragment() {
             if (questionIndex + 1 != questions.size) {
                 // load next question
                 questionIndex += 1
-                showQuestion()
+                loadQuestion()
             } else {
                 questionIndex = 0
-                if (quizType == QuizType.ONLINE) fetchQuestions()
-                else {
-                    val resultFragment = ResultFragment()
-                    val bundle = Bundle()
-                    bundle.putInt(BundleArguments.questionsCount, totalAnswersCount)
-                    bundle.putInt(BundleArguments.correctAnswers, correctAnswerCount)
-                    resultFragment.arguments = bundle
-                    parentFragmentManager.beginTransaction()
-                        .replace(R.id.fragment, resultFragment)
-                        .addToBackStack(null)
-                        .commit()
-                }
+                if (
+                    quizType == QuizType.ONLINE &&
+                    PreferenceHelper.isUnlimitedMode()
+                ) fetchQuestions()
+                else showResultFragment()
             }
         }
+    }
+
+    private fun showResultFragment() {
+        val resultFragment = ResultFragment()
+        val bundle = Bundle()
+        bundle.putInt(BundleArguments.questionsCount, totalAnswersCount)
+        bundle.putInt(BundleArguments.correctAnswers, correctAnswerCount)
+        resultFragment.arguments = bundle
+        parentFragmentManager.beginTransaction()
+            .replace(R.id.fragment, resultFragment)
+            .addToBackStack(null)
+            .commit()
     }
 }

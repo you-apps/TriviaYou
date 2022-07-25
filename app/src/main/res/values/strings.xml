@@ -7,13 +7,30 @@
     <string name="categories">Categories</string>
     <string name="library">Library</string>
 
-    <!-- settings -->
+    <!-- general settings -->
+    <string name="general">General</string>
+    <string name="unlimited_mode">Unlimited mode</string>
+
+    <!-- api settings -->
+    <string name="api">API</string>
     <string name="difficulty">Difficulty</string>
     <string name="random">Random</string>
     <string name="easy">Easy</string>
     <string name="medium">Medium</string>
     <string name="hard">Hard</string>
     <string name="limit">Limit</string>
+
+    <!-- appearance settings -->
+    <string name="appearance">Appearance</string>
+    <string name="themeMode">Theme</string>
+    <string name="systemTheme">System</string>
+    <string name="lightTheme">Light</string>
+    <string name="darkTheme">Dark</string>
+
+    <string name="labelVisibility">Label visibility</string>
+    <string name="selected">Selected</string>
+    <string name="labeled">Labeled</string>
+    <string name="unlabeled">Unlabeled</string>
 
     <!-- Custom Quiz -->
     <string name="create_quiz">Create Quiz</string>

@@ -2,22 +2,58 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ListPreference
-        android:defaultValue="@string/difficulty_default"
-        android:entries="@array/difficulties"
-        android:entryValues="@array/difficultiesValues"
-        android:icon="@drawable/ic_check"
-        app:key="@string/difficulty_key"
-        app:title="@string/difficulty"
-        app:useSimpleSummaryProvider="true" />
+    <PreferenceCategory app:title="@string/general">
 
-    <ListPreference
-        android:defaultValue="@string/limit_default"
-        android:entries="@array/limits"
-        android:entryValues="@array/limits"
-        android:icon="@drawable/ic_archive"
-        app:key="@string/limit_key"
-        app:title="@string/limit"
-        app:useSimpleSummaryProvider="true" />
+        <CheckBoxPreference
+            android:defaultValue="@string/unlimited_mode_default"
+            android:icon="@drawable/ic_extension"
+            app:key="@string/unlimited_mode_key"
+            app:title="@string/unlimited_mode" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/api">
+
+        <ListPreference
+            android:defaultValue="@string/difficulty_default"
+            android:entries="@array/difficulties"
+            android:entryValues="@array/difficultiesValues"
+            android:icon="@drawable/ic_check"
+            app:key="@string/difficulty_key"
+            app:title="@string/difficulty"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            android:defaultValue="@string/limit_default"
+            android:entries="@array/limits"
+            android:entryValues="@array/limits"
+            android:icon="@drawable/ic_archive"
+            app:key="@string/limit_key"
+            app:title="@string/limit"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/appearance">
+
+        <ListPreference
+            android:defaultValue="@string/theme_mode_default"
+            android:entries="@array/themeMode"
+            android:entryValues="@array/themeModeValues"
+            android:icon="@drawable/ic_theme"
+            app:key="@string/theme_mode_key"
+            app:title="@string/themeMode"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            android:defaultValue="@string/label_visibility_default"
+            android:entries="@array/labelVisibility"
+            android:entryValues="@array/labelVisibilityValues"
+            android:icon="@drawable/ic_label"
+            app:key="@string/label_visibility_key"
+            app:title="@string/labelVisibility"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>

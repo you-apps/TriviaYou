@@ -4,8 +4,14 @@
     <string name="difficulty_key">difficulty</string>
     <string name="limit_key">limit</string>
     <string name="quizzes_key">quizzes</string>
+    <string name="unlimited_mode_key">unlimited_mode</string>
+    <string name="theme_mode_key">theme_mode</string>
+    <string name="label_visibility_key">label_visibility</string>
 
     <!-- Preferences default Values -->
     <string name="difficulty_default">random</string>
     <string name="limit_default">50</string>
+    <string name="unlimited_mode_default">true</string>
+    <string name="theme_mode_default">system</string>
+    <string name="label_visibility_default">selected</string>
 </resources>

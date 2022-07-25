@@ -21,8 +21,12 @@ object PreferenceHelper {
         editor = settings.edit()
     }
 
-    private fun getString(key: String, defaultValue: String): String {
+    fun getString(key: String, defaultValue: String): String {
         return settings.getString(key, defaultValue)!!
+    }
+
+    private fun getBoolean(key: String, defaultValue: Boolean): Boolean {
+        return settings.getBoolean(key, defaultValue)
     }
 
     fun saveQuiz(name: String, isCreator: Boolean, questions: List<Question>) {
@@ -70,5 +74,9 @@ object PreferenceHelper {
             context.getString(R.string.limit_key),
             context.getString(R.string.limit_default)
         ).toInt()
+    }
+
+    fun isUnlimitedMode(): Boolean {
+        return getBoolean(context.getString(R.string.unlimited_mode_key), true)
     }
 }
