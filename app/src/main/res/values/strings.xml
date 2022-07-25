@@ -60,4 +60,16 @@
     <string name="result_great">Great Job!</string>
     <string name="result_average">Average performance</string>
     <string name="result_fail">Fail</string>
+
+    <!-- User Stats -->
+    <string name="user_stats">User Stats</string>
+    <string name="answered_questions">Answered questions</string>
+    <string name="correct_answers">Correct answers</string>
+    <string name="percentage_correct_answers">Correct answer rate</string>
+    <string name="library_quizzes">Quizzes in library</string>
+    <string name="library_questions">Questions in library</string>
+    <string name="created_quizzes">Created quizzes</string>
+    <string name="created_questions">Created questions</string>
+    <string name="downloaded_quizzes">Downloaded quizzes</string>
+    <string name="downloaded_questions">Downloaded questions</string>
 </resources>

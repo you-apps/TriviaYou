@@ -87,6 +87,10 @@ class MainActivity : AppCompatActivity() {
                 navController.navigate(R.id.apiStatsFragment)
                 true
             }
+            R.id.action_user_stats -> {
+                navController.navigate(R.id.userStatsFragment)
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
     }

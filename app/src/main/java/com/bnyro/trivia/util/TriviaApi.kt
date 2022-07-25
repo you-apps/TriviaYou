@@ -1,7 +1,7 @@
 package com.bnyro.trivia.util
 
+import com.bnyro.trivia.obj.ApiStats
 import com.bnyro.trivia.obj.Question
-import com.bnyro.trivia.obj.Stats
 import retrofit2.http.GET
 import retrofit2.http.Query
 import kotlin.collections.ArrayList
@@ -18,5 +18,5 @@ interface TriviaApi {
     suspend fun getCategories(): Any
 
     @GET("api/metadata")
-    suspend fun getMetadata(): Stats
+    suspend fun getMetadata(): ApiStats
 }

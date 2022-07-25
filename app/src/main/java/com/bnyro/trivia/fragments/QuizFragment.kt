@@ -147,6 +147,12 @@ class QuizFragment : Fragment() {
             }
         }
 
+        // save the total usage stats
+        PreferenceHelper.addToTotalStats(
+            totalQuestions = 1,
+            correctAnswers = if (isAnswerCorrect) 1 else 0
+        )
+
         lifecycleScope.launchWhenCreated {
             delay(800)
             if (questionIndex + 1 != questions.size) {

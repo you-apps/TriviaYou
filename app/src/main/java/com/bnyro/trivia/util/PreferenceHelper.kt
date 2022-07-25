@@ -6,6 +6,7 @@ import androidx.preference.PreferenceManager
 import com.bnyro.trivia.R
 import com.bnyro.trivia.obj.Question
 import com.bnyro.trivia.obj.Quiz
+import com.bnyro.trivia.obj.UserStats
 import com.fasterxml.jackson.core.type.TypeReference
 import com.fasterxml.jackson.databind.ObjectMapper
 
@@ -43,7 +44,6 @@ object PreferenceHelper {
         return try {
             mapper.readValue(json, type)
         } catch (e: Exception) {
-            e.printStackTrace()
             listOf()
         }
     }
@@ -78,5 +78,26 @@ object PreferenceHelper {
 
     fun isUnlimitedMode(): Boolean {
         return getBoolean(context.getString(R.string.unlimited_mode_key), true)
+    }
+
+    fun getTotalStats(): UserStats {
+        val json = settings.getString(context.getString(R.string.stats_key), "")
+        val type = object : TypeReference<UserStats>() {}
+        return try {
+            mapper.readValue(json, type)
+        } catch (e: Exception) {
+            UserStats()
+        }
+    }
+
+    fun addToTotalStats(
+        totalQuestions: Int = 0,
+        correctAnswers: Int = 0
+    ) {
+        val userStats = getTotalStats()
+        userStats.totalAnswers += totalQuestions
+        userStats.correctAnswers += correctAnswers
+        val json = mapper.writeValueAsString(userStats)
+        editor.putString(context.getString(R.string.stats_key), json)
     }
 }

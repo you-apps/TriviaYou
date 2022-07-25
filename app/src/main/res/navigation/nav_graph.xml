@@ -28,4 +28,10 @@
         android:name="com.bnyro.trivia.fragments.ApiStatsFragment"
         android:label="@string/api_stats"
         tools:layout="@layout/fragment_stats" />
+
+    <fragment
+        android:id="@+id/userStatsFragment"
+        android:name="com.bnyro.trivia.fragments.UserStatsFragment"
+        android:label="@string/user_stats"
+        tools:layout="@layout/fragment_stats" />
 </navigation>

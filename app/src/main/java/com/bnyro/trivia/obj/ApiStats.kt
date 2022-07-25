@@ -1,6 +1,6 @@
 package com.bnyro.trivia.obj
 
-data class Stats(
+data class ApiStats(
     val byCategory: Any? = null,
     val byDifficulty: Any? = null,
     val byState: Any? = null,
