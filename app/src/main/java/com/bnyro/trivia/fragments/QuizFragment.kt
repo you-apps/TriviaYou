@@ -131,9 +131,10 @@ class QuizFragment : Fragment() {
 
         val secondaryColor = ThemeHelper.getThemeColor(requireContext(), android.R.attr.colorAccent)
         val colorError = ThemeHelper.getThemeColor(requireContext(), com.google.android.material.R.attr.colorError)
+        val textColor = ThemeHelper.getThemeColor(requireContext(), android.R.attr.colorBackground)
 
         optionButtons[correctAnswerIndex].apply {
-            setTextColor(Color.WHITE)
+            setTextColor(textColor)
             setBackgroundColor(secondaryColor)
         }
         totalAnswersCount += 1
@@ -141,7 +142,7 @@ class QuizFragment : Fragment() {
             correctAnswerCount += 1
         } else {
             optionButtons[selectedAnswerIndex].apply {
-                setTextColor(Color.WHITE)
+                setTextColor(textColor)
                 setBackgroundColor(colorError)
             }
         }
