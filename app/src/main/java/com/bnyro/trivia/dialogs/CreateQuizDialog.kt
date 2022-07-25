@@ -2,31 +2,18 @@ package com.bnyro.trivia.dialogs
 
 import android.app.Dialog
 import android.os.Bundle
-import android.text.InputType
-import android.widget.EditText
-import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import com.bnyro.trivia.R
 import com.bnyro.trivia.fragments.CreateQuizFragment
 import com.bnyro.trivia.util.BundleArguments
+import com.bnyro.trivia.util.DialogHelper
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class CreateQuizDialog : DialogFragment() {
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        // build the view of the dialog
-        val container = LinearLayout(requireContext())
-        container.orientation = LinearLayout.VERTICAL
-        val lp = LinearLayout.LayoutParams(
-            LinearLayout.LayoutParams.MATCH_PARENT,
-            LinearLayout.LayoutParams.WRAP_CONTENT
-        )
-        lp.setMargins(60, 30, 60, 0)
-        val input = EditText(requireContext())
-        input.layoutParams = lp
-        input.inputType = InputType.TYPE_CLASS_TEXT
-        container.addView(input, lp)
+        val (container, input) = DialogHelper.getTextInput(requireContext())
 
         // build the dialog
         val builder = MaterialAlertDialogBuilder(requireContext())

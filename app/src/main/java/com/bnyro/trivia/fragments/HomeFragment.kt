@@ -2,7 +2,6 @@ package com.bnyro.trivia.fragments
 
 import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -87,7 +86,6 @@ class HomeFragment : Fragment() {
             questions = try {
                 RetrofitInstance.api.getQuestions(limit, category, difficulty)
             } catch (e: Exception) {
-                Log.e("error", "error")
                 return@launchWhenCreated
             }
             showQuestion()
