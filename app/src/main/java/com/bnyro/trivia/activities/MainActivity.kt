@@ -96,7 +96,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        navController.popBackStack()
-        super.onBackPressed()
+        if (navController.backQueue.isNotEmpty()) navController.popBackStack()
+        else super.onBackPressed()
     }
 }
