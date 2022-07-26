@@ -7,4 +7,7 @@ object BundleArguments {
 
     const val correctAnswers = "correctAnswers"
     const val questionsCount = "questions"
+
+    const val quizIndex = "quizIndex"
+    const val questionIndex = "questionIndex"
 }

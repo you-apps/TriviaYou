@@ -33,7 +33,15 @@ object PreferenceHelper {
 
     fun saveQuiz(name: String, isCreator: Boolean, questions: List<Question>) {
         val quizzes = getQuizzes().toMutableList()
-        quizzes += Quiz(name, isCreator, questions)
+        quizzes += Quiz(name, isCreator, questions.toMutableList())
+
+        val json = mapper.writeValueAsString(quizzes)
+        editor.putString(context.getString(R.string.quizzes_key), json).commit()
+    }
+
+    fun replaceQuizByIndex(index: Int, quiz: Quiz) {
+        val quizzes = getQuizzes().toMutableList()
+        quizzes[index] = quiz
 
         val json = mapper.writeValueAsString(quizzes)
         editor.putString(context.getString(R.string.quizzes_key), json).commit()

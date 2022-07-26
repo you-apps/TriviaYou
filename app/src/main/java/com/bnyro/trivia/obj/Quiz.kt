@@ -1,7 +1,7 @@
 package com.bnyro.trivia.obj
 
 data class Quiz(
-    val name: String? = null,
-    val creator: Boolean? = null,
-    val questions: List<Question>? = null
+    var name: String? = null,
+    var creator: Boolean? = null,
+    var questions: List<Question>? = null
 )

@@ -55,10 +55,11 @@
     <string name="add">Add</string>
     <string name="finish">Finish</string>
     <string name="save_quiz">Save quiz</string>
-    <string name="save_quiz_message">Are you sure that you want to save the quiz? It can\'t be edited after afterwards.</string>
+    <string name="save_quiz_message">Are you sure that you want to save the quiz?</string>
 
     <!-- Library -->
     <string name="questions">Questions: %1$s</string>
+    <string name="edit">Edit</string>
     <string name="delete">Delete</string>
 
     <!-- Download -->

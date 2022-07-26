@@ -16,7 +16,7 @@ object StatsHelper {
             libraryQuestions += it.questions?.size!!
             if (it.creator == true) {
                 userCreatedQuizzesCount += 1
-                userCreatedQuestionsCount += it.questions.size
+                userCreatedQuestionsCount += it.questions!!.size
             }
         }
         val correctAnswerRate: Double =

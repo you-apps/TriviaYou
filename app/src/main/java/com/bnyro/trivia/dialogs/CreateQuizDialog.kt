@@ -28,7 +28,6 @@ class CreateQuizDialog : DialogFragment() {
                     createQuizFragment.arguments = bundle
                     parentFragment?.parentFragmentManager!!.beginTransaction()
                         .replace(R.id.fragment, createQuizFragment)
-                        .addToBackStack(null)
                         .commit()
                 } else {
                     Toast.makeText(parentFragment?.context, R.string.name_empty, Toast.LENGTH_SHORT)
