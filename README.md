@@ -2,6 +2,14 @@
   <img width="200" height="200"src="app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png">
   <h1>Trivia You</h1>
   <p>Trivia You is a Trivia App which user the design style of <a href="https://m3.material.io/">Material Design 3 (You)</a>.</p>
+  <div align="center">
+    <img alt="License" src="https://img.shields.io/github/license/Bnyro/TriviaYou?color=c3e7ff&style=flat-square">
+    <img alt="Downloads" src="https://img.shields.io/github/downloads/Bnyro/TriviaYou/total.svg?color=c3e7ff&style=flat-square">
+    <img alt="Last commit" src="https://img.shields.io/github/last-commit/Bnyro/TriviaYou?color=c3e7ff&style=flat-square">
+    <img alt="Repo size" src="https://img.shields.io/github/repo-size/Bnyro/TriviaYou?color=c3e7ff&style=flat-square">
+    <img alt="Stars" src="https://img.shields.io/github/stars/Bnyro/TriviaYou?color=c3e7ff&style=flat-square">
+    <br>
+</div>
 </div>
 
 ## Download
