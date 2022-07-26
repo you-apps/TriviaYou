@@ -1,5 +1,5 @@
 <div align="center">
-    <img width="200" height="200" style="display: block; border: 1px solid #f5f5f5; border-radius: 9999px;" src="./app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png">
+ <img width="200" height="200" style="display: block; border: 1px solid #f5f5f5; border-radius: 9999px;" src="app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png">
 </div>
 
 <div align="center">
@@ -20,13 +20,16 @@
 
 ## Screenshots
 
-[<img src="fastlane/metadata/android/en-US/images/quiz.png" width=30%>](fastlane/metadata/android/en-US/images/quiz.png)
-[<img src="fastlane/metadata/android/en-US/images/categories.png" width=30%>](fastlane/metadata/android/en-US/images/categories.png)
-[<img src="fastlane/metadata/android/en-US/images/library.png" width=30%>](fastlane/metadata/android/en-US/images/library.png)
-[<img src="fastlane/metadata/android/en-US/images/create.png" width=30%>](fastlane/metadata/android/en-US/images/create.png)
-[<img src="fastlane/metadata/android/en-US/images/settings.png" width=30%>](fastlane/metadata/android/en-US/images/settings.png)
-[<img src="fastlane/metadata/android/en-US/images/stats.png" width=30%>](fastlane/metadata/android/en-US/images/stats.png)
-
+<div style="display: flex;">
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/quiz.png" width=30%>
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/categories.png" width=30%>
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/library.png" width=30%>
+</div>
+<div style="display: flex;">
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/create.png" width=30%>
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/settings.png" width=30%>
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/stats.png" width=30%>
+</div>
 
 ## Supported APIs
 - [x] [The Trivia API](https://the-trivia-api.com/)
