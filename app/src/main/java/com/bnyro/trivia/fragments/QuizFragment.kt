@@ -16,6 +16,7 @@ import com.bnyro.trivia.util.ApiHelper
 import com.bnyro.trivia.util.BundleArguments
 import com.bnyro.trivia.util.PreferenceHelper
 import com.bnyro.trivia.util.ThemeHelper
+import com.bnyro.trivia.util.navigate
 import com.bnyro.trivia.util.toHTML
 import kotlinx.coroutines.delay
 
@@ -186,9 +187,6 @@ class QuizFragment : Fragment() {
         bundle.putInt(BundleArguments.questionsCount, totalAnswersCount)
         bundle.putInt(BundleArguments.correctAnswers, correctAnswerCount)
         resultFragment.arguments = bundle
-        parentFragmentManager.beginTransaction()
-            .replace(R.id.fragment, resultFragment)
-            .addToBackStack(null)
-            .commit()
+        parentFragmentManager.navigate(resultFragment)
     }
 }

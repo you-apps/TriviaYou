@@ -13,6 +13,7 @@ import com.bnyro.trivia.databinding.FragmentEditQuizBinding
 import com.bnyro.trivia.obj.Quiz
 import com.bnyro.trivia.util.BundleArguments
 import com.bnyro.trivia.util.PreferenceHelper
+import com.bnyro.trivia.util.navigate
 import com.bnyro.trivia.util.toHTML
 
 class EditQuizFragment : Fragment() {
@@ -56,9 +57,7 @@ class EditQuizFragment : Fragment() {
                 bundle.putInt(BundleArguments.quizIndex, quizIndex)
                 bundle.putInt(BundleArguments.questionIndex, index)
                 createQuizFragment.arguments = bundle
-                parentFragmentManager.beginTransaction()
-                    .replace(R.id.fragment, createQuizFragment)
-                    .commit()
+                parentFragmentManager.navigate(createQuizFragment)
             }
 
         binding.newQuestionFAB.setOnClickListener {
@@ -66,9 +65,7 @@ class EditQuizFragment : Fragment() {
             val bundle = Bundle()
             bundle.putInt(BundleArguments.quizIndex, quizIndex)
             createQuizFragment.arguments = bundle
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment, createQuizFragment)
-                .commit()
+            parentFragmentManager.navigate(createQuizFragment)
         }
     }
 }

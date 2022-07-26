@@ -11,6 +11,7 @@ import com.bnyro.trivia.dialogs.QuizOptionsDialog
 import com.bnyro.trivia.fragments.QuizFragment
 import com.bnyro.trivia.util.BundleArguments
 import com.bnyro.trivia.util.PreferenceHelper
+import com.bnyro.trivia.util.navigate
 
 class LibraryAdapter(
     private val parentFragment: Fragment
@@ -41,10 +42,7 @@ class LibraryAdapter(
                 val bundle = Bundle()
                 bundle.putInt(BundleArguments.libraryIndex, position)
                 quizFragment.arguments = bundle
-                parentFragment.parentFragmentManager.beginTransaction()
-                    .replace(R.id.fragment, quizFragment)
-                    .addToBackStack(null)
-                    .commit()
+                parentFragment.parentFragmentManager.navigate(quizFragment)
             }
             root.setOnLongClickListener {
                 val quizOptionsDialog = QuizOptionsDialog(position)

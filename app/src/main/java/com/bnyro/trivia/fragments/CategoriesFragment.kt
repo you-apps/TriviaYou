@@ -12,6 +12,7 @@ import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.FragmentCategoriesBinding
 import com.bnyro.trivia.util.ApiHelper
 import com.bnyro.trivia.util.BundleArguments
+import com.bnyro.trivia.util.navigate
 
 class CategoriesFragment : Fragment() {
     private lateinit var binding: FragmentCategoriesBinding
@@ -58,10 +59,7 @@ class CategoriesFragment : Fragment() {
                 bundle.putString(BundleArguments.category, category)
                 quizFragment.arguments = bundle
 
-                parentFragmentManager.beginTransaction()
-                    .replace(R.id.fragment, quizFragment)
-                    .addToBackStack(null)
-                    .commit()
+                parentFragmentManager.navigate(quizFragment)
             }
         }
     }

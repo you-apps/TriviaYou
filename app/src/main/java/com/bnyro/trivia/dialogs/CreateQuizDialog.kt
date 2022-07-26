@@ -8,6 +8,7 @@ import com.bnyro.trivia.R
 import com.bnyro.trivia.fragments.CreateQuizFragment
 import com.bnyro.trivia.util.BundleArguments
 import com.bnyro.trivia.util.DialogHelper
+import com.bnyro.trivia.util.navigate
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class CreateQuizDialog : DialogFragment() {
@@ -26,9 +27,7 @@ class CreateQuizDialog : DialogFragment() {
                     val bundle = Bundle()
                     bundle.putString(BundleArguments.quizName, input.text.toString())
                     createQuizFragment.arguments = bundle
-                    parentFragment?.parentFragmentManager!!.beginTransaction()
-                        .replace(R.id.fragment, createQuizFragment)
-                        .commit()
+                    parentFragment?.parentFragmentManager!!.navigate(createQuizFragment, false)
                 } else {
                     Toast.makeText(parentFragment?.context, R.string.name_empty, Toast.LENGTH_SHORT)
                         .show()

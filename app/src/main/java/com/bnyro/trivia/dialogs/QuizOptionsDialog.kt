@@ -8,6 +8,7 @@ import com.bnyro.trivia.R
 import com.bnyro.trivia.fragments.EditQuizFragment
 import com.bnyro.trivia.util.BundleArguments
 import com.bnyro.trivia.util.PreferenceHelper
+import com.bnyro.trivia.util.navigate
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class QuizOptionsDialog(
@@ -32,10 +33,7 @@ class QuizOptionsDialog(
                         val bundle = Bundle()
                         bundle.putInt(BundleArguments.quizIndex, libraryIndex)
                         editQuizFragment.arguments = bundle
-                        parentFragment?.parentFragmentManager!!.beginTransaction()
-                            .replace(R.id.fragment, editQuizFragment)
-                            .addToBackStack(null)
-                            .commit()
+                        parentFragment?.parentFragmentManager!!.navigate(editQuizFragment)
                     }
                 }
             }
