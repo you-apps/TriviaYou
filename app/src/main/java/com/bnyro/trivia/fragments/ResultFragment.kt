@@ -8,17 +8,20 @@ import androidx.fragment.app.Fragment
 import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.FragmentResultBinding
 import com.bnyro.trivia.util.BundleArguments
+import com.bnyro.trivia.util.navigate
 
 class ResultFragment : Fragment() {
 
     private lateinit var binding: FragmentResultBinding
     private var correctAnswers: Int = -1
     private var totalQuestions = -1
+    private var libraryIndex: Int? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         correctAnswers = arguments?.getInt(BundleArguments.correctAnswers)!!
         totalQuestions = arguments?.getInt(BundleArguments.questionsCount)!!
+        libraryIndex = arguments?.getInt(BundleArguments.quizIndex)
     }
 
     override fun onCreateView(
@@ -41,5 +44,13 @@ class ResultFragment : Fragment() {
         }
 
         binding.resultStats.text = context?.getString(R.string.result_stats, "$correctAnswers/$totalQuestions")
+
+        binding.retry.setOnClickListener {
+            val quizFragment = QuizFragment()
+            val bundle = Bundle()
+            if (libraryIndex != null) bundle.putInt(BundleArguments.quizIndex, libraryIndex!!)
+            quizFragment.arguments = bundle
+            parentFragmentManager.navigate(quizFragment)
+        }
     }
 }

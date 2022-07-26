@@ -70,6 +70,7 @@
     <string name="result_average">Average performance</string>
     <string name="result_fail">Fail</string>
     <string name="result_stats">%1$s correct answers</string>
+    <string name="retry">Retry</string>
 
     <!-- User Stats -->
     <string name="user_stats">User Stats</string>

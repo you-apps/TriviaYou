@@ -188,6 +188,7 @@ class QuizFragment : Fragment() {
         val bundle = Bundle()
         bundle.putInt(BundleArguments.questionsCount, totalAnswersCount)
         bundle.putInt(BundleArguments.correctAnswers, correctAnswerCount)
+        if (libraryIndex != null) bundle.putInt(BundleArguments.quizIndex, libraryIndex!!)
         resultFragment.arguments = bundle
         parentFragmentManager.navigate(resultFragment)
     }
