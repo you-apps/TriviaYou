@@ -40,7 +40,7 @@ class LibraryAdapter(
             root.setOnClickListener {
                 val quizFragment = QuizFragment()
                 val bundle = Bundle()
-                bundle.putInt(BundleArguments.libraryIndex, position)
+                bundle.putInt(BundleArguments.quizIndex, position)
                 quizFragment.arguments = bundle
                 parentFragment.parentFragmentManager.navigate(quizFragment)
             }

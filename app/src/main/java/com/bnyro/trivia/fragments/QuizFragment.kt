@@ -45,7 +45,7 @@ class QuizFragment : Fragment() {
         category = arguments?.getString(BundleArguments.category)
 
         // circumvent 0 being returned although it's null
-        libraryIndex = arguments?.getInt(BundleArguments.libraryIndex, Int.MAX_VALUE)
+        libraryIndex = arguments?.getInt(BundleArguments.quizIndex, Int.MAX_VALUE)
         if (libraryIndex == Int.MAX_VALUE) libraryIndex = null
 
         quizType = if (libraryIndex != null) QuizType.OFFLINE else QuizType.ONLINE
@@ -76,7 +76,9 @@ class QuizFragment : Fragment() {
         if (quizType == QuizType.OFFLINE) {
             binding.progress.visibility = View.GONE
             binding.questionLL.visibility = View.VISIBLE
-            questions = PreferenceHelper.getQuizzes()[libraryIndex!!].questions!!
+            val quiz = PreferenceHelper.getQuizzes()[libraryIndex!!]
+            questions = quiz.questions!!
+            questionIndex = quiz.position
             loadQuestion()
         } else {
             fetchQuestions()
@@ -171,9 +173,11 @@ class QuizFragment : Fragment() {
             if (questionIndex + 1 != questions.size) {
                 // load next question
                 questionIndex += 1
+                if (quizType == QuizType.OFFLINE) PreferenceHelper.setQuizPosition(libraryIndex!!, questionIndex)
                 loadQuestion()
             } else {
                 questionIndex = 0
+                if (quizType == QuizType.OFFLINE) PreferenceHelper.setQuizPosition(libraryIndex!!, 0)
                 if (
                     quizType == QuizType.ONLINE &&
                     PreferenceHelper.isUnlimitedMode()

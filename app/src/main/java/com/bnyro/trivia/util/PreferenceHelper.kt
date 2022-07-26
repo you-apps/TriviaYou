@@ -133,4 +133,10 @@ object PreferenceHelper {
             else -> ApiType.theTriviaApi
         }
     }
+
+    fun setQuizPosition(quizIndex: Int, questionIndex: Int) {
+        val quiz = getQuizzes()[quizIndex]
+        quiz.position = questionIndex
+        replaceQuizByIndex(quizIndex, quiz)
+    }
 }

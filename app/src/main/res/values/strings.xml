@@ -61,6 +61,7 @@
     <string name="questions">Questions: %1$s</string>
     <string name="edit">Edit</string>
     <string name="delete">Delete</string>
+    <string name="restart">Restart</string>
 
     <!-- Download -->
     <string name="download">Download Quiz</string>

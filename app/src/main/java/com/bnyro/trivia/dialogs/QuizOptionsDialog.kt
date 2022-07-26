@@ -6,6 +6,7 @@ import androidx.fragment.app.DialogFragment
 import androidx.navigation.fragment.findNavController
 import com.bnyro.trivia.R
 import com.bnyro.trivia.fragments.EditQuizFragment
+import com.bnyro.trivia.fragments.QuizFragment
 import com.bnyro.trivia.util.BundleArguments
 import com.bnyro.trivia.util.PreferenceHelper
 import com.bnyro.trivia.util.navigate
@@ -16,6 +17,7 @@ class QuizOptionsDialog(
 ) : DialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         var options = arrayOf(
+            context?.getString(R.string.restart),
             context?.getString(R.string.delete)
         )
 
@@ -25,10 +27,18 @@ class QuizOptionsDialog(
             .setItems(options) { _, index ->
                 when (index) {
                     0 -> {
+                        PreferenceHelper.setQuizPosition(libraryIndex, 0)
+                        val quizFragment = QuizFragment()
+                        val bundle = Bundle()
+                        bundle.putInt(BundleArguments.quizIndex, libraryIndex)
+                        quizFragment.arguments = bundle
+                        parentFragment?.parentFragmentManager.navigate(quizFragment)
+                    }
+                    1 -> {
                         PreferenceHelper.deleteQuiz(libraryIndex)
                         findNavController().navigate(R.id.libraryFragment)
                     }
-                    1 -> {
+                    2 -> {
                         val editQuizFragment = EditQuizFragment()
                         val bundle = Bundle()
                         bundle.putInt(BundleArguments.quizIndex, libraryIndex)
