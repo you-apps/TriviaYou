@@ -1,13 +1,19 @@
 <div align="center">
-    <img width="200" height="200" style="display: block; border: 1px solid #f5f5f5; border-radius: 9999px;" src="./app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png">
+  <img width="200" height="200"src="app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png">
+  <h1>Trivia You</h1>
+  <p>Trivia You is a Trivia App which user the design style of <a href="https://m3.material.io/">Material Design 3 (You)</a>.</p>
+  <div align="center">
+    <img alt="License" src="https://img.shields.io/github/license/Bnyro/TriviaYou?color=c3e7ff&style=flat-square">
+    <img alt="Downloads" src="https://img.shields.io/github/downloads/Bnyro/TriviaYou/total.svg?color=c3e7ff&style=flat-square">
+    <img alt="Last commit" src="https://img.shields.io/github/last-commit/Bnyro/TriviaYou?color=c3e7ff&style=flat-square">
+    <img alt="Repo size" src="https://img.shields.io/github/repo-size/Bnyro/TriviaYou?color=c3e7ff&style=flat-square">
+    <img alt="Stars" src="https://img.shields.io/github/stars/Bnyro/TriviaYou?color=c3e7ff&style=flat-square">
+    <br>
 </div>
-
-<div align="center">
-    <h1>Trivia You</h1>
-    <p>Trivia You is a Trivia App which user the design style of <a href="https://m3.material.io/">Material Design 3 (You)</a>.</p>
 </div>
 
 ## Features
+
 - [x] Support for different Quiz APIs
     - [x] Categories
     - [x] Different difficulties
@@ -18,17 +24,25 @@
     - [x] Storing API questions locally to play without Internet
     - [x] User stats
 
+## Download
+[<img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png" alt="Get it on IzzyOnDroid" height="80">](https://apt.izzysoft.de/fdroid/index/apk/com.bnyro.triviayou)
+[<img src="ghbadge.png" alt="Get it on GitHub" height="80">](https://github.com/bnyro/triviayou/releases)
+
 ## Screenshots
 
-[<img src="fastlane/metadata/android/en-US/images/quiz.png" width=30%>](fastlane/metadata/android/en-US/images/quiz.png)
-[<img src="fastlane/metadata/android/en-US/images/categories.png" width=30%>](fastlane/metadata/android/en-US/images/categories.png)
-[<img src="fastlane/metadata/android/en-US/images/library.png" width=30%>](fastlane/metadata/android/en-US/images/library.png)
-[<img src="fastlane/metadata/android/en-US/images/create.png" width=30%>](fastlane/metadata/android/en-US/images/create.png)
-[<img src="fastlane/metadata/android/en-US/images/settings.png" width=30%>](fastlane/metadata/android/en-US/images/settings.png)
-[<img src="fastlane/metadata/android/en-US/images/stats.png" width=30%>](fastlane/metadata/android/en-US/images/stats.png)
-
+<div style="display: flex;">
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/quiz.png" width=30%>
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/categories.png" width=30%>
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/library.png" width=30%>
+</div>
+<div style="display: flex;">
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/create.png" width=30%>
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/settings.png" width=30%>
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/stats.png" width=30%>
+</div>
 
 ## Supported APIs
+
 - [x] [The Trivia API](https://the-trivia-api.com/)
 - [x] [Open Trivia DB](https://opentdb.com/)
 
