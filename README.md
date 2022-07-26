@@ -1,13 +1,16 @@
 <div align="center">
- <img width="200" height="200" style="display: block; border: 1px solid #f5f5f5; border-radius: 9999px;" src="app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png">
+  <img width="200" height="200"src="app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png">
+  <h1>Trivia You</h1>
+  <p>Trivia You is a Trivia App which user the design style of <a href="https://m3.material.io/">Material Design 3 (You)</a>.</p>
 </div>
 
-<div align="center">
-    <h1>Trivia You</h1>
-    <p>Trivia You is a Trivia App which user the design style of <a href="https://m3.material.io/">Material Design 3 (You)</a>.</p>
-</div>
+## Download
+[<img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png" alt="Get it on IzzyOnDroid" height="80">](https://apt.izzysoft.de/fdroid/index/apk/com.bnyro.triviayou)
+[<img src="ghbadge.png" alt="Get it on GitHub" height="80">](https://github.com/bnyro/triviayou/releases)
+
 
 ## Features
+
 - [x] Support for different Quiz APIs
     - [x] Categories
     - [x] Different difficulties
@@ -32,6 +35,7 @@
 </div>
 
 ## Supported APIs
+
 - [x] [The Trivia API](https://the-trivia-api.com/)
 - [x] [Open Trivia DB](https://opentdb.com/)
 
