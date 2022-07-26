@@ -35,11 +35,11 @@ class ResultFragment : Fragment() {
 
         val correctAnswersPercentage: Float = correctAnswers.toFloat() / totalQuestions
         binding.resultText.text = when {
-            correctAnswersPercentage > 2 / 3 -> getString(R.string.result_great)
-            correctAnswersPercentage > 1 / 3 -> getString(R.string.result_average)
+            correctAnswersPercentage > 2F / 3F -> getString(R.string.result_great)
+            correctAnswersPercentage > 1F / 3F -> getString(R.string.result_average)
             else -> getString(R.string.result_fail)
         }
 
-        binding.resultStats.text = "$correctAnswers/$totalQuestions"
+        binding.resultStats.text = context?.getString(R.string.result_stats, "$correctAnswers/$totalQuestions")
     }
 }

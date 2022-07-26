@@ -68,6 +68,7 @@
     <string name="result_great">Great Job!</string>
     <string name="result_average">Average performance</string>
     <string name="result_fail">Fail</string>
+    <string name="result_stats">%1$s correct answers</string>
 
     <!-- User Stats -->
     <string name="user_stats">User Stats</string>
