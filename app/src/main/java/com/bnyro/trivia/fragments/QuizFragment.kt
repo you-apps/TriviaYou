@@ -111,14 +111,11 @@ class QuizFragment : Fragment() {
             button.visibility = View.VISIBLE
         }
 
-        if (answers.size <= 3) {
-            binding.optionA.visibility = View.VISIBLE
-            tempOptionButtons.removeAt(0)
-        }
+        if (answers.size <= 3) tempOptionButtons.removeAt(0)
+        if (answers.size <= 2) tempOptionButtons.removeAt(2)
 
-        if (answers.size == 2) {
-            binding.optionD.visibility = View.VISIBLE
-            tempOptionButtons.removeAt(2)
+        optionButtons.forEach {
+            if (!tempOptionButtons.contains(it)) it.visibility = View.INVISIBLE
         }
 
         tempOptionButtons.forEachIndexed { index, button ->
@@ -161,6 +158,10 @@ class QuizFragment : Fragment() {
             totalQuestions = 1,
             correctAnswers = if (isAnswerCorrect) 1 else 0
         )
+
+        optionButtons.forEach {
+            it.setOnClickListener(null)
+        }
 
         lifecycleScope.launchWhenCreated {
             delay(800)

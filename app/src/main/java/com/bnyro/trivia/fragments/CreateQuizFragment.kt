@@ -12,6 +12,7 @@ import com.bnyro.trivia.databinding.FragmentCreateQuizBinding
 import com.bnyro.trivia.obj.Question
 import com.bnyro.trivia.util.BundleArguments
 import com.bnyro.trivia.util.PreferenceHelper
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputEditText
 
 class CreateQuizFragment : Fragment() {
@@ -39,6 +40,8 @@ class CreateQuizFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.quizName.text = quizName
+
         editTextViews = listOf(
             binding.questionNameET,
             binding.correctAnswerET,
@@ -61,9 +64,18 @@ class CreateQuizFragment : Fragment() {
         binding.finish.setOnClickListener {
             if (allFieldsFilled()) appendQuestionToList()
             if (questions.isNotEmpty()) {
-                PreferenceHelper.saveQuiz(quizName, true, questions)
+                MaterialAlertDialogBuilder(requireContext())
+                    .setTitle(R.string.save_quiz)
+                    .setMessage(R.string.save_quiz_message)
+                    .setNegativeButton(android.R.string.cancel) { _, _ -> }
+                    .setPositiveButton(android.R.string.ok) { _, _ ->
+                        PreferenceHelper.saveQuiz(quizName, true, questions)
+                        findNavController().navigate(R.id.libraryFragment)
+                    }
+                    .show()
+            } else {
+                findNavController().navigate(R.id.libraryFragment)
             }
-            findNavController().navigate(R.id.libraryFragment)
         }
     }
 
@@ -77,6 +89,7 @@ class CreateQuizFragment : Fragment() {
                 binding.incorrectAnswerThree.text.toString()
             )
         )
+        binding.questionCount.text = context?.getString(R.string.questions, questions.size)
     }
 
     private fun allFieldsFilled(): Boolean {
