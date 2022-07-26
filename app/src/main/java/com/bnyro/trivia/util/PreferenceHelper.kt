@@ -110,7 +110,7 @@ object PreferenceHelper {
     }
 
     fun resetTotalStats() {
-        editor.putString(context.getString(R.string.stats_key), "")
+        editor.putString(context.getString(R.string.stats_key), "").commit()
     }
 
     fun getApi(): Int {
