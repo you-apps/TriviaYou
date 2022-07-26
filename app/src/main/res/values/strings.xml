@@ -82,4 +82,8 @@
     <string name="created_questions">Created questions</string>
     <string name="downloaded_quizzes">Downloaded quizzes</string>
     <string name="downloaded_questions">Downloaded questions</string>
+
+    <!-- Internet -->
+    <string name="network_error">Network error</string>
+
 </resources>

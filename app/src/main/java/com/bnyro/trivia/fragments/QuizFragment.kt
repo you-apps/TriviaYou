@@ -18,6 +18,7 @@ import com.bnyro.trivia.util.PreferenceHelper
 import com.bnyro.trivia.util.ThemeHelper
 import com.bnyro.trivia.util.navigate
 import com.bnyro.trivia.util.toHTML
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.delay
 
 class QuizFragment : Fragment() {
@@ -87,6 +88,7 @@ class QuizFragment : Fragment() {
             questions = try {
                 ApiHelper().getQuestions(category)
             } catch (e: Exception) {
+                Snackbar.make(binding.root, R.string.network_error, Snackbar.LENGTH_INDEFINITE).show()
                 return@launchWhenCreated
             }
             loadQuestion()

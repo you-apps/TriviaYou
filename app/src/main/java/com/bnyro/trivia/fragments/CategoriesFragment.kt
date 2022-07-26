@@ -13,6 +13,7 @@ import com.bnyro.trivia.databinding.FragmentCategoriesBinding
 import com.bnyro.trivia.util.ApiHelper
 import com.bnyro.trivia.util.BundleArguments
 import com.bnyro.trivia.util.navigate
+import com.google.android.material.snackbar.Snackbar
 
 class CategoriesFragment : Fragment() {
     private lateinit var binding: FragmentCategoriesBinding
@@ -43,6 +44,7 @@ class CategoriesFragment : Fragment() {
             val (categoryNames, categoryQueries) = try {
                 ApiHelper().getCategories()
             } catch (e: Exception) {
+                Snackbar.make(binding.root, R.string.network_error, Snackbar.LENGTH_INDEFINITE).show()
                 return@launchWhenCreated
             }
 
