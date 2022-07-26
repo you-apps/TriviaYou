@@ -12,11 +12,6 @@
 </div>
 </div>
 
-## Download
-[<img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png" alt="Get it on IzzyOnDroid" height="80">](https://apt.izzysoft.de/fdroid/index/apk/com.bnyro.triviayou)
-[<img src="ghbadge.png" alt="Get it on GitHub" height="80">](https://github.com/bnyro/triviayou/releases)
-
-
 ## Features
 
 - [x] Support for different Quiz APIs
@@ -28,6 +23,10 @@
     - [x] Creating and playing custom quizzes
     - [x] Storing API questions locally to play without Internet
     - [x] User stats
+
+## Download
+[<img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png" alt="Get it on IzzyOnDroid" height="80">](https://apt.izzysoft.de/fdroid/index/apk/com.bnyro.triviayou)
+[<img src="ghbadge.png" alt="Get it on GitHub" height="80">](https://github.com/bnyro/triviayou/releases)
 
 ## Screenshots
 
