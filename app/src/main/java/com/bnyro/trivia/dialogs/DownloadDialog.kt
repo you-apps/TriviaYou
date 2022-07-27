@@ -40,7 +40,7 @@ class DownloadDialog : DialogFragment() {
                 categoryNames += it.name!!
                 categoryQueries += it.id!!
             }
-            val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, categoryNames)
+            val adapter = ArrayAdapter(requireContext(), R.layout.spinner_item, categoryNames)
             spinner.adapter = adapter
         }
 
