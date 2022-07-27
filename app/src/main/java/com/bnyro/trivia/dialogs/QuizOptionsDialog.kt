@@ -3,7 +3,6 @@ package com.bnyro.trivia.dialogs
 import android.app.Dialog
 import android.os.Bundle
 import androidx.fragment.app.DialogFragment
-import androidx.navigation.fragment.findNavController
 import com.bnyro.trivia.R
 import com.bnyro.trivia.fragments.EditQuizFragment
 import com.bnyro.trivia.fragments.QuizFragment
@@ -40,8 +39,8 @@ class QuizOptionsDialog(
                         renameDialog.show(parentFragmentManager, null)
                     }
                     2 -> {
-                        PreferenceHelper.deleteQuiz(libraryIndex)
-                        findNavController().navigate(R.id.libraryFragment)
+                        val deleteDialog = DeleteDialog(libraryIndex)
+                        deleteDialog.show(parentFragmentManager, null)
                     }
                     3 -> {
                         val editQuizFragment = EditQuizFragment()

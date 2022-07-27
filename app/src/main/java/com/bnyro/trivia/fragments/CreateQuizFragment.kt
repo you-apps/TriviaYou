@@ -32,8 +32,10 @@ class CreateQuizFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         quizName = arguments?.getString(BundleArguments.quizName)
-        quizIndex = arguments?.getInt(BundleArguments.quizIndex)
-        questionIndex = arguments?.getInt(BundleArguments.questionIndex)
+        quizIndex = arguments?.getInt(BundleArguments.quizIndex, Int.MAX_VALUE)
+        if (quizIndex == Int.MAX_VALUE) quizIndex = null
+        questionIndex = arguments?.getInt(BundleArguments.questionIndex, Int.MAX_VALUE)
+        if (questionIndex == Int.MAX_VALUE) questionIndex = null
     }
 
     override fun onCreateView(
@@ -51,8 +53,6 @@ class CreateQuizFragment : Fragment() {
 
         editMode = when {
             quizName != null -> {
-                questions = quizzes[quizIndex!!].questions!!.toMutableList()
-                quizName = quizzes[quizIndex!!].name
                 EditModeType.CREATE_NEW
             }
             quizIndex != null && questionIndex != null -> {
@@ -60,7 +60,11 @@ class CreateQuizFragment : Fragment() {
                 quizName = quizzes[quizIndex!!].name
                 EditModeType.EDIT_EXISTING
             }
-            quizIndex != null -> EditModeType.EDIT_APPEND
+            quizIndex != null -> {
+                questions = quizzes[quizIndex!!].questions!!.toMutableList()
+                quizName = quizzes[quizIndex!!].name
+                EditModeType.EDIT_APPEND
+            }
             else -> throw IllegalArgumentException()
         }
 
@@ -101,7 +105,7 @@ class CreateQuizFragment : Fragment() {
             if (questions.isNotEmpty()) {
                 showFinishDialog()
             } else {
-                findNavController().popBackStack()
+                findNavController().navigate(R.id.libraryFragment)
             }
         }
     }

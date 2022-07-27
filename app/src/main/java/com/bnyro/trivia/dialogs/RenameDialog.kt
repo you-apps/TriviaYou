@@ -8,7 +8,6 @@ import androidx.navigation.fragment.findNavController
 import com.bnyro.trivia.R
 import com.bnyro.trivia.util.DialogHelper
 import com.bnyro.trivia.util.PreferenceHelper
-import com.bnyro.trivia.util.navigate
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class RenameDialog(
