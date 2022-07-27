@@ -62,6 +62,7 @@
     <string name="edit">Edit</string>
     <string name="delete">Delete</string>
     <string name="restart">Restart</string>
+    <string name="rename">Rename</string>
 
     <!-- Download -->
     <string name="download">Download Quiz</string>

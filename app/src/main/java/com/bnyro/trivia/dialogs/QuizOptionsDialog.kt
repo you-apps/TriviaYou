@@ -18,6 +18,7 @@ class QuizOptionsDialog(
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         var options = arrayOf(
             context?.getString(R.string.restart),
+            context?.getString(R.string.rename),
             context?.getString(R.string.delete)
         )
 
@@ -35,10 +36,14 @@ class QuizOptionsDialog(
                         parentFragment?.parentFragmentManager.navigate(quizFragment)
                     }
                     1 -> {
+                        val renameDialog = RenameDialog(libraryIndex)
+                        renameDialog.show(parentFragmentManager, null)
+                    }
+                    2 -> {
                         PreferenceHelper.deleteQuiz(libraryIndex)
                         findNavController().navigate(R.id.libraryFragment)
                     }
-                    2 -> {
+                    3 -> {
                         val editQuizFragment = EditQuizFragment()
                         val bundle = Bundle()
                         bundle.putInt(BundleArguments.quizIndex, libraryIndex)
