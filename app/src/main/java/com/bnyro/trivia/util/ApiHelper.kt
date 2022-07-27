@@ -3,6 +3,7 @@ package com.bnyro.trivia.util
 import com.bnyro.trivia.api.opentriviadb.OpenTriviaDBHelper
 import com.bnyro.trivia.api.thetriviaapi.TheTriviaApiHelper
 import com.bnyro.trivia.obj.ApiType
+import com.bnyro.trivia.obj.Category
 import com.bnyro.trivia.obj.Question
 
 class ApiHelper {
@@ -16,11 +17,11 @@ class ApiHelper {
         }
     }
 
-    suspend fun getCategories(): Pair<List<String>, List<String>> {
+    suspend fun getCategories(): List<Category> {
         return when (apiPref) {
             ApiType.theTriviaApi -> TheTriviaApiHelper.getCategories()
             ApiType.openTriviaApi -> OpenTriviaDBHelper.getCategories()
-            else -> Pair(listOf(), listOf())
+            else -> listOf()
         }
     }
 

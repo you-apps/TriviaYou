@@ -41,11 +41,20 @@ class CategoriesFragment : Fragment() {
 
     private fun fetchCategories() {
         lifecycleScope.launchWhenCreated {
-            val (categoryNames, categoryQueries) = try {
+            val categories = try {
                 ApiHelper().getCategories()
             } catch (e: Exception) {
                 Snackbar.make(binding.root, R.string.network_error, Snackbar.LENGTH_INDEFINITE).show()
                 return@launchWhenCreated
+            }
+
+            val sortedCategories = categories.sortedBy { it.name }
+
+            val categoryNames = mutableListOf<String>()
+            val categoryQueries = mutableListOf<String>()
+            sortedCategories.forEach {
+                categoryNames += it.name!!
+                categoryQueries += it.id!!
             }
 
             val categoriesAdapter = ArrayAdapter(requireContext(), R.layout.list_item, categoryNames)

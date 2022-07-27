@@ -1,5 +1,6 @@
 package com.bnyro.trivia.api.opentriviadb
 
+import com.bnyro.trivia.obj.Category
 import com.bnyro.trivia.obj.Question
 import com.bnyro.trivia.util.PreferenceHelper
 import com.bnyro.trivia.util.RetrofitInstance
@@ -13,7 +14,7 @@ object OpenTriviaDBHelper {
         val apiQuestions =
             RetrofitInstance.openTriviaApi.getQuestions(
                 PreferenceHelper.getLimit(),
-                category,
+                category?.toInt(),
                 PreferenceHelper.getDifficultyQuery()
             )
         val questions = mutableListOf<Question>()
@@ -28,19 +29,10 @@ object OpenTriviaDBHelper {
         return questions
     }
 
-    suspend fun getCategories(): Pair<List<String>, List<String>> {
+    suspend fun getCategories(): List<Category> {
         val categories = RetrofitInstance.openTriviaApi.getCategories()
 
-        kotlin.runCatching {
-            val categoryNames = mutableListOf<String>()
-            val categoryQueries = mutableListOf<String>()
-            categories.trivia_categories?.forEach {
-                categoryNames += it.name!!
-                categoryQueries += it.id.toString()
-            }
-            return Pair(categoryNames, categoryQueries)
-        }
-        return Pair(listOf(), listOf())
+        return categories.trivia_categories!!
     }
 
     suspend fun getStats(): List<String> {

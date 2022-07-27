@@ -1,5 +1,6 @@
 package com.bnyro.trivia.api.thetriviaapi
 
+import com.bnyro.trivia.obj.Category
 import com.bnyro.trivia.obj.Question
 import com.bnyro.trivia.util.PreferenceHelper
 import com.bnyro.trivia.util.RetrofitInstance
@@ -28,24 +29,23 @@ object TheTriviaApiHelper {
         return questions
     }
 
-    suspend fun getCategories(): Pair<List<String>, List<String>> {
+    suspend fun getCategories(): List<Category> {
         val categories = RetrofitInstance.theTriviaApi.getCategories()
 
         kotlin.runCatching {
-            val answer = mapper.readTree(
+            val response = mapper.readTree(
                 mapper.writeValueAsString(categories)
             )
-            val categoryNames = mutableListOf<String>()
-            val categoryQueries = mutableListOf<String>()
-            answer.fieldNames().forEach {
-                categoryNames += it.toString()
+            val categoriesList = mutableListOf<Category>()
+            response.fields().forEach {
+                categoriesList += Category(
+                    id = it.value.toString(),
+                    name = it.key.toString()
+                )
             }
-            answer.elements().forEach {
-                categoryQueries += it[0].toString()
-            }
-            return Pair(categoryNames, categoryQueries)
+            return categoriesList
         }
-        return Pair(listOf(), listOf())
+        return listOf()
     }
 
     suspend fun getStats(): List<String> {
