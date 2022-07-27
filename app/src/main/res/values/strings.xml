@@ -39,6 +39,11 @@
     <string name="labeled">Labeled</string>
     <string name="unlabeled">Unlabeled</string>
 
+    <!-- Backup and restore -->
+    <string name="backup_restore">Backup &amp; restore</string>
+    <string name="backup">Backup</string>
+    <string name="restore">Restore</string>
+
     <!-- Other Settings -->
     <string name="reset_stats">Reset stats</string>
     <string name="clear_library">Clear library</string>

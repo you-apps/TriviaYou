@@ -4,6 +4,7 @@ import android.app.Dialog
 import android.os.Bundle
 import androidx.fragment.app.DialogFragment
 import com.bnyro.trivia.R
+import com.bnyro.trivia.obj.Quiz
 import com.bnyro.trivia.util.ApiHelper
 import com.bnyro.trivia.util.DialogHelper
 import com.bnyro.trivia.util.PreferenceHelper
@@ -35,7 +36,12 @@ class DownloadDialog : DialogFragment() {
             } catch (e: Exception) {
                 return@launch
             }
-            PreferenceHelper.saveQuiz(name, false, questions)
+            val quiz = Quiz(
+                name = name,
+                creator = false,
+                questions = questions
+            )
+            PreferenceHelper.saveQuiz(quiz)
         }
     }
 }

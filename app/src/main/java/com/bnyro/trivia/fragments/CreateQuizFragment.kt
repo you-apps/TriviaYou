@@ -11,6 +11,7 @@ import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.FragmentCreateQuizBinding
 import com.bnyro.trivia.obj.EditModeType
 import com.bnyro.trivia.obj.Question
+import com.bnyro.trivia.obj.Quiz
 import com.bnyro.trivia.util.BundleArguments
 import com.bnyro.trivia.util.PreferenceHelper
 import com.bnyro.trivia.util.toHTML
@@ -128,7 +129,12 @@ class CreateQuizFragment : Fragment() {
             quiz.questions = questions
             PreferenceHelper.replaceQuizByIndex(quizIndex!!, quiz)
         } else {
-            PreferenceHelper.saveQuiz(quizName!!, true, questions)
+            val quiz = Quiz(
+                name = quizName,
+                creator = true,
+                questions = questions
+            )
+            PreferenceHelper.saveQuiz(quiz)
         }
     }
 

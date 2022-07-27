@@ -1,9 +1,11 @@
 package com.bnyro.trivia.fragments
 
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.bnyro.trivia.R
+import com.bnyro.trivia.util.BackupHelper
 import com.bnyro.trivia.util.PreferenceHelper
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
@@ -34,6 +36,20 @@ class SettingsFragment : PreferenceFragmentCompat() {
                     PreferenceHelper.deleteAllQuizzes()
                 }
                 .show()
+            true
+        }
+
+        val backupHelper = BackupHelper(activity as AppCompatActivity)
+
+        val backup = findPreference<Preference>(context?.getString(R.string.backup_key)!!)
+        backup?.setOnPreferenceClickListener {
+            backupHelper.backupQuizzes()
+            true
+        }
+
+        val restore = findPreference<Preference>(context?.getString(R.string.restore_key)!!)
+        restore?.setOnPreferenceClickListener {
+            backupHelper.restoreQuizzes()
             true
         }
     }

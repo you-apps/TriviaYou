@@ -19,6 +19,8 @@
     <!-- Preference Action Keys -->
     <string name="reset_stats_key">reset_stats</string>
     <string name="clear_library_key">clear_library</string>
+    <string name="backup_key">backup</string>
+    <string name="restore_key">restore</string>
 
     <!-- Storage keys -->
     <string name="quizzes_key">quizzes</string>

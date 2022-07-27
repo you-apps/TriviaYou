@@ -5,7 +5,6 @@ import android.content.SharedPreferences
 import androidx.preference.PreferenceManager
 import com.bnyro.trivia.R
 import com.bnyro.trivia.obj.ApiType
-import com.bnyro.trivia.obj.Question
 import com.bnyro.trivia.obj.Quiz
 import com.bnyro.trivia.obj.UserStats
 import com.fasterxml.jackson.core.type.TypeReference
@@ -31,9 +30,9 @@ object PreferenceHelper {
         return settings.getBoolean(key, defaultValue)
     }
 
-    fun saveQuiz(name: String, isCreator: Boolean, questions: List<Question>) {
+    fun saveQuiz(quiz: Quiz) {
         val quizzes = getQuizzes().toMutableList()
-        quizzes += Quiz(name, isCreator, questions.toMutableList())
+        quizzes += quiz
 
         val json = mapper.writeValueAsString(quizzes)
         editor.putString(context.getString(R.string.quizzes_key), json).commit()
