@@ -31,7 +31,8 @@ class ApiStatsFragment : Fragment() {
             val stats = try {
                 ApiHelper().getStats()
             } catch (e: Exception) {
-                Snackbar.make(binding.root, R.string.network_error, Snackbar.LENGTH_INDEFINITE).show()
+                Snackbar.make(binding.root, R.string.network_error, Snackbar.LENGTH_LONG)
+                    .show()
                 return@launchWhenCreated
             }
             kotlin.runCatching {

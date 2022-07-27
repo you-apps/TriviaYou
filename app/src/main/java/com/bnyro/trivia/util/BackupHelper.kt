@@ -3,8 +3,10 @@ package com.bnyro.trivia.util
 import android.app.Activity
 import android.content.Intent
 import android.net.Uri
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import com.bnyro.trivia.R
 import com.bnyro.trivia.obj.Quiz
 import com.fasterxml.jackson.core.type.TypeReference
 import com.fasterxml.jackson.databind.ObjectMapper
@@ -95,13 +97,18 @@ class BackupHelper(
             if (it.resultCode == Activity.RESULT_OK) {
                 val uri = it.data?.data!!
                 val text = readTextFromUri(uri)
-                // parse the raw json to a list of quizzes
-                val mapper = ObjectMapper()
-                val type = object : TypeReference<List<Quiz>>() {}
-                val quizzes = mapper.readValue(text, type)
-                quizzes.forEach {
-                    // add all the quizzes to the library
-                    PreferenceHelper.saveQuiz(it)
+                try {
+                    // parse the raw json to a list of quizzes
+                    val mapper = ObjectMapper()
+                    val type = object : TypeReference<List<Quiz>>() {}
+                    val quizzes = mapper.readValue(text, type)
+                    quizzes.forEach {
+                        // add all the quizzes to the library
+                        PreferenceHelper.saveQuiz(it)
+                    }
+                    Toast.makeText(activity, R.string.restore_success, Toast.LENGTH_SHORT).show()
+                } catch (e: Exception) {
+                    Toast.makeText(activity, R.string.restore_error, Toast.LENGTH_SHORT).show()
                 }
             }
         }

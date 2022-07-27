@@ -93,7 +93,8 @@ class CreateQuizFragment : Fragment() {
                     it.text?.clear()
                 }
                 if (editMode == EditModeType.EDIT_EXISTING) {
-                    questionIndex = if (questionIndex!! + 1 != questionIndex) questionIndex!! + 1 else null
+                    questionIndex =
+                        if (questionIndex!! + 1 != questionIndex) questionIndex!! + 1 else null
                     onViewCreated(view, null)
                 }
             } else {

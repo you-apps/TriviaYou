@@ -2,14 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/homeFragment"
-        android:title="@string/home"
-        android:icon="@drawable/ic_home"/>
+        android:icon="@drawable/ic_home"
+        android:title="@string/home" />
     <item
         android:id="@+id/categoriesFragment"
-        android:title="@string/categories"
-        android:icon="@drawable/ic_categories"/>
+        android:icon="@drawable/ic_categories"
+        android:title="@string/categories" />
     <item
         android:id="@+id/libraryFragment"
-        android:title="@string/library"
-        android:icon="@drawable/ic_library"/>
+        android:icon="@drawable/ic_library"
+        android:title="@string/library" />
 </menu>

@@ -44,7 +44,8 @@ class CategoriesFragment : Fragment() {
             val categories = try {
                 ApiHelper().getCategories()
             } catch (e: Exception) {
-                Snackbar.make(binding.root, R.string.network_error, Snackbar.LENGTH_INDEFINITE).show()
+                Snackbar.make(binding.root, R.string.network_error, Snackbar.LENGTH_LONG)
+                    .show()
                 return@launchWhenCreated
             }
 
@@ -57,7 +58,8 @@ class CategoriesFragment : Fragment() {
                 categoryQueries += it.id!!
             }
 
-            val categoriesAdapter = ArrayAdapter(requireContext(), R.layout.list_item, categoryNames)
+            val categoriesAdapter =
+                ArrayAdapter(requireContext(), R.layout.list_item, categoryNames)
             binding.categoriesLV.adapter = categoriesAdapter
 
             binding.progress.visibility = View.GONE

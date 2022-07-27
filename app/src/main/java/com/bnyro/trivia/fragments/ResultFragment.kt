@@ -43,7 +43,8 @@ class ResultFragment : Fragment() {
             else -> getString(R.string.result_fail)
         }
 
-        binding.resultStats.text = context?.getString(R.string.result_stats, "$correctAnswers/$totalQuestions")
+        binding.resultStats.text =
+            context?.getString(R.string.result_stats, "$correctAnswers/$totalQuestions")
 
         binding.retry.setOnClickListener {
             val quizFragment = QuizFragment()

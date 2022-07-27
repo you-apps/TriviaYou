@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.FragmentStatsBinding
 import com.bnyro.trivia.util.StatsHelper
-import java.util.*
 
 class UserStatsFragment : Fragment() {
     private lateinit var binding: FragmentStatsBinding

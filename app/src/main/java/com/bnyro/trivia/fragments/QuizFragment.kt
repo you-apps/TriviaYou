@@ -90,7 +90,8 @@ class QuizFragment : Fragment() {
             questions = try {
                 ApiHelper().getQuestions(category)
             } catch (e: Exception) {
-                Snackbar.make(binding.root, R.string.network_error, Snackbar.LENGTH_INDEFINITE).show()
+                Snackbar.make(binding.root, R.string.network_error, Snackbar.LENGTH_SHORT)
+                    .show()
                 return@launchWhenCreated
             }
             loadQuestion()
@@ -141,7 +142,10 @@ class QuizFragment : Fragment() {
         val isAnswerCorrect = correctAnswerIndex == selectedAnswerIndex
 
         val secondaryColor = ThemeHelper.getThemeColor(requireContext(), android.R.attr.colorAccent)
-        val colorError = ThemeHelper.getThemeColor(requireContext(), com.google.android.material.R.attr.colorError)
+        val colorError = ThemeHelper.getThemeColor(
+            requireContext(),
+            com.google.android.material.R.attr.colorError
+        )
         val textColor = ThemeHelper.getThemeColor(requireContext(), android.R.attr.colorBackground)
 
         tempOptionButtons[correctAnswerIndex].apply {
@@ -173,11 +177,17 @@ class QuizFragment : Fragment() {
             if (questionIndex + 1 != questions.size) {
                 // load next question
                 questionIndex += 1
-                if (quizType == QuizType.OFFLINE) PreferenceHelper.setQuizPosition(libraryIndex!!, questionIndex)
+                if (quizType == QuizType.OFFLINE) PreferenceHelper.setQuizPosition(
+                    libraryIndex!!,
+                    questionIndex
+                )
                 loadQuestion()
             } else {
                 questionIndex = 0
-                if (quizType == QuizType.OFFLINE) PreferenceHelper.setQuizPosition(libraryIndex!!, 0)
+                if (quizType == QuizType.OFFLINE) PreferenceHelper.setQuizPosition(
+                    libraryIndex!!,
+                    0
+                )
                 if (
                     quizType == QuizType.ONLINE &&
                     PreferenceHelper.isUnlimitedMode()

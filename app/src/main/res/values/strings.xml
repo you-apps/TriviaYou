@@ -43,6 +43,8 @@
     <string name="backup_restore">Backup &amp; restore</string>
     <string name="backup">Backup</string>
     <string name="restore">Restore</string>
+    <string name="restore_success">Successfully restored all quizzes :)</string>
+    <string name="restore_error">Error restoring the quizzes :(</string>
 
     <!-- Other Settings -->
     <string name="reset_stats">Reset stats</string>

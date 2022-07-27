@@ -2,7 +2,6 @@ package com.bnyro.trivia.api.thetriviaapi
 
 import retrofit2.http.GET
 import retrofit2.http.Query
-import kotlin.collections.ArrayList
 
 interface TheTriviaApi {
     @GET("api/questions")

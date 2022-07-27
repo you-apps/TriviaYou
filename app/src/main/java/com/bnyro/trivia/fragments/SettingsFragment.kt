@@ -26,7 +26,8 @@ class SettingsFragment : PreferenceFragmentCompat() {
             true
         }
 
-        val clearLibrary = findPreference<Preference>(context?.getString(R.string.clear_library_key)!!)
+        val clearLibrary =
+            findPreference<Preference>(context?.getString(R.string.clear_library_key)!!)
         clearLibrary?.setOnPreferenceClickListener {
             MaterialAlertDialogBuilder(requireContext())
                 .setTitle(R.string.clear_library)

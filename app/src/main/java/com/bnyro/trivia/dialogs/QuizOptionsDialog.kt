@@ -21,7 +21,9 @@ class QuizOptionsDialog(
             context?.getString(R.string.delete)
         )
 
-        if (PreferenceHelper.getQuizzes()[libraryIndex].creator == true) options += context?.getString(R.string.edit)
+        if (PreferenceHelper.getQuizzes()[libraryIndex].creator == true) options += context?.getString(
+            R.string.edit
+        )
 
         val builder = MaterialAlertDialogBuilder(requireContext())
             .setItems(options) { _, index ->
