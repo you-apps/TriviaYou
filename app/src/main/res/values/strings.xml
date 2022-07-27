@@ -74,6 +74,7 @@
 
     <!-- Download -->
     <string name="download">Download Quiz</string>
+    <string name="none">None</string>
 
     <!-- Result -->
     <string name="result_great">Great Job!</string>

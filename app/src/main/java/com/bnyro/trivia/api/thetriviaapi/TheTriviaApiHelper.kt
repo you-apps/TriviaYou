@@ -39,7 +39,7 @@ object TheTriviaApiHelper {
             val categoriesList = mutableListOf<Category>()
             response.fields().forEach {
                 categoriesList += Category(
-                    id = it.value.toString(),
+                    id = it.value[0].toString(),
                     name = it.key.toString()
                 )
             }
