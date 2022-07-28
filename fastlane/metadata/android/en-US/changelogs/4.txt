@@ -1,0 +1,3 @@
+Download by category
+Option to set the default start tab
+License dialog in the about section
