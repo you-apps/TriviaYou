@@ -9,19 +9,19 @@
         android:id="@+id/homeFragment"
         android:name="com.bnyro.trivia.fragments.QuizFragment"
         android:label="@string/home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_quiz" />
 
     <fragment
         android:id="@+id/categoriesFragment"
         android:name="com.bnyro.trivia.fragments.CategoriesFragment"
         android:label="@string/home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_quiz" />
 
     <fragment
         android:id="@+id/libraryFragment"
         android:name="com.bnyro.trivia.fragments.LibraryFragment"
         android:label="@string/home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_quiz" />
 
     <fragment
         android:id="@+id/apiStatsFragment"

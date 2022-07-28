@@ -21,7 +21,8 @@ class ResultFragment : Fragment() {
         super.onCreate(savedInstanceState)
         correctAnswers = arguments?.getInt(BundleArguments.correctAnswers)!!
         totalQuestions = arguments?.getInt(BundleArguments.questionsCount)!!
-        libraryIndex = arguments?.getInt(BundleArguments.quizIndex)
+        libraryIndex = arguments?.getInt(BundleArguments.quizIndex, Int.MAX_VALUE)
+        if (libraryIndex == Int.MAX_VALUE) libraryIndex = null
     }
 
     override fun onCreateView(

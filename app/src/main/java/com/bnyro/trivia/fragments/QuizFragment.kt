@@ -9,7 +9,7 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.bnyro.trivia.R
-import com.bnyro.trivia.databinding.FragmentHomeBinding
+import com.bnyro.trivia.databinding.FragmentQuizBinding
 import com.bnyro.trivia.obj.Question
 import com.bnyro.trivia.obj.QuizType
 import com.bnyro.trivia.util.ApiHelper
@@ -22,7 +22,7 @@ import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.delay
 
 class QuizFragment : Fragment() {
-    private lateinit var binding: FragmentHomeBinding
+    private lateinit var binding: FragmentQuizBinding
 
     private lateinit var optionButtons: List<Button>
     private lateinit var questions: List<Question>
@@ -56,7 +56,7 @@ class QuizFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentHomeBinding.inflate(layoutInflater, container, false)
+        binding = FragmentQuizBinding.inflate(layoutInflater, container, false)
         // Inflate the layout for this fragment
         return binding.root
     }
