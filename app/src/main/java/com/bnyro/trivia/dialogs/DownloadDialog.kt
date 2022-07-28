@@ -6,6 +6,7 @@ import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.LinearLayout
 import android.widget.Spinner
+import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.lifecycleScope
 import com.bnyro.trivia.R
@@ -27,7 +28,7 @@ class DownloadDialog : DialogFragment() {
             LinearLayout.LayoutParams.MATCH_PARENT,
             LinearLayout.LayoutParams.WRAP_CONTENT
         )
-        lp.setMargins(60, 30, 60, 0)
+        lp.setMargins(30, 0, 30, 0)
 
         val categoryNames = mutableListOf(context?.getString(R.string.none)!!)
         val categoryQueries = mutableListOf("")
@@ -51,9 +52,14 @@ class DownloadDialog : DialogFragment() {
             .setTitle(R.string.download)
             .setNegativeButton(android.R.string.cancel) { _, _ -> }
             .setPositiveButton(android.R.string.ok) { _, _ ->
-                val position = spinner.selectedItemPosition
-                val category = if (position == 0) null else categoryQueries[position]
-                downloadQuestions(input.text.toString(), category)
+                val name = input.text.toString()
+                if (name != "") {
+                    val position = spinner.selectedItemPosition
+                    val category = if (position == 0) null else categoryQueries[position]
+                    downloadQuestions(input.text.toString(), category)
+                } else {
+                    Toast.makeText(context, R.string.name_empty, Toast.LENGTH_SHORT).show()
+                }
             }
             .setView(container)
         return dialog.create()
