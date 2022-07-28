@@ -63,6 +63,15 @@
             app:title="@string/labelVisibility"
             app:useSimpleSummaryProvider="true" />
 
+        <ListPreference
+            android:defaultValue="@string/default_tab_default"
+            android:entries="@array/defaultTab"
+            android:entryValues="@array/defaultTabValues"
+            app:key="@string/default_tab_key"
+            app:title="@string/default_tab"
+            android:icon="@drawable/ic_home"
+            app:useSimpleSummaryProvider="true" />
+
     </PreferenceCategory>
 
     <PreferenceCategory app:title="@string/backup_restore">

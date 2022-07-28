@@ -19,6 +19,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
 
+    private var startFragmentId = R.id.homeFragment
+
     override fun onCreate(savedInstanceState: Bundle?) {
         WindowCompat.setDecorFitsSystemWindows(window, false)
 
@@ -60,6 +62,21 @@ class MainActivity : AppCompatActivity() {
             }
             false
         }
+
+        // save start tab fragment id
+        startFragmentId =
+            when (PreferenceHelper.getString(getString(R.string.default_tab_key), "home")) {
+                "home" -> R.id.homeFragment
+                "categories" -> R.id.categoriesFragment
+                "library" -> R.id.libraryFragment
+                else -> R.id.homeFragment
+            }
+
+        // set default tab as start fragment
+        navController.graph.setStartDestination(startFragmentId)
+
+        // navigate to the default fragment
+        navController.navigate(startFragmentId)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -96,7 +113,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        if (navController.backQueue.isNotEmpty()) navController.popBackStack()
+        if (navController.currentDestination?.id == startFragmentId) super.onBackPressed()
+        else if (navController.backQueue.isNotEmpty()) navController.popBackStack()
         else super.onBackPressed()
     }
 }
