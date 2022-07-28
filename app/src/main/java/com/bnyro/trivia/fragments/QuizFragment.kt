@@ -18,6 +18,7 @@ import com.bnyro.trivia.util.PreferenceHelper
 import com.bnyro.trivia.util.ThemeHelper
 import com.bnyro.trivia.util.navigate
 import com.bnyro.trivia.util.toHTML
+import com.google.android.material.elevation.SurfaceColors
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.delay
 
@@ -33,6 +34,7 @@ class QuizFragment : Fragment() {
     private var correctAnswerCount = 0
 
     private var buttonTextColor = 0
+    private var buttonBackgroundColor = 0
 
     private var category: String? = null
 
@@ -72,6 +74,9 @@ class QuizFragment : Fragment() {
         )
 
         buttonTextColor = binding.optionA.currentTextColor
+
+        // gets the surface color of the bottom navigation view
+        buttonBackgroundColor = SurfaceColors.getColorForElevation(requireContext(), 10F)
 
         if (quizType == QuizType.OFFLINE) {
             binding.progress.visibility = View.GONE
@@ -113,7 +118,7 @@ class QuizFragment : Fragment() {
         tempOptionButtons.forEachIndexed { _, button ->
             // reset button style
             button.setTextColor(buttonTextColor)
-            button.setBackgroundColor(Color.TRANSPARENT)
+            button.setBackgroundColor(buttonBackgroundColor)
             button.visibility = View.VISIBLE
         }
 
