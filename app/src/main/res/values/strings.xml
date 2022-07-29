@@ -33,6 +33,7 @@
     <string name="systemTheme">System</string>
     <string name="lightTheme">Light</string>
     <string name="darkTheme">Dark</string>
+    <string name="blackTheme">Black</string>
     <string name="default_tab">Default tab</string>
 
     <string name="labelVisibility">Label visibility</string>

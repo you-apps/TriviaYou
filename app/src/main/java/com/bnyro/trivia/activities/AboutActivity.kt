@@ -10,6 +10,7 @@ import com.bnyro.trivia.BuildConfig
 import com.bnyro.trivia.GITHUB_URL
 import com.bnyro.trivia.LICENSE_URL
 import com.bnyro.trivia.databinding.ActivityAboutBinding
+import com.bnyro.trivia.util.ThemeHelper
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import java.net.URL
 
@@ -17,6 +18,7 @@ class AboutActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAboutBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        ThemeHelper.setThemeMode(this)
         super.onCreate(savedInstanceState)
 
         binding = ActivityAboutBinding.inflate(layoutInflater)

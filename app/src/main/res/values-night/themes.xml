@@ -13,4 +13,11 @@
 
     </style>
 
+    <style name="Theme.TriviaYou.Black">
+
+        <item name="colorSurface">@android:color/black</item>
+        <item name="android:colorBackground">@android:color/black</item>
+
+    </style>
+
 </resources>
