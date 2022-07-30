@@ -10,6 +10,7 @@ import com.bnyro.trivia.adapters.LibraryAdapter
 import com.bnyro.trivia.databinding.FragmentLibraryBinding
 import com.bnyro.trivia.dialogs.CreateQuizDialog
 import com.bnyro.trivia.dialogs.DownloadDialog
+import com.bnyro.trivia.util.PreferenceHelper
 
 class LibraryFragment : Fragment() {
     private lateinit var binding: FragmentLibraryBinding
@@ -32,6 +33,8 @@ class LibraryFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        if (PreferenceHelper.getQuizzes().isNotEmpty()) binding.libraryEmpty.visibility = View.GONE
 
         binding.libraryRV.layoutManager = LinearLayoutManager(context)
         binding.libraryRV.adapter = LibraryAdapter(this)

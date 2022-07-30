@@ -73,6 +73,7 @@
     <string name="delete">Delete</string>
     <string name="restart">Restart</string>
     <string name="rename">Rename</string>
+    <string name="library_empty">Library is empty.</string>
 
     <!-- Download -->
     <string name="download">Download Quiz</string>
