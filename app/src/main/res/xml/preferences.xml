@@ -10,6 +10,15 @@
             app:key="@string/unlimited_mode_key"
             app:title="@string/unlimited_mode" />
 
+        <ListPreference
+            android:defaultValue="@string/questions_delay_default"
+            android:entries="@array/questionsDelay"
+            android:entryValues="@array/questionsDelayValues"
+            android:icon="@drawable/ic_timer"
+            app:key="@string/questions_delay_key"
+            app:title="@string/questions_delay"
+            app:useSimpleSummaryProvider="true" />
+
     </PreferenceCategory>
 
     <PreferenceCategory app:title="@string/api">
@@ -67,9 +76,9 @@
             android:defaultValue="@string/default_tab_default"
             android:entries="@array/defaultTab"
             android:entryValues="@array/defaultTabValues"
+            android:icon="@drawable/ic_home"
             app:key="@string/default_tab_key"
             app:title="@string/default_tab"
-            android:icon="@drawable/ic_home"
             app:useSimpleSummaryProvider="true" />
 
     </PreferenceCategory>

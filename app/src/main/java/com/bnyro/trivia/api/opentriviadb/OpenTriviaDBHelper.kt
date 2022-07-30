@@ -1,10 +1,10 @@
 package com.bnyro.trivia.api.opentriviadb
 
+import com.bnyro.trivia.extensions.formatStats
 import com.bnyro.trivia.obj.Category
 import com.bnyro.trivia.obj.Question
 import com.bnyro.trivia.util.PreferenceHelper
 import com.bnyro.trivia.util.RetrofitInstance
-import com.bnyro.trivia.util.formatStats
 import com.fasterxml.jackson.databind.ObjectMapper
 
 object OpenTriviaDBHelper {

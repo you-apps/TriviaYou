@@ -30,6 +30,7 @@
         <entry key="app/src/main/res/drawable/ic_save.xml" value="0.2975" />
         <entry key="app/src/main/res/drawable/ic_server.xml" value="0.1395" />
         <entry key="app/src/main/res/drawable/ic_theme.xml" value="0.1395" />
+        <entry key="app/src/main/res/drawable/ic_timer.xml" value="0.1395" />
         <entry key="app/src/main/res/layout/activity_about.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_settings.xml" value="0.5" />

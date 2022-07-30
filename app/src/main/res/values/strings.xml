@@ -17,6 +17,8 @@
     <!-- General Settings -->
     <string name="general">General</string>
     <string name="unlimited_mode">Unlimited mode</string>
+    <string name="questions_delay">Time between questions</string>
+    <string name="delay_auto">Auto</string>
 
     <!-- API Settings -->
     <string name="api">API</string>

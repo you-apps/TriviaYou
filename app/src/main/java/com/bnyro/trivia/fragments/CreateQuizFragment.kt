@@ -9,12 +9,12 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.FragmentCreateQuizBinding
+import com.bnyro.trivia.extensions.toHTML
 import com.bnyro.trivia.obj.EditModeType
 import com.bnyro.trivia.obj.Question
 import com.bnyro.trivia.obj.Quiz
 import com.bnyro.trivia.util.BundleArguments
 import com.bnyro.trivia.util.PreferenceHelper
-import com.bnyro.trivia.util.toHTML
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputEditText
 

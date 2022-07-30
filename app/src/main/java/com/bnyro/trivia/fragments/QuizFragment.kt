@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.FragmentQuizBinding
+import com.bnyro.trivia.extensions.toHTML
 import com.bnyro.trivia.obj.Question
 import com.bnyro.trivia.obj.QuizType
 import com.bnyro.trivia.util.ApiHelper
@@ -16,7 +17,6 @@ import com.bnyro.trivia.util.BundleArguments
 import com.bnyro.trivia.util.PreferenceHelper
 import com.bnyro.trivia.util.ThemeHelper
 import com.bnyro.trivia.util.navigate
-import com.bnyro.trivia.util.toHTML
 import com.google.android.material.elevation.SurfaceColors
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.delay
@@ -142,7 +142,8 @@ class QuizFragment : Fragment() {
     }
 
     private fun checkAnswer(selectedAnswerIndex: Int, tempOptionButtons: List<Button>) {
-        val correctAnswerIndex = answers.indexOf(questions[questionIndex].correctAnswer)
+        val question = questions[questionIndex]
+        val correctAnswerIndex = answers.indexOf(question.correctAnswer)
         val isAnswerCorrect = correctAnswerIndex == selectedAnswerIndex
 
         val secondaryColor = ThemeHelper.getThemeColor(requireContext(), android.R.attr.colorAccent)
@@ -177,7 +178,7 @@ class QuizFragment : Fragment() {
         }
 
         lifecycleScope.launchWhenCreated {
-            delay(800)
+            delay(PreferenceHelper.getDelay(question.correctAnswer!!))
             if (questionIndex + 1 != questions.size) {
                 // load next question
                 questionIndex += 1

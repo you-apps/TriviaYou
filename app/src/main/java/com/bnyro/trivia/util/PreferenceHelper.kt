@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import androidx.preference.PreferenceManager
 import com.bnyro.trivia.R
+import com.bnyro.trivia.extensions.wordCount
 import com.bnyro.trivia.obj.ApiType
 import com.bnyro.trivia.obj.Quiz
 import com.bnyro.trivia.obj.UserStats
@@ -137,5 +138,16 @@ object PreferenceHelper {
         val quiz = getQuizzes()[quizIndex]
         quiz.position = questionIndex
         replaceQuizByIndex(quizIndex, quiz)
+    }
+
+    fun getDelay(correctAnswer: String): Long {
+        val questionsDelayPref = getString(
+            context.getString(R.string.questions_delay_key),
+            context.getString(R.string.questions_delay_default)
+        )
+        return when (questionsDelayPref) {
+            "auto" -> correctAnswer.wordCount() * 400L
+            else -> questionsDelayPref.toLong()
+        }
     }
 }
