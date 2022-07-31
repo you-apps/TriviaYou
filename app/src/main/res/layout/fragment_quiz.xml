@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -16,20 +17,18 @@
         android:orientation="vertical"
         android:visibility="gone">
 
-        <FrameLayout
+        <TextView
+            android:id="@+id/questionTV"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
-
-            <TextView
-                android:id="@+id/questionTV"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginHorizontal="10dp"
-                android:textAlignment="center"
-                android:textSize="21sp" />
-        </FrameLayout>
+            android:layout_marginHorizontal="10dp"
+            android:layout_weight="1"
+            android:autoSizeMaxTextSize="21sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:textAlignment="center"
+            tools:targetApi="o" />
 
         <LinearLayout
             android:id="@+id/answersLL"
