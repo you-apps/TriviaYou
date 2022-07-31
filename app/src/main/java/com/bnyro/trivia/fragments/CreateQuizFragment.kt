@@ -1,6 +1,7 @@
 package com.bnyro.trivia.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -69,14 +70,9 @@ class CreateQuizFragment : Fragment() {
             else -> throw IllegalArgumentException()
         }
 
-        // editing question and not creating a new quiz
-        // load the previous quiz data into the input fields
-        if (editMode == EditModeType.EDIT_EXISTING) {
-            val question = questions[questionIndex!!]
-            loadQuestion(question)
-        }
-
         binding.quizName.text = quizName
+
+        loadQuestionIfNeeded()
 
         editTextViews = listOf(
             binding.questionNameET,
@@ -93,9 +89,9 @@ class CreateQuizFragment : Fragment() {
                     it.text?.clear()
                 }
                 if (editMode == EditModeType.EDIT_EXISTING) {
-                    questionIndex =
-                        if (questionIndex!! + 1 != questionIndex) questionIndex!! + 1 else null
-                    onViewCreated(view, null)
+                    questionIndex = questionIndex!! + 1
+                    Log.e("!askdf", questionIndex.toString())
+                    loadQuestionIfNeeded()
                 }
             } else {
                 Toast.makeText(context, R.string.item_empty, Toast.LENGTH_SHORT).show()
@@ -154,17 +150,25 @@ class CreateQuizFragment : Fragment() {
 
     private fun appendQuestionToList() {
         val question = getInsertedQuestion()
-        if (editMode != EditModeType.EDIT_EXISTING) questions += question
-        else questions[questionIndex!!] = question
+        if (editMode == EditModeType.EDIT_EXISTING &&
+            questions.size > questionIndex!!
+        ) {
+            questions[questionIndex!!] = question
+        } else questions += question
         binding.questionCount.text = context?.getString(R.string.questions, questions.size)
     }
 
-    private fun loadQuestion(question: Question) {
-        binding.questionNameET.setText(question.question.toHTML())
-        binding.correctAnswerET.setText(question.correctAnswer.toHTML())
-        binding.incorrectAnswerOne.setText(question.incorrectAnswers!![0].toHTML())
-        binding.incorrectAnswerTwo.setText(question.incorrectAnswers[1].toHTML())
-        binding.incorrectAnswerThree.setText(question.incorrectAnswers[2].toHTML())
+    // editing question and not creating a new quiz
+    // load the previous quiz data into the input fields
+    private fun loadQuestionIfNeeded() {
+        if (editMode == EditModeType.EDIT_EXISTING && questions.size > questionIndex!!) {
+            val question = questions[questionIndex!!]
+            binding.questionNameET.setText(question.question.toHTML())
+            binding.correctAnswerET.setText(question.correctAnswer.toHTML())
+            binding.incorrectAnswerOne.setText(question.incorrectAnswers!![0].toHTML())
+            binding.incorrectAnswerTwo.setText(question.incorrectAnswers[1].toHTML())
+            binding.incorrectAnswerThree.setText(question.incorrectAnswers[2].toHTML())
+        }
     }
 
     private fun allFieldsFilled(): Boolean {
