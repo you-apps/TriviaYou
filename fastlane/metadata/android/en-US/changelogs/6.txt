@@ -1,0 +1,2 @@
+Auto resize the question
+Fix editing questions
