@@ -1,4 +1,5 @@
 <resources>
+    
     <string name="app_name">Trivia You</string>
     <string name="settings">Impostazioni</string>
     <string name="about">Informazioni</string>
@@ -38,7 +39,7 @@
     <string name="blackTheme">Nero</string>
     <string name="default_tab">Pagina principale</string>
 
-    <string name="labelVisibility">Visibilità dell'etichetta</string>
+    <string name="labelVisibility">Visibilità dell\'etichetta</string>
     <string name="selected">Selezionata</string>
     <string name="labeled">Etichettata</string>
     <string name="unlabeled">Non etichettata</string>
