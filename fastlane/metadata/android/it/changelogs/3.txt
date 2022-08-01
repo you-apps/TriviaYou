@@ -1,0 +1,2 @@
+Aggiunta opzione di backup e ripristino
+Aggiunta opzione di rinomina dei quiz
