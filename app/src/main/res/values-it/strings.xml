@@ -1,0 +1,106 @@
+<resources>
+    <string name="app_name">Trivia You</string>
+    <string name="settings">Impostazioni</string>
+    <string name="about">Informazioni</string>
+    <string name="api_stats">Statistiche API</string>
+
+    <!-- Menù di navigazione in basso -->
+    <string name="home">Home</string>
+    <string name="categories">Categorie</string>
+    <string name="library">Libreria</string>
+
+    <!-- Informazioni -->
+    <string name="github">Github</string>
+    <string name="authors">Autori</string>
+    <string name="license">Licenza</string>
+
+    <!-- Impostazioni generali -->
+    <string name="general">Generale</string>
+    <string name="unlimited_mode">Modalità illimitata</string>
+    <string name="questions_delay">Tempo tra le domande</string>
+    <string name="delay_auto">Automatico</string>
+
+    <!-- Impostazioni API -->
+    <string name="api">API</string>
+    <string name="difficulty">Difficoltà</string>
+    <string name="random">Casuale</string>
+    <string name="easy">Facile</string>
+    <string name="medium">Medio</string>
+    <string name="hard">Difficile</string>
+    <string name="limit">Limite</string>
+
+    <!-- Impostazioni aspetto -->
+    <string name="appearance">Aspetto</string>
+    <string name="themeMode">Tema</string>
+    <string name="systemTheme">Sistema</string>
+    <string name="lightTheme">Chiaro</string>
+    <string name="darkTheme">Scuro</string>
+    <string name="blackTheme">Nero</string>
+    <string name="default_tab">Pagina principale</string>
+
+    <string name="labelVisibility">Visibilità dell'etichetta</string>
+    <string name="selected">Selezionata</string>
+    <string name="labeled">Etichettata</string>
+    <string name="unlabeled">Non etichettata</string>
+
+    <!-- Backup e ripristino -->
+    <string name="backup_restore">Backup e ripristino</string>
+    <string name="backup">Backup</string>
+    <string name="restore">Ripristina</string>
+    <string name="restore_success">Ripristinati tutti i quiz con successo :)</string>
+    <string name="restore_error">Errore durante il ripristino dei quiz :(</string>
+
+    <!-- Altre impostazioni -->
+    <string name="reset_stats">Azzera statistiche</string>
+    <string name="clear_library">Cancella la libreria</string>
+    <string name="irreversible">Sei sicuro? Questa operazione non può essere annullata</string>
+    <string name="reset">Azzera</string>
+
+    <!-- Quiz personalizzato -->
+    <string name="create_quiz">Crea quiz</string>
+    <string name="quiz_name">Nome</string>
+    <string name="name_empty">Il nome non può essere vuoto!</string>
+    <string name="item_empty">Per favore riempi tutti i campi!</string>
+    <string name="question">Domanda</string>
+    <string name="correct_answer">Risposta corretta</string>
+    <string name="incorrect_answers">Risposte sbagliate</string>
+    <string name="add">Aggiungi</string>
+    <string name="finish">Finito</string>
+    <string name="save_quiz">Salva quiz</string>
+    <string name="save_quiz_message">Sei sicuro di voler salvare il quiz?</string>
+
+    <!-- Libreria -->
+    <string name="questions">Domande: %1$s</string>
+    <string name="edit">Modifica</string>
+    <string name="delete">Elimina</string>
+    <string name="restart">Ricomincia</string>
+    <string name="rename">Rinomina</string>
+    <string name="library_empty">La libreria è vuota.</string>
+
+    <!-- Download -->
+    <string name="download">Scarica quiz</string>
+    <string name="none">Niente</string>
+
+    <!-- Risultati -->
+    <string name="result_great">Ottimo lavoro!</string>
+    <string name="result_average">Performance media</string>
+    <string name="result_fail">Fallito</string>
+    <string name="result_stats">%1$s risposte corrette</string>
+    <string name="retry">Riprova</string>
+
+    <!-- Statistiche -->
+    <string name="user_stats">Statistiche utente</string>
+    <string name="answered_questions">Domande risposte</string>
+    <string name="correct_answers">Risposte corrette</string>
+    <string name="percentage_correct_answers">Tasso di risposte corrette</string>
+    <string name="library_quizzes">Quiz in libreria</string>
+    <string name="library_questions">Domande in libreria</string>
+    <string name="created_quizzes">Quiz creati</string>
+    <string name="created_questions">Domande create</string>
+    <string name="downloaded_quizzes">Quiz scaricati</string>
+    <string name="downloaded_questions">Domande scaricate</string>
+
+    <!-- Internet -->
+    <string name="network_error">Errore di rete</string>
+
+</resources>
