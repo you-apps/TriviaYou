@@ -1,1 +1,0 @@
-Trivia App for Android built with Material You
