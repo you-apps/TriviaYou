@@ -28,6 +28,7 @@
         <entry key="app/src/main/res/drawable/ic_reset.xml" value="0.1395" />
         <entry key="app/src/main/res/drawable/ic_restore.xml" value="0.1395" />
         <entry key="app/src/main/res/drawable/ic_save.xml" value="0.2975" />
+        <entry key="app/src/main/res/drawable/ic_search.xml" value="0.2975" />
         <entry key="app/src/main/res/drawable/ic_server.xml" value="0.1395" />
         <entry key="app/src/main/res/drawable/ic_theme.xml" value="0.1395" />
         <entry key="app/src/main/res/drawable/ic_timer.xml" value="0.1395" />
@@ -44,6 +45,7 @@
         <entry key="app/src/main/res/layout/fragment_library.xml" value="0.3476923076923077" />
         <entry key="app/src/main/res/layout/fragment_quiz.xml" value="0.353125" />
         <entry key="app/src/main/res/layout/fragment_result.xml" value="0.3466666666666667" />
+        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.353125" />
         <entry key="app/src/main/res/layout/list_item.xml" value="0.2682291666666667" />
         <entry key="app/src/main/res/layout/row_quiz.xml" value="0.35208333333333336" />
         <entry key="app/src/main/res/layout/spinner_item.xml" value="0.3466666666666667" />

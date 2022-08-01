@@ -9,15 +9,15 @@ import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.RowQuizBinding
 import com.bnyro.trivia.dialogs.QuizOptionsDialog
 import com.bnyro.trivia.fragments.QuizFragment
+import com.bnyro.trivia.obj.Quiz
 import com.bnyro.trivia.util.BundleArguments
 import com.bnyro.trivia.util.PreferenceHelper
 import com.bnyro.trivia.util.navigate
 
 class LibraryAdapter(
+    private val quizzes: List<Quiz>,
     private val parentFragment: Fragment
 ) : RecyclerView.Adapter<LibraryViewHolder>() {
-
-    private var quizzes = PreferenceHelper.getQuizzes()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LibraryViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -40,7 +40,8 @@ class LibraryAdapter(
             root.setOnClickListener {
                 val quizFragment = QuizFragment()
                 val bundle = Bundle()
-                bundle.putInt(BundleArguments.quizIndex, position)
+                val quizIndex = PreferenceHelper.getQuizzes().indexOf(quiz)
+                bundle.putInt(BundleArguments.quizIndex, quizIndex)
                 quizFragment.arguments = bundle
                 parentFragment.parentFragmentManager.navigate(quizFragment)
             }

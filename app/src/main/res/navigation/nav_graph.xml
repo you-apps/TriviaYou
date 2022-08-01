@@ -34,4 +34,10 @@
         android:name="com.bnyro.trivia.fragments.UserStatsFragment"
         android:label="@string/user_stats"
         tools:layout="@layout/fragment_stats" />
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.bnyro.trivia.fragments.SearchFragment"
+        android:label="@string/search"
+        tools:layout="@layout/fragment_stats" />
 </navigation>

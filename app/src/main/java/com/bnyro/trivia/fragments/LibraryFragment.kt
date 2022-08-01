@@ -34,10 +34,11 @@ class LibraryFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        if (PreferenceHelper.getQuizzes().isNotEmpty()) binding.libraryEmpty.visibility = View.GONE
+        val quizzes = PreferenceHelper.getQuizzes()
+        if (quizzes.isNotEmpty()) binding.libraryEmpty.visibility = View.GONE
 
         binding.libraryRV.layoutManager = LinearLayoutManager(context)
-        binding.libraryRV.adapter = LibraryAdapter(this)
+        binding.libraryRV.adapter = LibraryAdapter(quizzes, this)
 
         binding.downloadFAB.setOnClickListener {
             DownloadDialog().show(childFragmentManager, null)
