@@ -1,0 +1,1 @@
+<i>Trivia You</i> è un'app di quiz open source. Supporta differenti API di quiz, oltre a dare la possibilità di crearne dei propri localmente, così da poter usare l'app sia stando online sia offline.
