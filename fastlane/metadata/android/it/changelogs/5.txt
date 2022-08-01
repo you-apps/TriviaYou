@@ -1,0 +1,3 @@
+Aggiunto tema OLED
+Aggiunta opzione per impostare il ritardo tra le domande
+Aggiunta scritta in caso di libreria vuota
