@@ -1,0 +1,3 @@
+Aggiunta possibilità di scaricare i quiz per categoria
+Aggiunta opzione per impostare la pagina iniziale
+Aggiunta la sezione sulla licenza in Informazioni
