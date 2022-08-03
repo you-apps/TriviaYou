@@ -59,10 +59,8 @@ class BackupHelper(
             val mapper = ObjectMapper()
             val data = mapper.writeValueAsBytes(PreferenceHelper.getQuizzes())
             activity.contentResolver.openFileDescriptor(uri, "w")?.use {
-                FileOutputStream(it.fileDescriptor).use {
-                    it.write(
-                        data
-                    )
+                FileOutputStream(it.fileDescriptor).use { fileOutputStream ->
+                    fileOutputStream.write(data)
                 }
             }
         } catch (e: FileNotFoundException) {
@@ -93,7 +91,7 @@ class BackupHelper(
     private val getFileData =
         activity.registerForActivityResult(
             ActivityResultContracts.StartActivityForResult()
-        ) {
+        ) { it ->
             if (it.resultCode == Activity.RESULT_OK) {
                 val uri = it.data?.data!!
                 val text = readTextFromUri(uri)

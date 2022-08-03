@@ -4,6 +4,7 @@
     <string name="settings">Impostazioni</string>
     <string name="about">Informazioni</string>
     <string name="api_stats">Statistiche API</string>
+    <string name="search">Ricerca</string>
 
     <!-- Menù di navigazione in basso -->
     <string name="home">Home</string>

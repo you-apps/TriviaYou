@@ -1,7 +1,6 @@
 package com.bnyro.trivia.fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -90,7 +89,6 @@ class CreateQuizFragment : Fragment() {
                 }
                 if (editMode == EditModeType.EDIT_EXISTING) {
                     questionIndex = questionIndex!! + 1
-                    Log.e("!askdf", questionIndex.toString())
                     loadQuestionIfNeeded()
                 }
             } else {
@@ -154,7 +152,7 @@ class CreateQuizFragment : Fragment() {
         ) {
             questions[questionIndex!!] = question
         } else questions += question
-        binding.questionCount.text = context?.getString(R.string.questions, questions.size)
+        binding.questionCount.text = context?.getString(R.string.questions, questions.size.toString())
     }
 
     // editing question and not creating a new quiz

@@ -1,5 +1,6 @@
 package com.bnyro.trivia.util
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.preference.PreferenceManager
@@ -11,6 +12,7 @@ import com.bnyro.trivia.obj.UserStats
 import com.fasterxml.jackson.core.type.TypeReference
 import com.fasterxml.jackson.databind.ObjectMapper
 
+@SuppressLint("StaticFieldLeak")
 object PreferenceHelper {
     private lateinit var context: Context
     private lateinit var settings: SharedPreferences
