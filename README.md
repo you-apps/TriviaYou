@@ -52,6 +52,12 @@ All contributions are welcome!
 Feel free to suggest new features or new APIs that could be supported.
 If you are a developer and wish to contribute to the app, please to fork the project and submit a pull request.
 
+## Translation
+
+<a href="https://hosted.weblate.org/projects/trivia-you/#languages">
+<img src="https://hosted.weblate.org/widgets/trivia-you/-/287x66-grey.png" alt="Translation status" />
+</a>
+
 ## License
 
 Trivia You is licensed under the [GNU General Public License](https://www.gnu.org/licenses/gpl.html): You can use, study and share it as you want.
