@@ -10,11 +10,11 @@ import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.FragmentEditQuizBinding
+import com.bnyro.trivia.extensions.navigate
 import com.bnyro.trivia.extensions.toHTML
 import com.bnyro.trivia.obj.Quiz
 import com.bnyro.trivia.util.BundleArguments
 import com.bnyro.trivia.util.PreferenceHelper
-import com.bnyro.trivia.util.navigate
 
 class EditQuizFragment : Fragment() {
     private lateinit var binding: FragmentEditQuizBinding

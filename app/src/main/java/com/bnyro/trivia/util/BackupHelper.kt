@@ -30,7 +30,7 @@ class BackupHelper(
     /**
      * create a new file
      */
-    fun createFile() {
+    private fun createFile() {
         val intent = Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
             addCategory(Intent.CATEGORY_OPENABLE)
             type = "text/plain"
@@ -54,7 +54,7 @@ class BackupHelper(
     /**
      * write the text to the document
      */
-    fun writeToDocument(uri: Uri) {
+    private fun writeToDocument(uri: Uri) {
         try {
             val mapper = ObjectMapper()
             val data = mapper.writeValueAsBytes(PreferenceHelper.getQuizzes())
@@ -90,7 +90,7 @@ class BackupHelper(
     /**
      * listen for a file being selected
      */
-    val getFileData =
+    private val getFileData =
         activity.registerForActivityResult(
             ActivityResultContracts.StartActivityForResult()
         ) {
@@ -116,7 +116,7 @@ class BackupHelper(
     /**
      * get the text inside the file
      */
-    fun readTextFromUri(uri: Uri): String {
+    private fun readTextFromUri(uri: Uri): String {
         val stringBuilder = StringBuilder()
         activity.contentResolver.openInputStream(uri)?.use { inputStream ->
             BufferedReader(InputStreamReader(inputStream)).use { reader ->

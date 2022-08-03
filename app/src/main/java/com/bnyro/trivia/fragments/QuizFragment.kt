@@ -7,11 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
-import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.FragmentQuizBinding
+import com.bnyro.trivia.extensions.navigate
 import com.bnyro.trivia.extensions.toHTML
 import com.bnyro.trivia.obj.Question
 import com.bnyro.trivia.obj.QuizType
@@ -19,7 +19,6 @@ import com.bnyro.trivia.util.ApiHelper
 import com.bnyro.trivia.util.BundleArguments
 import com.bnyro.trivia.util.PreferenceHelper
 import com.bnyro.trivia.util.ThemeHelper
-import com.bnyro.trivia.util.navigate
 import com.google.android.material.elevation.SurfaceColors
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.delay

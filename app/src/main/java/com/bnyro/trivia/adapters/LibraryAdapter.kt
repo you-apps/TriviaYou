@@ -8,11 +8,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.RowQuizBinding
 import com.bnyro.trivia.dialogs.QuizOptionsDialog
+import com.bnyro.trivia.extensions.navigate
 import com.bnyro.trivia.fragments.QuizFragment
 import com.bnyro.trivia.obj.Quiz
 import com.bnyro.trivia.util.BundleArguments
 import com.bnyro.trivia.util.PreferenceHelper
-import com.bnyro.trivia.util.navigate
 
 class LibraryAdapter(
     private val quizzes: List<Quiz>,

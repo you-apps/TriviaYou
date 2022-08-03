@@ -4,11 +4,11 @@ import android.app.Dialog
 import android.os.Bundle
 import androidx.fragment.app.DialogFragment
 import com.bnyro.trivia.R
+import com.bnyro.trivia.extensions.navigate
 import com.bnyro.trivia.fragments.EditQuizFragment
 import com.bnyro.trivia.fragments.QuizFragment
 import com.bnyro.trivia.util.BundleArguments
 import com.bnyro.trivia.util.PreferenceHelper
-import com.bnyro.trivia.util.navigate
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class QuizOptionsDialog(
@@ -34,7 +34,7 @@ class QuizOptionsDialog(
                         val bundle = Bundle()
                         bundle.putInt(BundleArguments.quizIndex, libraryIndex)
                         quizFragment.arguments = bundle
-                        parentFragment?.parentFragmentManager.navigate(quizFragment)
+                        requireParentFragment().parentFragmentManager.navigate(quizFragment)
                     }
                     1 -> {
                         val renameDialog = RenameDialog(libraryIndex)
@@ -49,7 +49,7 @@ class QuizOptionsDialog(
                         val bundle = Bundle()
                         bundle.putInt(BundleArguments.quizIndex, libraryIndex)
                         editQuizFragment.arguments = bundle
-                        parentFragment?.parentFragmentManager!!.navigate(editQuizFragment)
+                        requireParentFragment().parentFragmentManager.navigate(editQuizFragment)
                     }
                 }
             }

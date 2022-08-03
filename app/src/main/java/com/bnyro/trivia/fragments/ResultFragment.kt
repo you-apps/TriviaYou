@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.FragmentResultBinding
+import com.bnyro.trivia.extensions.navigate
 import com.bnyro.trivia.util.BundleArguments
-import com.bnyro.trivia.util.navigate
 
 class ResultFragment : Fragment() {
 

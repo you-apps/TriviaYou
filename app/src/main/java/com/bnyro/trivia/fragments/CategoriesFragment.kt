@@ -10,9 +10,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.FragmentCategoriesBinding
+import com.bnyro.trivia.extensions.navigate
 import com.bnyro.trivia.util.ApiHelper
 import com.bnyro.trivia.util.BundleArguments
-import com.bnyro.trivia.util.navigate
 import com.google.android.material.snackbar.Snackbar
 
 class CategoriesFragment : Fragment() {

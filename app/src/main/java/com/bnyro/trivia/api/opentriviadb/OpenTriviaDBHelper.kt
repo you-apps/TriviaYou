@@ -39,7 +39,6 @@ object OpenTriviaDBHelper {
         val metadata = RetrofitInstance.openTriviaApi.getStats()
 
         val stats = mutableListOf<String>()
-        val mapper = ObjectMapper()
 
         kotlin.runCatching {
             val json = mapper.readTree(

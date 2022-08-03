@@ -5,10 +5,10 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import com.bnyro.trivia.R
+import com.bnyro.trivia.extensions.navigate
 import com.bnyro.trivia.fragments.CreateQuizFragment
 import com.bnyro.trivia.util.BundleArguments
 import com.bnyro.trivia.util.DialogHelper
-import com.bnyro.trivia.util.navigate
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class CreateQuizDialog : DialogFragment() {
@@ -27,7 +27,7 @@ class CreateQuizDialog : DialogFragment() {
                     val bundle = Bundle()
                     bundle.putString(BundleArguments.quizName, input.text.toString())
                     createQuizFragment.arguments = bundle
-                    parentFragment?.parentFragmentManager!!.navigate(createQuizFragment, false)
+                    requireParentFragment().parentFragmentManager.navigate(createQuizFragment, false)
                 } else {
                     Toast.makeText(parentFragment?.context, R.string.name_empty, Toast.LENGTH_SHORT)
                         .show()

@@ -2,6 +2,7 @@ package com.bnyro.trivia.util
 
 import android.content.Context
 import com.bnyro.trivia.R
+import com.bnyro.trivia.extensions.round
 
 object StatsHelper {
     fun getStats(context: Context): List<String> {
@@ -20,10 +21,10 @@ object StatsHelper {
             }
         }
         val correctAnswerRate: Double =
-            if (totalStats.totalAnswers != 0) (totalStats.correctAnswers.toDouble() / totalStats.totalAnswers.toDouble() * 100).round(
-                2
-            )
-            else 100F.toDouble()
+            if (totalStats.totalAnswers != 0) {
+                (totalStats.correctAnswers.toDouble() / totalStats.totalAnswers.toDouble() * 100)
+                    .round(2)
+            } else 100F.toDouble()
 
         return listOf(
             "${context.getString(R.string.answered_questions)}: ${totalStats.totalAnswers}",

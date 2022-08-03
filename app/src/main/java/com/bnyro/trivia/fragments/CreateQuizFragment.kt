@@ -136,7 +136,7 @@ class CreateQuizFragment : Fragment() {
     }
 
     private fun getInsertedQuestion(): Question {
-        val question = Question(
+        return Question(
             question = binding.questionNameET.text.toString(),
             correctAnswer = binding.correctAnswerET.text.toString(),
             incorrectAnswers = listOf(
@@ -145,7 +145,6 @@ class CreateQuizFragment : Fragment() {
                 binding.incorrectAnswerThree.text.toString()
             )
         )
-        return question
     }
 
     private fun appendQuestionToList() {

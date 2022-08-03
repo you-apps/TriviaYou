@@ -1,4 +1,4 @@
-package com.bnyro.trivia.util
+package com.bnyro.trivia.extensions
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
