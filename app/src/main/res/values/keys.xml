@@ -9,6 +9,7 @@
     <string name="label_visibility_key">label_visibility</string>
     <string name="default_tab_key">default_tab</string>
     <string name="questions_delay_key">questions_delay</string>
+    <string name="sounds_key">sounds</string>
 
     <!-- Preferences default Values -->
     <string name="api_default">TheTriviaAPI</string>
@@ -19,6 +20,7 @@
     <string name="label_visibility_default">selected</string>
     <string name="default_tab_default">home</string>
     <string name="questions_delay_default">auto</string>
+    <string name="sounds_default">false</string>
 
     <!-- Preference Action Keys -->
     <string name="reset_stats_key">reset_stats</string>

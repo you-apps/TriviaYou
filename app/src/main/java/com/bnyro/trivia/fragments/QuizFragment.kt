@@ -1,6 +1,7 @@
 package com.bnyro.trivia.fragments
 
 import android.content.Context
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -76,6 +77,11 @@ class QuizFragment : Fragment() {
             binding.optionC,
             binding.optionD
         )
+
+        // disable click sounds of the buttons
+        optionButtons.forEach {
+            it.isSoundEffectsEnabled = false
+        }
 
         buttonTextColor = binding.optionA.currentTextColor
 
@@ -164,8 +170,10 @@ class QuizFragment : Fragment() {
         }
         totalAnswersCount += 1
         if (isAnswerCorrect) {
+            playSoundIfEnabled(R.raw.right)
             correctAnswerCount += 1
         } else {
+            playSoundIfEnabled(R.raw.wrong)
             tempOptionButtons[selectedAnswerIndex].apply {
                 setTextColor(textColor)
                 setBackgroundColor(colorError)
@@ -215,5 +223,16 @@ class QuizFragment : Fragment() {
         if (libraryIndex != null) bundle.putInt(BundleArguments.quizIndex, libraryIndex!!)
         resultFragment.arguments = bundle
         parentFragmentManager.navigate(resultFragment)
+    }
+
+    private fun playSoundIfEnabled(resource: Int) {
+        if (!PreferenceHelper.areSoundsEnabled()) return
+
+        val mediaPlayer = MediaPlayer.create(context, resource)
+        mediaPlayer.setOnCompletionListener {
+            it.reset()
+            it.release()
+        }
+        mediaPlayer.start()
     }
 }

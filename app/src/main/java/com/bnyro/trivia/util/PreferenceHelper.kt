@@ -98,6 +98,10 @@ object PreferenceHelper {
         return getBoolean(context.getString(R.string.unlimited_mode_key), true)
     }
 
+    fun areSoundsEnabled(): Boolean {
+        return getBoolean(context.getString(R.string.sounds_key), false)
+    }
+
     fun getTotalStats(): UserStats {
         val json = settings.getString(context.getString(R.string.stats_key), "")
         val type = object : TypeReference<UserStats>() {}

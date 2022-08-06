@@ -19,6 +19,12 @@
             app:title="@string/questions_delay"
             app:useSimpleSummaryProvider="true" />
 
+        <CheckBoxPreference
+            android:defaultValue="@string/sounds_default"
+            android:icon="@drawable/ic_sound"
+            app:key="@string/sounds_key"
+            app:title="@string/sounds" />
+
     </PreferenceCategory>
 
     <PreferenceCategory app:title="@string/api">
