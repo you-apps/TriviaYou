@@ -14,9 +14,6 @@ android {
         versionName "0.8"
     }
 
-    lintOptions {
-        baseline file("lint-baseline.xml")
-    }
 
     buildTypes {
         release {
@@ -38,6 +35,9 @@ android {
     }
     buildFeatures {
         viewBinding true
+    }
+    lint {
+        baseline file('lint-baseline.xml')
     }
 }
 
