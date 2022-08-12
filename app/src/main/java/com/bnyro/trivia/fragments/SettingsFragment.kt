@@ -3,13 +3,13 @@ package com.bnyro.trivia.fragments
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.Preference
-import androidx.preference.PreferenceFragmentCompat
 import com.bnyro.trivia.R
+import com.bnyro.trivia.extensions.PrefFragment
 import com.bnyro.trivia.util.BackupHelper
 import com.bnyro.trivia.util.PreferenceHelper
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
-class SettingsFragment : PreferenceFragmentCompat() {
+class SettingsFragment : PrefFragment() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.preferences, rootKey)
 
