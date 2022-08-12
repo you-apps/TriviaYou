@@ -146,13 +146,14 @@ object PreferenceHelper {
         replaceQuizByIndex(quizIndex, quiz)
     }
 
-    fun getDelay(correctAnswer: String): Long {
+    fun getDelay(correctAnswer: String): Long? {
         val questionsDelayPref = getString(
             context.getString(R.string.questions_delay_key),
             context.getString(R.string.questions_delay_default)
         )
         return when (questionsDelayPref) {
             "auto" -> correctAnswer.wordCount() * 400L
+            "infinite" -> null
             else -> questionsDelayPref.toLong()
         }
     }

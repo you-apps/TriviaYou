@@ -35,9 +35,9 @@ class SearchFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.searchResults.layoutManager = LinearLayoutManager(requireContext())
 
-        viewModel.searchQuery.observe(viewLifecycleOwner,{
+        viewModel.searchQuery.observe(viewLifecycleOwner) {
             loadSuggestions(it)
-        })
+        }
 
         loadSuggestions(query)
     }

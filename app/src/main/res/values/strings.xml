@@ -20,6 +20,7 @@
     <string name="unlimited_mode">Unlimited mode</string>
     <string name="questions_delay">Time between questions</string>
     <string name="delay_auto">Auto</string>
+    <string name="delay_infinite">Infinite</string>
     <string name="sounds">Sounds</string>
 
     <!-- API Settings -->

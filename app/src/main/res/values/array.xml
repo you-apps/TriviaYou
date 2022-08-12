@@ -78,6 +78,7 @@
         <item>2s</item>
         <item>3s</item>
         <item>5s</item>
+        <item>@string/delay_infinite</item>
     </string-array>
 
     <string-array name="questionsDelayValues">
@@ -87,6 +88,7 @@
         <item>2000</item>
         <item>3000</item>
         <item>5000</item>
+        <item>infinite</item>
     </string-array>
 
 </resources>

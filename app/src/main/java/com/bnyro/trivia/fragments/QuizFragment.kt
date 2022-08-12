@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
+import androidx.core.view.children
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.bnyro.trivia.R
@@ -71,19 +72,14 @@ class QuizFragment : Fragment() {
         val imm = context?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(view.windowToken, 0)
 
-        optionButtons = mutableListOf(
-            binding.optionA,
-            binding.optionB,
-            binding.optionC,
-            binding.optionD
-        )
+        optionButtons = binding.answersLL.children.map { it as Button }.toList()
 
         // disable click sounds of the buttons
         optionButtons.forEach {
             it.isSoundEffectsEnabled = false
         }
 
-        buttonTextColor = binding.optionA.currentTextColor
+        buttonTextColor = optionButtons[0].currentTextColor
 
         // gets the surface color of the bottom navigation view
         buttonBackgroundColor = SurfaceColors.getColorForElevation(requireContext(), 10F)
@@ -191,27 +187,41 @@ class QuizFragment : Fragment() {
         }
 
         lifecycleScope.launchWhenCreated {
-            delay(PreferenceHelper.getDelay(question.correctAnswer!!))
-            if (questionIndex + 1 != questions.size) {
-                // load next question
-                questionIndex += 1
-                if (quizType == QuizType.OFFLINE) PreferenceHelper.setQuizPosition(
-                    libraryIndex!!,
-                    questionIndex
-                )
-                loadQuestion()
+            val delay = PreferenceHelper.getDelay(question.correctAnswer!!)
+            if (delay == null) {
+                // infinite delay
+                optionButtons.forEach {
+                    it.setOnClickListener {
+                        loadNextQuestion()
+                    }
+                }
             } else {
-                questionIndex = 0
-                if (quizType == QuizType.OFFLINE) PreferenceHelper.setQuizPosition(
-                    libraryIndex!!,
-                    0
-                )
-                if (
-                    quizType == QuizType.ONLINE &&
-                    PreferenceHelper.isUnlimitedMode()
-                ) fetchQuestions()
-                else showResultFragment()
+                delay(delay)
+                loadNextQuestion()
             }
+        }
+    }
+
+    private fun loadNextQuestion() {
+        if (questionIndex + 1 != questions.size) {
+            // load next question
+            questionIndex += 1
+            if (quizType == QuizType.OFFLINE) PreferenceHelper.setQuizPosition(
+                libraryIndex!!,
+                questionIndex
+            )
+            loadQuestion()
+        } else {
+            questionIndex = 0
+            if (quizType == QuizType.OFFLINE) PreferenceHelper.setQuizPosition(
+                libraryIndex!!,
+                0
+            )
+            if (
+                quizType == QuizType.ONLINE &&
+                PreferenceHelper.isUnlimitedMode()
+            ) fetchQuestions()
+            else showResultFragment()
         }
     }
 

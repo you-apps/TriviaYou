@@ -38,19 +38,15 @@
             android:orientation="vertical">
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/optionA"
                 style="@style/AnswerButton" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/optionB"
                 style="@style/AnswerButton" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/optionC"
                 style="@style/AnswerButton" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/optionD"
                 style="@style/AnswerButton" />
 
         </LinearLayout>
