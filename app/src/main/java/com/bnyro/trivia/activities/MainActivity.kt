@@ -6,11 +6,14 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
+import androidx.core.os.bundleOf
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.ActivityMainBinding
+import com.bnyro.trivia.models.SearchViewModel
 import com.bnyro.trivia.util.BundleArguments
 import com.bnyro.trivia.util.PreferenceHelper
 import com.bnyro.trivia.util.ThemeHelper
@@ -85,7 +88,10 @@ class MainActivity : AppCompatActivity() {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.menu_main, menu)
 
+        val searchItem = menu.findItem(R.id.action_search)
         searchView = menu.findItem(R.id.action_search).actionView as SearchView
+
+        val searchViewModel = ViewModelProvider(this)[SearchViewModel::class.java]
 
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
@@ -94,12 +100,29 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                val bundle = Bundle()
-                bundle.putString(BundleArguments.query, newText)
-                navController.navigate(R.id.searchFragment, bundle)
+                if (navController.currentDestination?.id != R.id.searchFragment) {
+                    val bundle = bundleOf(BundleArguments.query to newText)
+                    navController.navigate(R.id.searchFragment, bundle)
+                } else {
+                    searchViewModel.setQuery(newText)
+                }
                 return true
             }
         })
+
+        searchItem.setOnActionExpandListener(
+            object : MenuItem.OnActionExpandListener {
+                override fun onMenuItemActionExpand(p0: MenuItem?): Boolean {
+                    return true
+                }
+
+                override fun onMenuItemActionCollapse(p0: MenuItem?): Boolean {
+                    if (navController.currentDestination?.id == R.id.searchFragment) onBackPressed()
+                    return true
+                }
+            }
+        )
+
         return true
     }
 
