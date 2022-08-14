@@ -152,7 +152,8 @@ class CreateQuizFragment : Fragment() {
         ) {
             questions[questionIndex!!] = question
         } else questions += question
-        binding.questionCount.text = context?.getString(R.string.questions, questions.size.toString())
+        binding.questionCount.text =
+            context?.getString(R.string.questions, questions.size.toString())
     }
 
     // editing question and not creating a new quiz

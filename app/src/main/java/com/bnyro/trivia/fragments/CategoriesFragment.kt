@@ -11,9 +11,9 @@ import androidx.lifecycle.lifecycleScope
 import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.FragmentCategoriesBinding
 import com.bnyro.trivia.extensions.navigate
+import com.bnyro.trivia.extensions.showSnackBar
 import com.bnyro.trivia.util.ApiHelper
 import com.bnyro.trivia.util.BundleArguments
-import com.google.android.material.snackbar.Snackbar
 
 class CategoriesFragment : Fragment() {
     private lateinit var binding: FragmentCategoriesBinding
@@ -44,8 +44,7 @@ class CategoriesFragment : Fragment() {
             val categories = try {
                 ApiHelper().getCategories()
             } catch (e: Exception) {
-                Snackbar.make(binding.root, R.string.network_error, Snackbar.LENGTH_LONG)
-                    .show()
+                binding.root.showSnackBar(R.string.network_error)
                 return@launchWhenCreated
             }
 

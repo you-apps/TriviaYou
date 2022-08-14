@@ -14,6 +14,7 @@ import androidx.lifecycle.lifecycleScope
 import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.FragmentQuizBinding
 import com.bnyro.trivia.extensions.navigate
+import com.bnyro.trivia.extensions.showSnackBar
 import com.bnyro.trivia.extensions.toHTML
 import com.bnyro.trivia.obj.Question
 import com.bnyro.trivia.obj.QuizType
@@ -22,7 +23,6 @@ import com.bnyro.trivia.util.BundleArguments
 import com.bnyro.trivia.util.PreferenceHelper
 import com.bnyro.trivia.util.ThemeHelper
 import com.google.android.material.elevation.SurfaceColors
-import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.delay
 
 class QuizFragment : Fragment() {
@@ -101,8 +101,7 @@ class QuizFragment : Fragment() {
             questions = try {
                 ApiHelper().getQuestions(category)
             } catch (e: Exception) {
-                Snackbar.make(binding.root, R.string.network_error, Snackbar.LENGTH_SHORT)
-                    .show()
+                binding.root.showSnackBar(R.string.network_error)
                 return@launchWhenCreated
             }
             loadQuestion()

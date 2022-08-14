@@ -41,7 +41,8 @@ class EditQuizFragment : Fragment() {
         quiz = PreferenceHelper.getQuizzes()[quizIndex]
 
         binding.quizName.text = quiz.name
-        binding.questionCount.text = context?.getString(R.string.questions, quiz.questions?.size.toString())
+        binding.questionCount.text =
+            context?.getString(R.string.questions, quiz.questions?.size.toString())
 
         val adapter = ArrayAdapter<Spanned>(requireContext(), R.layout.list_item)
 

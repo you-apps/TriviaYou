@@ -27,7 +27,10 @@ class CreateQuizDialog : DialogFragment() {
                     val bundle = Bundle()
                     bundle.putString(BundleArguments.quizName, input.text.toString())
                     createQuizFragment.arguments = bundle
-                    requireParentFragment().parentFragmentManager.navigate(createQuizFragment, false)
+                    requireParentFragment().parentFragmentManager.navigate(
+                        createQuizFragment,
+                        false
+                    )
                 } else {
                     Toast.makeText(parentFragment?.context, R.string.name_empty, Toast.LENGTH_SHORT)
                         .show()

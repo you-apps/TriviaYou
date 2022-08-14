@@ -37,17 +37,13 @@
             android:layout_marginBottom="30dp"
             android:orientation="vertical">
 
-            <com.google.android.material.button.MaterialButton
-                style="@style/AnswerButton" />
+            <com.google.android.material.button.MaterialButton style="@style/AnswerButton" />
 
-            <com.google.android.material.button.MaterialButton
-                style="@style/AnswerButton" />
+            <com.google.android.material.button.MaterialButton style="@style/AnswerButton" />
 
-            <com.google.android.material.button.MaterialButton
-                style="@style/AnswerButton" />
+            <com.google.android.material.button.MaterialButton style="@style/AnswerButton" />
 
-            <com.google.android.material.button.MaterialButton
-                style="@style/AnswerButton" />
+            <com.google.android.material.button.MaterialButton style="@style/AnswerButton" />
 
         </LinearLayout>
 
