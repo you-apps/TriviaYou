@@ -33,6 +33,7 @@
         <entry key="app/src/main/res/drawable/ic_sound.xml" value="0.162" />
         <entry key="app/src/main/res/drawable/ic_theme.xml" value="0.1395" />
         <entry key="app/src/main/res/drawable/ic_timer.xml" value="0.1395" />
+        <entry key="app/src/main/res/drawable/snackbar_shape.xml" value="0.32" />
         <entry key="app/src/main/res/layout/activity_about.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_settings.xml" value="0.5" />

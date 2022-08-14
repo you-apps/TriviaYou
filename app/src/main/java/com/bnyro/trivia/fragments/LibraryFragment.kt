@@ -10,6 +10,7 @@ import com.bnyro.trivia.adapters.LibraryAdapter
 import com.bnyro.trivia.databinding.FragmentLibraryBinding
 import com.bnyro.trivia.dialogs.CreateQuizDialog
 import com.bnyro.trivia.dialogs.DownloadDialog
+import com.bnyro.trivia.util.NetworkHelper
 import com.bnyro.trivia.util.PreferenceHelper
 
 class LibraryFragment : Fragment() {
@@ -41,6 +42,7 @@ class LibraryFragment : Fragment() {
         binding.libraryRV.adapter = LibraryAdapter(quizzes, this)
 
         binding.downloadFAB.setOnClickListener {
+            if (!NetworkHelper.isOnline(requireContext())) return@setOnClickListener
             DownloadDialog().show(childFragmentManager, null)
         }
 
