@@ -7,7 +7,7 @@ interface OpenTriviaDB {
     @GET("api.php")
     suspend fun getQuestions(
         @Query("amount") limit: Int,
-        @Query("categories") category: Int?,
+        @Query("category") category: Int?,
         @Query("difficulty") difficulty: String?
     ): OpenTriviaDBQuestionResponse
 
