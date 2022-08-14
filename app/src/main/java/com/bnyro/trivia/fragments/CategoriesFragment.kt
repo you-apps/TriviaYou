@@ -11,7 +11,7 @@ import androidx.lifecycle.lifecycleScope
 import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.FragmentCategoriesBinding
 import com.bnyro.trivia.extensions.navigate
-import com.bnyro.trivia.extensions.showSnackBar
+import com.bnyro.trivia.extensions.showStyledSnackBar
 import com.bnyro.trivia.util.ApiHelper
 import com.bnyro.trivia.util.BundleArguments
 
@@ -44,7 +44,7 @@ class CategoriesFragment : Fragment() {
             val categories = try {
                 ApiHelper().getCategories()
             } catch (e: Exception) {
-                binding.root.showSnackBar(R.string.network_error)
+                binding.root.showStyledSnackBar(R.string.network_error)
                 return@launchWhenCreated
             }
 

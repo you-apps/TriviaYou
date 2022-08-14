@@ -14,7 +14,7 @@ import androidx.lifecycle.lifecycleScope
 import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.FragmentQuizBinding
 import com.bnyro.trivia.extensions.navigate
-import com.bnyro.trivia.extensions.showSnackBar
+import com.bnyro.trivia.extensions.showStyledSnackBar
 import com.bnyro.trivia.extensions.toHTML
 import com.bnyro.trivia.obj.Question
 import com.bnyro.trivia.obj.QuizType
@@ -101,7 +101,7 @@ class QuizFragment : Fragment() {
             questions = try {
                 ApiHelper().getQuestions(category)
             } catch (e: Exception) {
-                binding.root.showSnackBar(R.string.network_error)
+                binding.root.showStyledSnackBar(R.string.network_error)
                 return@launchWhenCreated
             }
             loadQuestion()

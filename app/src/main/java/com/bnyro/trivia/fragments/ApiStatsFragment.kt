@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.FragmentStatsBinding
-import com.bnyro.trivia.extensions.showSnackBar
+import com.bnyro.trivia.extensions.showStyledSnackBar
 import com.bnyro.trivia.util.ApiHelper
 
 class ApiStatsFragment : Fragment() {
@@ -31,7 +31,7 @@ class ApiStatsFragment : Fragment() {
             val stats = try {
                 ApiHelper().getStats()
             } catch (e: Exception) {
-                binding.root.showSnackBar(R.string.network_error)
+                binding.root.showStyledSnackBar(R.string.network_error)
                 return@launchWhenCreated
             }
             kotlin.runCatching {

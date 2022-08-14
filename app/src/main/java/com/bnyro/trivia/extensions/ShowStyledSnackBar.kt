@@ -6,19 +6,19 @@ import androidx.core.content.res.ResourcesCompat
 import com.bnyro.trivia.R
 import com.google.android.material.snackbar.Snackbar
 
-fun View.showSnackBar(text: Int) {
+fun View.showStyledSnackBar(text: Int) {
     val snackBar = Snackbar.make(this, text, Snackbar.LENGTH_SHORT)
     snackBar.setTextMaxLines(3)
     snackBar.animationMode = Snackbar.ANIMATION_MODE_SLIDE
 
     val params = snackBar.view.layoutParams as FrameLayout.LayoutParams
-    val sideMargin = 70
+    val sideMargin = 50
 
     params.setMargins(
         sideMargin,
         params.topMargin,
         sideMargin,
-        sideMargin + 50
+        270
     )
     snackBar.view.layoutParams = params
 
