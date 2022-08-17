@@ -78,4 +78,5 @@
     <string name="correct_answer">Poprawna odpowiedź</string>
     <string name="restore_error">Błąd w przywracaniu quizów :(</string>
     <string name="clear_library">Wyczyść bibliotekę</string>
+    <string name="unlimited_mode">Nieograniczona ilość pytań</string>
 </resources>
