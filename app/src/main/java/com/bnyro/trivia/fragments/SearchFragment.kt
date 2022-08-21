@@ -44,7 +44,19 @@ class SearchFragment : Fragment() {
 
     private fun loadSuggestions(query: String) {
         val quizzes = PreferenceHelper.getQuizzes()
-        val results = quizzes.filter { it.name?.contains(query)!! }
+        val results = quizzes.filter {
+            // contained in the name
+            it.name
+                ?.lowercase()!!
+                .contains(query.lowercase()) ||
+            // contained in one question
+            it.questions!!
+                .filter {
+                    it.question!!
+                        .lowercase()
+                        .contains(query.lowercase()) }
+                .isNotEmpty()
+        }
 
         val adapter = LibraryAdapter(results, this)
         binding.searchResults.adapter = adapter
