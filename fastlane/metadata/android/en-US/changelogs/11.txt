@@ -1,0 +1,3 @@
+* Czech translations thanks to @maciej-klupp
+* Ability to search for question names
+* Minor bug fixes
