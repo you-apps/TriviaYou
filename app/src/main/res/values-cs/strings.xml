@@ -78,4 +78,5 @@
     <string name="downloaded_quizzes">Stažené kvízy</string>
     <string name="downloaded_questions">Stažené otázky</string>
     <string name="network_error">Chyba sítě</string>
+    <string name="delay_infinite">Neomezené</string>
 </resources>
