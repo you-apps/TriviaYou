@@ -49,13 +49,14 @@ class SearchFragment : Fragment() {
             it.name
                 ?.lowercase()!!
                 .contains(query.lowercase()) ||
-            // contained in one question
-            it.questions!!
-                .filter {
-                    it.question!!
-                        .lowercase()
-                        .contains(query.lowercase()) }
-                .isNotEmpty()
+                // contained in one question
+                it.questions!!
+                    .filter {
+                        it.question!!
+                            .lowercase()
+                            .contains(query.lowercase())
+                    }
+                    .isNotEmpty()
         }
 
         val adapter = LibraryAdapter(results, this)
