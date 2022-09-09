@@ -3,14 +3,15 @@ package com.bnyro.trivia.api.opentriviadb
 import com.bnyro.trivia.extensions.formatStats
 import com.bnyro.trivia.obj.Category
 import com.bnyro.trivia.obj.Question
+import com.bnyro.trivia.util.ApiHelper
 import com.bnyro.trivia.util.PreferenceHelper
 import com.bnyro.trivia.util.RetrofitInstance
 import com.fasterxml.jackson.databind.ObjectMapper
 
-object OpenTriviaDBHelper {
+class OpenTriviaDBHelper : ApiHelper() {
     private val mapper = ObjectMapper()
 
-    suspend fun getQuestions(category: String?): List<Question> {
+    override suspend fun getQuestions(category: String?): List<Question> {
         val apiQuestions =
             RetrofitInstance.openTriviaApi.getQuestions(
                 PreferenceHelper.getLimit(),
@@ -29,13 +30,13 @@ object OpenTriviaDBHelper {
         return questions
     }
 
-    suspend fun getCategories(): List<Category> {
+    override suspend fun getCategories(): List<Category> {
         val categories = RetrofitInstance.openTriviaApi.getCategories()
 
         return categories.trivia_categories!!
     }
 
-    suspend fun getStats(): List<String> {
+    override suspend fun getStats(): List<String> {
         val metadata = RetrofitInstance.openTriviaApi.getStats()
 
         val stats = mutableListOf<String>()

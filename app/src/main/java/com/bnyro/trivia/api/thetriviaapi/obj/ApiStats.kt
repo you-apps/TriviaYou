@@ -1,6 +1,6 @@
-package com.bnyro.trivia.api.thetriviaapi
+package com.bnyro.trivia.api.thetriviaapi.obj
 
-data class TheTriviaApiStats(
+data class ApiStats(
     val byCategory: Any? = null,
     val byDifficulty: Any? = null,
     val byState: Any? = null,

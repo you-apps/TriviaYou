@@ -1,6 +1,6 @@
-package com.bnyro.trivia.api.thetriviaapi
+package com.bnyro.trivia.api.thetriviaapi.obj
 
-data class TheTriviaApiQuestion(
+data class Question(
     val category: String? = null,
     val correctAnswer: String? = null,
     val difficulty: String? = null,

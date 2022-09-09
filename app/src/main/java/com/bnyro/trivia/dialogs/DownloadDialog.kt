@@ -12,6 +12,7 @@ import androidx.lifecycle.lifecycleScope
 import com.bnyro.trivia.R
 import com.bnyro.trivia.obj.Quiz
 import com.bnyro.trivia.util.ApiHelper
+import com.bnyro.trivia.util.ApiInstance
 import com.bnyro.trivia.util.DialogHelper
 import com.bnyro.trivia.util.PreferenceHelper
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -35,7 +36,7 @@ class DownloadDialog : DialogFragment() {
 
         val spinner = Spinner(requireContext())
         lifecycleScope.launchWhenCreated {
-            val categories = ApiHelper().getCategories()
+            val categories = ApiInstance.apiHelper.getCategories()
 
             categories.forEach {
                 categoryNames += it.name!!

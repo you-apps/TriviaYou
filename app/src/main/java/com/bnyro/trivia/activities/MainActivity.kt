@@ -112,11 +112,11 @@ class MainActivity : AppCompatActivity() {
 
         searchItem.setOnActionExpandListener(
             object : MenuItem.OnActionExpandListener {
-                override fun onMenuItemActionExpand(p0: MenuItem?): Boolean {
+                override fun onMenuItemActionExpand(p0: MenuItem): Boolean {
                     return true
                 }
 
-                override fun onMenuItemActionCollapse(p0: MenuItem?): Boolean {
+                override fun onMenuItemActionCollapse(p0: MenuItem): Boolean {
                     if (navController.currentDestination?.id == R.id.searchFragment) onBackPressed()
                     return true
                 }
@@ -154,8 +154,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        if (navController.currentDestination?.id == startFragmentId) super.onBackPressed()
-        else if (navController.backQueue.isNotEmpty()) navController.popBackStack()
-        else super.onBackPressed()
+        if (navController.currentDestination?.id == startFragmentId) {
+            super.onBackPressed()
+        } else if (navController.backQueue.isNotEmpty()) {
+            navController.popBackStack()
+        } else {
+            super.onBackPressed()
+        }
     }
 }

@@ -151,7 +151,9 @@ class CreateQuizFragment : Fragment() {
             questions.size > questionIndex!!
         ) {
             questions[questionIndex!!] = question
-        } else questions += question
+        } else {
+            questions += question
+        }
         binding.questionCount.text =
             context?.getString(R.string.questions, questions.size.toString())
     }

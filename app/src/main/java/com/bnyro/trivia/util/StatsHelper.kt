@@ -24,7 +24,9 @@ object StatsHelper {
             if (totalStats.totalAnswers != 0) {
                 (totalStats.correctAnswers.toDouble() / totalStats.totalAnswers.toDouble() * 100)
                     .round(2)
-            } else 100F.toDouble()
+            } else {
+                100F.toDouble()
+            }
 
         return listOf(
             "${context.getString(R.string.answered_questions)}: ${totalStats.totalAnswers}",

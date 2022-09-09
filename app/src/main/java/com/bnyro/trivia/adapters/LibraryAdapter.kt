@@ -34,8 +34,11 @@ class LibraryAdapter(
                 quiz.questions?.size
             )
             quizType.setImageResource(
-                if (quiz.creator == true) R.drawable.ic_bookmark
-                else R.drawable.ic_public
+                if (quiz.creator == true) {
+                    R.drawable.ic_bookmark
+                } else {
+                    R.drawable.ic_public
+                }
             )
             root.setOnClickListener {
                 val quizFragment = QuizFragment()

@@ -1,6 +1,6 @@
-package com.bnyro.trivia.api.opentriviadb
+package com.bnyro.trivia.api.opentriviadb.obj
 
-data class OpenTriviaDBQuestion(
+data class Question(
     val category: String? = null,
     val correct_answer: String? = null,
     val difficulty: String? = null,

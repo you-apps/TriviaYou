@@ -3,14 +3,15 @@ package com.bnyro.trivia.api.thetriviaapi
 import com.bnyro.trivia.extensions.formatStats
 import com.bnyro.trivia.obj.Category
 import com.bnyro.trivia.obj.Question
+import com.bnyro.trivia.util.ApiHelper
 import com.bnyro.trivia.util.PreferenceHelper
 import com.bnyro.trivia.util.RetrofitInstance
 import com.fasterxml.jackson.databind.ObjectMapper
 
-object TheTriviaApiHelper {
+class TheTriviaApiHelper : ApiHelper() {
     private val mapper = ObjectMapper()
 
-    suspend fun getQuestions(category: String?): List<Question> {
+    override suspend fun getQuestions(category: String?): List<Question> {
         val apiQuestions =
             RetrofitInstance.theTriviaApi.getQuestions(
                 PreferenceHelper.getLimit(),
@@ -29,7 +30,7 @@ object TheTriviaApiHelper {
         return questions
     }
 
-    suspend fun getCategories(): List<Category> {
+    override suspend fun getCategories(): List<Category> {
         val categories = RetrofitInstance.theTriviaApi.getCategories()
 
         kotlin.runCatching {
@@ -48,7 +49,7 @@ object TheTriviaApiHelper {
         return listOf()
     }
 
-    suspend fun getStats(): List<String> {
+    override suspend fun getStats(): List<String> {
         val metadata = RetrofitInstance.theTriviaApi.getStats()
 
         val stats = mutableListOf<String>()

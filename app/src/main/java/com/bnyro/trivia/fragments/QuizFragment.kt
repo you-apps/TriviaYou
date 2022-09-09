@@ -18,7 +18,7 @@ import com.bnyro.trivia.extensions.showStyledSnackBar
 import com.bnyro.trivia.extensions.toHTML
 import com.bnyro.trivia.obj.Question
 import com.bnyro.trivia.obj.QuizType
-import com.bnyro.trivia.util.ApiHelper
+import com.bnyro.trivia.util.ApiInstance
 import com.bnyro.trivia.util.BundleArguments
 import com.bnyro.trivia.util.PreferenceHelper
 import com.bnyro.trivia.util.ThemeHelper
@@ -99,7 +99,7 @@ class QuizFragment : Fragment() {
     private fun fetchQuestions() {
         lifecycleScope.launchWhenCreated {
             questions = try {
-                ApiHelper().getQuestions(category)
+                ApiInstance.apiHelper.getQuestions(category)
             } catch (e: Exception) {
                 binding.root.showStyledSnackBar(R.string.network_error)
                 return@launchWhenCreated
@@ -205,22 +205,29 @@ class QuizFragment : Fragment() {
         if (questionIndex + 1 != questions.size) {
             // load next question
             questionIndex += 1
-            if (quizType == QuizType.OFFLINE) PreferenceHelper.setQuizPosition(
-                libraryIndex!!,
-                questionIndex
-            )
+            if (quizType == QuizType.OFFLINE) {
+                PreferenceHelper.setQuizPosition(
+                    libraryIndex!!,
+                    questionIndex
+                )
+            }
             loadQuestion()
         } else {
             questionIndex = 0
-            if (quizType == QuizType.OFFLINE) PreferenceHelper.setQuizPosition(
-                libraryIndex!!,
-                0
-            )
+            if (quizType == QuizType.OFFLINE) {
+                PreferenceHelper.setQuizPosition(
+                    libraryIndex!!,
+                    0
+                )
+            }
             if (
                 quizType == QuizType.ONLINE &&
                 PreferenceHelper.isUnlimitedMode()
-            ) fetchQuestions()
-            else showResultFragment()
+            ) {
+                fetchQuestions()
+            } else {
+                showResultFragment()
+            }
         }
     }
 

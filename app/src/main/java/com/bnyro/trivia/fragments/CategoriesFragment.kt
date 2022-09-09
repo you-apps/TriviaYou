@@ -12,7 +12,7 @@ import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.FragmentCategoriesBinding
 import com.bnyro.trivia.extensions.navigate
 import com.bnyro.trivia.extensions.showStyledSnackBar
-import com.bnyro.trivia.util.ApiHelper
+import com.bnyro.trivia.util.ApiInstance
 import com.bnyro.trivia.util.BundleArguments
 
 class CategoriesFragment : Fragment() {
@@ -42,7 +42,7 @@ class CategoriesFragment : Fragment() {
     private fun fetchCategories() {
         lifecycleScope.launchWhenCreated {
             val categories = try {
-                ApiHelper().getCategories()
+                ApiInstance.apiHelper.getCategories()
             } catch (e: Exception) {
                 binding.root.showStyledSnackBar(R.string.network_error)
                 return@launchWhenCreated
