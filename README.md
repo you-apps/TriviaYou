@@ -58,6 +58,9 @@ If you are a developer and wish to contribute to the app, please to fork the pro
 <img src="https://hosted.weblate.org/widgets/trivia-you/-/287x66-grey.png" alt="Translation status" />
 </a>
 
+## Credits
+- Logo by [@XenXen](https://github.com/XelXen)
+
 ## License
 
 Trivia You is licensed under the [GNU General Public License](https://www.gnu.org/licenses/gpl.html): You can use, study and share it as you want.
