@@ -59,7 +59,7 @@ If you are a developer and wish to contribute to the app, please to fork the pro
 </a>
 
 ## Credits
-- Logo by [@XenXen](https://github.com/XelXen)
+- Logo by [@XelXen](https://github.com/XelXen)
 
 ## License
 
