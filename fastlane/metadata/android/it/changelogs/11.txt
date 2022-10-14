@@ -1,0 +1,3 @@
+* Traduzione in ceco grazie a @maciej-klupp
+* Possibilità di ricercare nomi delle domande to search for question names
+* Sistemati piccoli errori
