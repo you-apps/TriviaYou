@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">Trivia You</string>
+    <string name="settings">Réglages</string>
+    <string name="about">À propos</string>
+</resources>
