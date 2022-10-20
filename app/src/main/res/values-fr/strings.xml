@@ -3,4 +3,5 @@
     <string name="app_name">Trivia You</string>
     <string name="settings">Réglages</string>
     <string name="about">À propos</string>
+    <string name="license">Licence</string>
 </resources>
