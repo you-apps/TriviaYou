@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="about">ବିଷୟରେ</string>
-    <string name="app_name">ତ୍ରିଭିଆ ତୁମେ</string>
+    <string name="app_name">Trivia You</string>
     <string name="settings">ସେଟିଂ</string>
     <string name="unlimited_mode">ଅସୀମିତ ମୋଡ୍</string>
     <string name="questions_delay">ପ୍ରଶ୍ନଗୁଡିକ ମଧ୍ୟରେ ସମୟ</string>
@@ -40,7 +40,7 @@
     <string name="home">ଗୃହ</string>
     <string name="search">ସନ୍ଧାନ</string>
     <string name="categories">ବର୍ଗଗୁଡିକ</string>
-    <string name="github">ଗିଟ ହବ୍</string>
+    <string name="github">Github</string>
     <string name="authors">ଲେଖକ ମାନେ</string>
     <string name="general">ସାଧାରଣ</string>
     <string name="random">ଅନିୟମିତ</string>
