@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView.OnItemClickListener
 import android.widget.ArrayAdapter
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.bnyro.trivia.R
@@ -17,12 +18,6 @@ import com.bnyro.trivia.util.BundleArguments
 
 class CategoriesFragment : Fragment() {
     private lateinit var binding: FragmentCategoriesBinding
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -65,11 +60,9 @@ class CategoriesFragment : Fragment() {
             binding.categoriesLV.visibility = View.VISIBLE
 
             binding.categoriesLV.onItemClickListener = OnItemClickListener { _, _, index, _ ->
-                val category = categoryQueries[index]
-                val quizFragment = QuizFragment()
-                val bundle = Bundle()
-                bundle.putString(BundleArguments.category, category)
-                quizFragment.arguments = bundle
+                val quizFragment = QuizFragment().apply {
+                    arguments = bundleOf(BundleArguments.category to categoryQueries[index])
+                }
 
                 parentFragmentManager.navigate(quizFragment)
             }

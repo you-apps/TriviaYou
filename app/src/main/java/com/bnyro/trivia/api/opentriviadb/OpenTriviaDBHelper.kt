@@ -41,7 +41,7 @@ class OpenTriviaDBHelper : ApiHelper() {
 
         val stats = mutableListOf<String>()
 
-        kotlin.runCatching {
+        runCatching {
             val json = mapper.readTree(
                 mapper.writeValueAsString(metadata.overall)
             )

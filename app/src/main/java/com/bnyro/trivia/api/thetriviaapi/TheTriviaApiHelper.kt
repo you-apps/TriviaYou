@@ -1,5 +1,6 @@
 package com.bnyro.trivia.api.thetriviaapi
 
+import android.util.Log
 import com.bnyro.trivia.extensions.formatStats
 import com.bnyro.trivia.obj.Category
 import com.bnyro.trivia.obj.Question
@@ -27,20 +28,21 @@ class TheTriviaApiHelper : ApiHelper() {
                 incorrectAnswers = it.incorrectAnswers
             )
         }
+        Log.e("category", apiQuestions.first().category.toString())
         return questions
     }
 
     override suspend fun getCategories(): List<Category> {
         val categories = RetrofitInstance.theTriviaApi.getCategories()
 
-        kotlin.runCatching {
+        runCatching {
             val response = mapper.readTree(
                 mapper.writeValueAsString(categories)
             )
             val categoriesList = mutableListOf<Category>()
             response.fields().forEach {
                 categoriesList += Category(
-                    id = it.value[0].toString(),
+                    id = it.value.firstOrNull().toString().replace("\"", ""),
                     name = it.key.toString()
                 )
             }
@@ -55,7 +57,7 @@ class TheTriviaApiHelper : ApiHelper() {
         val stats = mutableListOf<String>()
         val mapper = ObjectMapper()
 
-        kotlin.runCatching {
+        runCatching {
             val stateStats = mapper.readTree(
                 mapper.writeValueAsString(metadata.byState)
             )

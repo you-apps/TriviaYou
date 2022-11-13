@@ -152,7 +152,7 @@ object PreferenceHelper {
             context.getString(R.string.questions_delay_default)
         )
         return when (questionsDelayPref) {
-            "auto" -> correctAnswer.wordCount() * 400L
+            "auto" -> correctAnswer.wordCount() * 1000L
             "infinite" -> null
             else -> questionsDelayPref.toLong()
         }
