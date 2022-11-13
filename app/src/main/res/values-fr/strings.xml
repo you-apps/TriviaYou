@@ -30,4 +30,8 @@
     <string name="library">Bibliothèque</string>
     <string name="github">Github</string>
     <string name="api_stats">Stats de l\'API</string>
+    <string name="clear_library">Nettoyer la librairie</string>
+    <string name="irreversible">"Es-tu sûr \?  C\'est ne peux pas être défait!"</string>
+    <string name="create_quiz">Créer questions</string>
+    <string name="reset">Reprendre</string>
 </resources>
