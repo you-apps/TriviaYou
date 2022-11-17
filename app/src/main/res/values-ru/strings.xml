@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings">Настройки</string>
+    <string name="search">Поиск</string>
+    <string name="license">Лицензия</string>
+    <string name="app_name">Trivia You</string>
+    <string name="home">Главная</string>
+    <string name="categories">Категории</string>
+    <string name="github">Github</string>
+    <string name="api_stats">API Статистика</string>
+    <string name="about">О нас</string>
+    <string name="library">Библиотека</string>
+    <string name="authors">Авторы</string>
+</resources>
