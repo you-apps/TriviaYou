@@ -1,20 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Trivia You</string>
     <string name="settings">Settings</string>
     <string name="about">About</string>
     <string name="api_stats">API Stats</string>
     <string name="search">Search</string>
-
     <!-- Bottom Navigation Menu -->
     <string name="home">Home</string>
     <string name="categories">Categories</string>
     <string name="library">Library</string>
-
     <!-- About -->
     <string name="github">Github</string>
     <string name="authors">Authors</string>
     <string name="license">License</string>
-
     <!-- General Settings -->
     <string name="general">General</string>
     <string name="unlimited_mode">Unlimited mode</string>
@@ -22,7 +20,6 @@
     <string name="delay_auto">Auto</string>
     <string name="delay_infinite">Infinite</string>
     <string name="sounds">Sounds</string>
-
     <!-- API Settings -->
     <string name="api">API</string>
     <string name="difficulty">Difficulty</string>
@@ -31,7 +28,6 @@
     <string name="medium">Medium</string>
     <string name="hard">Hard</string>
     <string name="limit">Limit</string>
-
     <!-- Appearance Settings -->
     <string name="appearance">Appearance</string>
     <string name="themeMode">Theme</string>
@@ -40,25 +36,21 @@
     <string name="darkTheme">Dark</string>
     <string name="blackTheme">Black</string>
     <string name="default_tab">Default tab</string>
-
     <string name="labelVisibility">Label visibility</string>
     <string name="selected">Selected</string>
     <string name="labeled">Labeled</string>
     <string name="unlabeled">Unlabeled</string>
-
     <!-- Backup and restore -->
     <string name="backup_restore">Backup &amp; restore</string>
     <string name="backup">Backup</string>
     <string name="restore">Restore</string>
     <string name="restore_success">Successfully restored all quizzes :)</string>
     <string name="restore_error">Error restoring the quizzes :(</string>
-
     <!-- Other Settings -->
     <string name="reset_stats">Reset stats</string>
     <string name="clear_library">Clear library</string>
     <string name="irreversible">Are you sure? This can\'t be undone!</string>
     <string name="reset">Reset</string>
-
     <!-- Custom Quiz -->
     <string name="create_quiz">Create Quiz</string>
     <string name="quiz_name">Name</string>
@@ -71,7 +63,6 @@
     <string name="finish">Finish</string>
     <string name="save_quiz">Save quiz</string>
     <string name="save_quiz_message">Are you sure that you want to save the quiz?</string>
-
     <!-- Library -->
     <string name="questions">Questions: %1$s</string>
     <string name="edit">Edit</string>
@@ -79,18 +70,15 @@
     <string name="restart">Restart</string>
     <string name="rename">Rename</string>
     <string name="library_empty">Library is empty.</string>
-
     <!-- Download -->
     <string name="download">Download Quiz</string>
     <string name="none">None</string>
-
     <!-- Result -->
     <string name="result_great">Great Job!</string>
     <string name="result_average">Average performance</string>
     <string name="result_fail">Fail</string>
     <string name="result_stats">%1$s correct answers</string>
     <string name="retry">Retry</string>
-
     <!-- User Stats -->
     <string name="user_stats">User Stats</string>
     <string name="answered_questions">Answered questions</string>
@@ -102,8 +90,6 @@
     <string name="created_questions">Created questions</string>
     <string name="downloaded_quizzes">Downloaded quizzes</string>
     <string name="downloaded_questions">Downloaded questions</string>
-
     <!-- Internet -->
     <string name="network_error">Network error</string>
-
 </resources>
