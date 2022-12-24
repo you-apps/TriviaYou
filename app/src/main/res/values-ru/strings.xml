@@ -4,7 +4,7 @@
     <string name="search">Поиск</string>
     <string name="license">Лицензия</string>
     <string name="app_name">Trivia You</string>
-    <string name="home">Главная</string>
+    <string name="home">Домашний экран</string>
     <string name="categories">Категории</string>
     <string name="github">Github</string>
     <string name="api_stats">API Статистика</string>
@@ -37,7 +37,7 @@
     <string name="backup">Резервное копирование</string>
     <string name="restore">Восстановить</string>
     <string name="restore_success">Успешно восстановлены все викторины :)</string>
-    <string name="reset">Сбросить</string>
+    <string name="reset">Сброс</string>
     <string name="create_quiz">Создать викторину</string>
     <string name="quiz_name">Имя</string>
     <string name="name_empty">Имя не может быть пустым!</string>
