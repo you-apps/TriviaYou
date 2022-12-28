@@ -2,7 +2,7 @@
 <resources>
     <string name="about">ବିଷୟରେ</string>
     <string name="app_name">Trivia You</string>
-    <string name="settings">ସେଟିଂ</string>
+    <string name="settings">ସେଟିଂସମୂହ</string>
     <string name="unlimited_mode">ଅସୀମିତ ମୋଡ୍</string>
     <string name="questions_delay">ପ୍ରଶ୍ନଗୁଡିକ ମଧ୍ୟରେ ସମୟ</string>
     <string name="delay_auto">ସ୍ଵତଃ</string>
