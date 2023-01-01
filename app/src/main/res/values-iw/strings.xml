@@ -43,7 +43,7 @@
     <string name="library_quizzes">חידונים בספרייה</string>
     <string name="created_quizzes">חידונים שנוצרו</string>
     <string name="downloaded_quizzes">חידונים שמשכת</string>
-    <string name="none">אין</string>
+    <string name="none">ללא</string>
     <string name="result_great">כל הכבוד!</string>
     <string name="result_average">ביצועים ממוצעים</string>
     <string name="result_fail">נכשלת</string>
