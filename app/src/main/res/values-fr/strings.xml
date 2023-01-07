@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Trivia You</string>
-    <string name="settings">Réglages</string>
+    <string name="settings">Paramètres</string>
     <string name="about">À propos</string>
     <string name="license">Licence</string>
     <string name="lightTheme">Clair</string>
     <string name="general">Général</string>
-    <string name="unlimited_mode">Mode continu</string>
+    <string name="unlimited_mode">Mode illimité</string>
     <string name="questions_delay">Délai entre les questions</string>
     <string name="delay_auto">Auto</string>
     <string name="delay_infinite">Infini</string>
@@ -55,7 +55,7 @@
     <string name="result_great">Beau Travail!</string>
     <string name="result_average">Performance moyennes</string>
     <string name="result_fail">Raté</string>
-    <string name="result_stats">%1$s réponses correctes</string>
+    <string name="result_stats">%1$s bonnes réponses</string>
     <string name="retry">Recommencer</string>
     <string name="user_stats">Statistiques de l\'utilisateur</string>
     <string name="answered_questions">Questions répondues</string>
@@ -70,12 +70,13 @@
     <string name="network_error">Erreur de connexion</string>
     <string name="default_tab">Onglet par défaut</string>
     <string name="selected">Choisi</string>
-    <string name="labeled">Etiquetée</string>
-    <string name="unlabeled">Non étiqueté</string>
+    <string name="labeled">Étiquettes</string>
+    <string name="unlabeled">Non-étiqueté</string>
     <string name="restore">Restaurer</string>
     <string name="backup_restore">Sauvegarder &amp; restaurer</string>
     <string name="backup">Sauvegarder</string>
     <string name="restore_success">Tous les quiz ont été restauré avec succès :)</string>
     <string name="restore_error">Erreur durant la restauration des quiz :(</string>
     <string name="reset_stats">Réinitialiser les statistiques</string>
+    <string name="labelVisibility">Visibilité de l\'étiquette</string>
 </resources>
