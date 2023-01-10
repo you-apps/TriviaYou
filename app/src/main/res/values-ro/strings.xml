@@ -38,7 +38,7 @@
     <string name="clear_library">Ștergeți biblioteca</string>
     <string name="irreversible">Eşti sigur\? Acest lucru nu poate fi anulat!</string>
     <string name="question">Întrebare</string>
-    <string name="add">Adăugați</string>
+    <string name="add">Adăugare</string>
     <string name="finish">Termina</string>
     <string name="save_quiz">Salvați testul</string>
     <string name="edit">Editează</string>
@@ -63,7 +63,7 @@
     <string name="delay_infinite">Infinit</string>
     <string name="selected">Selectat</string>
     <string name="backup_restore">Backup și restaurare</string>
-    <string name="reset">Resetați</string>
+    <string name="reset">Resetare</string>
     <string name="create_quiz">Creați un chestionar</string>
     <string name="quiz_name">Nume</string>
     <string name="name_empty">Numele nu poate fi gol!</string>
