@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -7,110 +7,117 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="15dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/quizName"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:maxLines="1"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/questionCount"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:textSize="16sp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/TextInputLayout"
-            android:hint="@string/question">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/questionNameET"
-                style="@style/EditText" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/TextInputLayout"
-            android:hint="@string/correct_answer">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/correctAnswerET"
-                style="@style/EditText" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
+            android:layout_marginHorizontal="15dp"
             android:layout_marginTop="20dp"
-            android:text="@string/incorrect_answers"
-            android:textSize="15sp" />
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
 
-        <com.google.android.material.textfield.TextInputLayout style="@style/TextInputLayout">
+            <TextView
+                android:id="@+id/quizName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/incorrectAnswerOne"
-                style="@style/EditText" />
+            <TextView
+                android:id="@+id/questionCount"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="16sp" />
 
-        </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
 
-        <com.google.android.material.textfield.TextInputLayout style="@style/TextInputLayout">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/incorrectAnswerTwo"
-                style="@style/EditText" />
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayout"
+                android:hint="@string/question">
 
-        </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/questionNameET"
+                    style="@style/EditText" />
 
-        <com.google.android.material.textfield.TextInputLayout style="@style/TextInputLayout">
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/incorrectAnswerThree"
-                style="@style/EditText" />
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayout"
+                android:hint="@string/correct_answer">
 
-        </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/correctAnswerET"
+                    style="@style/EditText" />
 
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/incorrect_answers"
+                android:textSize="15sp" />
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/TextInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/incorrectAnswerOne"
+                    style="@style/EditText" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/TextInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/incorrectAnswerTwo"
+                    style="@style/EditText" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout style="@style/TextInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/incorrectAnswerThree"
+                    style="@style/EditText" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/finish"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|bottom"
+                android:text="@string/finish" />
+
+            <Button
+                android:id="@+id/save"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:text="@string/add" />
+
+        </FrameLayout>
+        
     </LinearLayout>
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_margin="10dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/finish"
-            style="?attr/materialButtonOutlinedStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start|bottom"
-            android:text="@string/finish" />
-
-        <Button
-            android:id="@+id/save"
-            style="?attr/materialButtonOutlinedStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end|bottom"
-            android:text="@string/add" />
-
-    </FrameLayout>
-
-</LinearLayout>
+</ScrollView>
