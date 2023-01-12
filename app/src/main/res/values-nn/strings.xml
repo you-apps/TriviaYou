@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings">Innstillingar</string>
+    <string name="search">Søk</string>
+    <string name="home">Heim</string>
+    <string name="categories">Slag</string>
+    <string name="app_name">Trivia You</string>
+    <string name="about">Om</string>
+</resources>
