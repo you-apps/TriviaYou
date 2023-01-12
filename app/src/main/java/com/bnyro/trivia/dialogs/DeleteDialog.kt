@@ -15,7 +15,7 @@ class DeleteDialog(
         val builder = MaterialAlertDialogBuilder(requireContext())
             .setTitle(R.string.delete)
             .setMessage(R.string.irreversible)
-            .setNegativeButton(android.R.string.cancel) { _, _ -> }
+            .setNegativeButton(android.R.string.cancel, null)
             .setPositiveButton(android.R.string.ok) { _, _ ->
                 PreferenceHelper.deleteQuiz(libraryIndex)
                 findNavController().navigate(R.id.libraryFragment)

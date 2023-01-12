@@ -28,7 +28,7 @@ class SettingsFragment : PrefFragment() {
             MaterialAlertDialogBuilder(requireContext())
                 .setTitle(R.string.reset_stats)
                 .setMessage(R.string.irreversible)
-                .setNegativeButton(android.R.string.cancel) { _, _ -> }
+                .setNegativeButton(android.R.string.cancel, null)
                 .setPositiveButton(android.R.string.ok) { _, _ ->
                     PreferenceHelper.resetTotalStats()
                 }
@@ -42,7 +42,7 @@ class SettingsFragment : PrefFragment() {
             MaterialAlertDialogBuilder(requireContext())
                 .setTitle(R.string.clear_library)
                 .setMessage(R.string.irreversible)
-                .setNegativeButton(android.R.string.cancel) { _, _ -> }
+                .setNegativeButton(android.R.string.cancel, null)
                 .setPositiveButton(android.R.string.ok) { _, _ ->
                     PreferenceHelper.deleteAllQuizzes()
                 }

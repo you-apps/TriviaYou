@@ -110,7 +110,7 @@ class CreateQuizFragment : Fragment() {
         MaterialAlertDialogBuilder(requireContext())
             .setTitle(R.string.save_quiz)
             .setMessage(R.string.save_quiz_message)
-            .setNegativeButton(android.R.string.cancel) { _, _ -> }
+            .setNegativeButton(android.R.string.cancel, null)
             .setPositiveButton(android.R.string.ok) { _, _ ->
                 saveQuiz()
                 findNavController().navigate(R.id.libraryFragment)
