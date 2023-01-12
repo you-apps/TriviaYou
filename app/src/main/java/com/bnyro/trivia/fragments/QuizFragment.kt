@@ -3,6 +3,7 @@ package com.bnyro.trivia.fragments
 import android.content.Context
 import android.media.MediaPlayer
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -101,6 +102,7 @@ class QuizFragment : Fragment() {
             questions = try {
                 ApiInstance.apiHelper.getQuestions(category)
             } catch (e: Exception) {
+                Log.e(this::class.java.simpleName, e.toString())
                 binding.root.showStyledSnackBar(R.string.network_error)
                 return@launchWhenCreated
             }

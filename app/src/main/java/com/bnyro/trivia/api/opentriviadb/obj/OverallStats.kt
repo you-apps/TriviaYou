@@ -1,5 +1,8 @@
 package com.bnyro.trivia.api.opentriviadb.obj
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 data class OverallStats(
     val total_num_of_pending_questions: Int? = null,
     val total_num_of_questions: Int? = null,

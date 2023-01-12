@@ -1,5 +1,8 @@
 package com.bnyro.trivia.api.opentriviadb.obj
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 data class OpenTriviaQuestion(
     val category: String? = null,
     val correct_answer: String? = null,
