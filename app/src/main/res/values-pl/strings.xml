@@ -2,7 +2,7 @@
 <resources>
     <string name="api_stats">Statystyki API</string>
     <string name="search">Szukaj</string>
-    <string name="home">Strona Główna</string>
+    <string name="home">Główna</string>
     <string name="categories">Kategorie</string>
     <string name="library">Biblioteka</string>
     <string name="github">Github</string>
@@ -48,7 +48,7 @@
     <string name="rename">Zmień nazwę</string>
     <string name="library_empty">Biblioteka jest pusta.</string>
     <string name="download">Pobierz Quiz</string>
-    <string name="none">Brak</string>
+    <string name="none">Żaden</string>
     <string name="result_great">Dobra robota!</string>
     <string name="result_average">Przeciętny wynik</string>
     <string name="result_fail">Porażka</string>
