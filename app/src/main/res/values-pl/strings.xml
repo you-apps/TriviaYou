@@ -2,7 +2,7 @@
 <resources>
     <string name="api_stats">Statystyki API</string>
     <string name="search">Szukaj</string>
-    <string name="home">Główna</string>
+    <string name="home">Ekran główny</string>
     <string name="categories">Kategorie</string>
     <string name="library">Biblioteka</string>
     <string name="github">Github</string>
@@ -30,7 +30,7 @@
     <string name="unlabeled">Niewidoczne</string>
     <string name="backup">Kopia zapasowa</string>
     <string name="irreversible">Jesteś pewien\? Tej operacji nie można cofnąć!</string>
-    <string name="reset">Reset</string>
+    <string name="reset">Resetuj</string>
     <string name="create_quiz">Utwórz quiz</string>
     <string name="name_empty">Pole z nazwą nie może być puste!</string>
     <string name="question">Pytanie</string>
