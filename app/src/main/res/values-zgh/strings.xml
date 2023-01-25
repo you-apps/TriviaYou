@@ -1,2 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">Trivia You</string>
+    <string name="settings">ⵜⵉⵙⵖⴰⵍ</string>
+    <string name="api_stats">ⵉⵙⵏⵎⴽⵜⴰⵜⵏ API</string>
+    <string name="general">ⴰⵎⴰⵜⴰⵢ</string>
+    <string name="about">ⵅⴼ</string>
+    <string name="library">ⵜⴰⵙⴷⵍⵉⵙⵜ</string>
+    <string name="authors">ⵉⵎⴳⴰⵢⵏ</string>
+    <string name="unlimited_mode">ⴰⵎⵎⴰⴽ ⴰⵔⵙⵎⵓⵔⴰⵏ</string>
+    <string name="search">ⵔⵣⵓ</string>
+    <string name="home">ⴰⵙⵏⵓⴱⴳ</string>
+    <string name="license">ⵜⵓⵔⴰⴳⵜ</string>
+    <string name="categories">ⵉⵙⵎⵉⵍⵏ</string>
+    <string name="github">Github</string>
+    <string name="questions_delay">ⴰⴳⵓⵔ ⵏⴳⵔ ⵉⵙⵇⵙⵉⵜⵏ</string>
+    <string name="delay_auto">ⴰⵡⵓⵔⵎⴰⵏ</string>
+    <string name="delay_infinite">ⴰⵔⵙⵎⵓⵔⴰⵏ</string>
+    <string name="sounds">ⵉⵎⵙⵍⵉⵜⵏ</string>
+    <string name="api">API</string>
+    <string name="difficulty">ⴰⵏⵎⴰⵔ</string>
+    <string name="easy">ⵉⵀⵡⵏ</string>
+    <string name="hard">ⵢⵓⵄⵕ</string>
+    <string name="medium">ⴰⵏⴰⵎⵎⴰⵙ</string>
+    <string name="blackTheme">ⴰⴱⵔⴽⴰⵏ</string>
+    <string name="limit">ⴰⵡⵜⵜⵓ</string>
+    <string name="darkTheme">ⴰⵎⴰⵍⵍⴰⵙ</string>
+    <string name="themeMode">ⵜⴰⴼⵔⵙⵜ</string>
+    <string name="lightTheme">ⴰⵏⴰⴼⴰⵡ</string>
+    <string name="selected">ⵉⵜⵜⵓⵙⵜⴰⵢ</string>
+    <string name="unlabeled">ⵡⴰⵔ ⵉⵙⵎ</string>
+    <string name="systemTheme">ⴰⵏⴳⵔⴰⵡ</string>
+</resources>
