@@ -11,4 +11,6 @@
     <string name="systemTheme">সিস্টেম</string>
     <string name="lightTheme">লাইট</string>
     <string name="darkTheme">ডার্ক</string>
+    <string name="retry">পুনঃচেষ্টা</string>
+    <string name="home">বাড়ি</string>
 </resources>
