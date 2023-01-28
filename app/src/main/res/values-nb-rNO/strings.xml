@@ -8,4 +8,7 @@
     <string name="add">Legg til</string>
     <string name="reset">Tilbakestill</string>
     <string name="general">Generelt</string>
+    <string name="search">Søk</string>
+    <string name="irreversible">Sikker\? Dette kan ikke angres.</string>
+    <string name="retry">Prøv igjen</string>
 </resources>
