@@ -2,11 +2,11 @@
 <resources>
     <string name="app_name">Trivia You</string>
     <string name="settings">Impostazioni</string>
-    <string name="about">Di più</string>
+    <string name="about">Informazioni</string>
     <string name="api_stats">Statistiche API</string>
-    <string name="search">Cerca</string>
+    <string name="search">Ricerca</string>
     <!-- Menù di navigazione in basso -->
-    <string name="home">Schermata home</string>
+    <string name="home">Pagina principale</string>
     <string name="categories">Categorie</string>
     <string name="library">Libreria</string>
     <!-- Informazioni -->
@@ -47,7 +47,7 @@
     <!-- Altre impostazioni -->
     <string name="reset_stats">Azzera statistiche</string>
     <string name="clear_library">Cancella la libreria</string>
-    <string name="irreversible">Sei sicuro\? Questa operazione non può essere annullata!</string>
+    <string name="irreversible">Sei sicuro/a\? Questo non può essere annullato!</string>
     <string name="reset">Ripristina</string>
     <!-- Quiz personalizzato -->
     <string name="create_quiz">Crea quiz</string>
