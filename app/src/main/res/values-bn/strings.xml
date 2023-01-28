@@ -13,4 +13,8 @@
     <string name="darkTheme">ডার্ক</string>
     <string name="retry">পুনঃচেষ্টা</string>
     <string name="home">বাড়ি</string>
+    <string name="license">লাইসেন্স</string>
+    <string name="search">খুঁজুন</string>
+    <string name="about">সম্পর্কে</string>
+    <string name="irreversible">আপনি নিশ্চিত\? এটি আর পূর্বাবস্থায় ফেরত আনা যাবে না!</string>
 </resources>
