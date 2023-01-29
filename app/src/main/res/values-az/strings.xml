@@ -75,7 +75,7 @@
     <string name="none">Heç nə</string>
     <string name="result_great">Əla İş!</string>
     <string name="result_fail">Uğursuz</string>
-    <string name="retry">Yenidən cəhd et</string>
+    <string name="retry">Təkrar cəhd et</string>
     <string name="result_average">Orta performans</string>
     <string name="created_quizzes">Yaradılmış viktorinalar</string>
     <string name="library_questions">Kitabxanadakı suallar</string>

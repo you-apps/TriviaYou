@@ -12,7 +12,7 @@
     <string name="save_quiz">Testi kaydet</string>
     <string name="sounds">Sesler</string>
     <string name="systemTheme">Sistem</string>
-    <string name="irreversible">Emin misiniz\? Bu geri alınamaz!</string>
+    <string name="irreversible">Emin misin\? Bu geri alınamaz!</string>
     <string name="create_quiz">Test Oluştur</string>
     <string name="item_empty">Lütfen tüm alanları doldurun!</string>
     <string name="user_stats">Kullanıcı İstatistikleri</string>
@@ -21,8 +21,8 @@
     <string name="settings">Ayarlar</string>
     <string name="about">Hakkında</string>
     <string name="api_stats">API İstatistikleri</string>
-    <string name="search">Ara</string>
-    <string name="home">Ana ekran</string>
+    <string name="search">Arama</string>
+    <string name="home">Ana sayfa</string>
     <string name="categories">Kategoriler</string>
     <string name="library">Kütüphane</string>
     <string name="github">GitHub</string>
@@ -70,7 +70,7 @@
     <string name="result_great">İyi iş!</string>
     <string name="result_average">Ortalama performans</string>
     <string name="result_fail">Başarısız</string>
-    <string name="retry">Yeniden dene</string>
+    <string name="retry">Tekrar dene</string>
     <string name="answered_questions">Cevaplanan sorular</string>
     <string name="correct_answers">Doğru cevaplar</string>
     <string name="library_questions">Kütüphanedeki sorular</string>
