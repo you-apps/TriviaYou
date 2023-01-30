@@ -6,7 +6,7 @@
     <string name="api_stats">Statistiche API</string>
     <string name="search">Ricerca</string>
     <!-- Menù di navigazione in basso -->
-    <string name="home">Pagina principale</string>
+    <string name="home">Casa</string>
     <string name="categories">Categorie</string>
     <string name="library">Libreria</string>
     <!-- Informazioni -->
@@ -47,8 +47,8 @@
     <!-- Altre impostazioni -->
     <string name="reset_stats">Azzera statistiche</string>
     <string name="clear_library">Cancella la libreria</string>
-    <string name="irreversible">Sei sicuro/a\? Questo non può essere annullato!</string>
-    <string name="reset">Ripristina</string>
+    <string name="irreversible">Sei sicuro\? Questo non può essere annullato!</string>
+    <string name="reset">Azzera</string>
     <!-- Quiz personalizzato -->
     <string name="create_quiz">Crea quiz</string>
     <string name="quiz_name">Nome</string>
