@@ -4,11 +4,11 @@
     <string name="search">Поиск</string>
     <string name="license">Лицензия</string>
     <string name="app_name">Trivia You</string>
-    <string name="home">Домашний экран</string>
+    <string name="home">Главная</string>
     <string name="categories">Категории</string>
     <string name="github">Github</string>
     <string name="api_stats">API Статистика</string>
-    <string name="about">О нас</string>
+    <string name="about">Про</string>
     <string name="library">Библиотека</string>
     <string name="authors">Авторы</string>
     <string name="blackTheme">Чёрная</string>
@@ -46,7 +46,7 @@
     <string name="result_average">Средняя производительность</string>
     <string name="result_fail">Провал</string>
     <string name="result_stats">%1$s правильные ответы</string>
-    <string name="retry">Повторная попытка</string>
+    <string name="retry">Попробовать ещё раз</string>
     <string name="hard">Сложный</string>
     <string name="appearance">Внешний вид</string>
     <string name="medium">Средний</string>
@@ -60,9 +60,9 @@
     <string name="delete">Удалить</string>
     <string name="rename">Переименовать</string>
     <string name="restore_error">Ошибка при восстановлении тестов :(</string>
-    <string name="irreversible">Вы уверены\? Это нельзя отменить!</string>
+    <string name="irreversible">Вы уверены\? Это действие нельзя будет отменить!</string>
     <string name="incorrect_answers">Неправильные ответы</string>
-    <string name="none">Нет</string>
+    <string name="none">Ни одного</string>
     <string name="user_stats">Статистика пользователей</string>
     <string name="answered_questions">Ответы на вопросы</string>
     <string name="percentage_correct_answers">Количество правильных ответов</string>
