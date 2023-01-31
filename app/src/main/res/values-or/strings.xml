@@ -22,7 +22,7 @@
     <string name="backup_restore">ନକଲ ଓ ସଂରକ୍ଷଣ</string>
     <string name="restore_error">କୁଇଜ୍ ପୁନରୁଦ୍ଧାରରେ ତ୍ରୁଟି :(</string>
     <string name="clear_library">ଲାଇବ୍ରେରୀ ଖାଲି କରନ୍ତୁ</string>
-    <string name="irreversible">ତମେ ନିଶ୍ଚିତ କି!</string>
+    <string name="irreversible">ତମେ ନିଶ୍ଚିତ କି\? ଏହା ପୂର୍ବବତ୍ ହୋଇପାରିବ ନାହିଁ!</string>
     <string name="reset">ପୁନଃସେଟ୍ କରନ୍ତୁ</string>
     <string name="quiz_name">ନାମ</string>
     <string name="finish">ଶେଷ କରନ୍ତୁ</string>
@@ -37,7 +37,7 @@
     <string name="medium">ମଧ୍ୟମ</string>
     <string name="library">ପାଠାଗାର</string>
     <string name="api_stats">API ପରିସଂଖ୍ୟାନ</string>
-    <string name="home">ଗୃହ</string>
+    <string name="home">ଘର</string>
     <string name="search">ସନ୍ଧାନ କର</string>
     <string name="categories">ବର୍ଗଗୁଡିକ</string>
     <string name="github">Github</string>

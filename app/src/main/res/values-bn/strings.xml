@@ -17,4 +17,5 @@
     <string name="search">খুঁজুন</string>
     <string name="about">সম্পর্কে</string>
     <string name="irreversible">আপনি নিশ্চিত\? এটি আর পূর্বাবস্থায় ফেরত আনা যাবে না!</string>
+    <string name="reset">রিসেট</string>
 </resources>

@@ -3,10 +3,10 @@
     <string name="delay_infinite">Нескінченний</string>
     <string name="app_name">Trivia You</string>
     <string name="settings">Налаштування</string>
-    <string name="about">Про застосунок</string>
+    <string name="about">Про</string>
     <string name="api_stats">API Статистика</string>
     <string name="search">Пошук</string>
-    <string name="home">Домашній екран</string>
+    <string name="home">Головна</string>
     <string name="categories">Категорії</string>
     <string name="library">Бібліотека</string>
     <string name="github">Github</string>
@@ -39,7 +39,7 @@
     <string name="result_average">Середня продуктивність</string>
     <string name="result_fail">Помилка</string>
     <string name="result_stats">%1$s правильних відповідей</string>
-    <string name="retry">Повтор</string>
+    <string name="retry">Спробувати знову</string>
     <string name="user_stats">Статистика користувача</string>
     <string name="answered_questions">Питань з відповідями</string>
     <string name="correct_answers">Правильні відповіді</string>
@@ -78,5 +78,5 @@
     <string name="clear_library">Очистити історію</string>
     <string name="restore_success">Успішно відновлено всі вікторини :)</string>
     <string name="reset_stats">Скидання статистики</string>
-    <string name="irreversible">Ви впевнені\? Це не можна скасувати!</string>
+    <string name="irreversible">Ви впевнені\? Це не можна відмінити!</string>
 </resources>
