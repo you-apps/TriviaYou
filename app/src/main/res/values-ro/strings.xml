@@ -3,7 +3,7 @@
     <string name="settings">Setări</string>
     <string name="about">Despre</string>
     <string name="api_stats">Statistici API</string>
-    <string name="home">Ecranul de pornire</string>
+    <string name="home">Acasă</string>
     <string name="library">Bibliotecă</string>
     <string name="github">Github</string>
     <string name="authors">Autor</string>
@@ -63,7 +63,7 @@
     <string name="delay_infinite">Infinit</string>
     <string name="selected">Selectat</string>
     <string name="backup_restore">Backup și restaurare</string>
-    <string name="reset">Resetare</string>
+    <string name="reset">Resetați</string>
     <string name="create_quiz">Creați un chestionar</string>
     <string name="quiz_name">Nume</string>
     <string name="name_empty">Numele nu poate fi gol!</string>
