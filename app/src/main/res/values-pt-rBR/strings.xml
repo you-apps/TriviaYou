@@ -2,8 +2,8 @@
 <resources>
     <string name="settings">Configurações</string>
     <string name="api_stats">Estatísticas da API</string>
-    <string name="search">Buscar</string>
-    <string name="home">Inicio</string>
+    <string name="search">Pesquisa</string>
+    <string name="home">Casa</string>
     <string name="categories">Categorias</string>
     <string name="authors">Autores</string>
     <string name="license">Licença</string>
@@ -30,8 +30,8 @@
     <string name="restore_error">Erro na restauração dos questionários :(</string>
     <string name="reset_stats">Zerar estatísticas</string>
     <string name="clear_library">Limpar coleção</string>
-    <string name="irreversible">Tem certeza\? Isto não pode ser desfeito!</string>
-    <string name="reset">Redefinir</string>
+    <string name="irreversible">Você tem certeza\? Isto não pode ser desfeito!</string>
+    <string name="reset">Reiniciar</string>
     <string name="name_empty">O nome não pode ser vazio!</string>
     <string name="item_empty">Por favor preencha todos os campos!</string>
     <string name="question">Pergunta</string>
@@ -77,6 +77,6 @@
     <string name="percentage_correct_answers">Índice de resposta correta</string>
     <string name="restore_success">Questionários restaurados com sucesso :)</string>
     <string name="downloaded_questions">Perguntas baixadas</string>
-    <string name="retry">Tentar novamente</string>
+    <string name="retry">Repetir</string>
     <string name="user_stats">Estatísticas do Usuário</string>
 </resources>
