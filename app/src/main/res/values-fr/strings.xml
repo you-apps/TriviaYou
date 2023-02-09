@@ -31,9 +31,9 @@
     <string name="github">Github</string>
     <string name="api_stats">Stats de l\'API</string>
     <string name="clear_library">Effacer la bibliothèque</string>
-    <string name="irreversible">Êtes-vous sûr·e \? Ceci ne peut pas être annulé !</string>
+    <string name="irreversible">Êtes-vous sûr·e \? Ceci ne peut pas être annulé !</string>
     <string name="create_quiz">Créer questions</string>
-    <string name="reset">Réinitialiser à l\'usine</string>
+    <string name="reset">Réinitialiser</string>
     <string name="name_empty">Le nom ne peut pas être vide !</string>
     <string name="quiz_name">Nom</string>
     <string name="item_empty">Veuillez remplir tous les champs !</string>

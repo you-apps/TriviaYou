@@ -10,7 +10,7 @@
     <string name="library">Samling</string>
     <string name="github">GitHub</string>
     <string name="authors">Skaparar</string>
-    <string name="license">Løyve</string>
+    <string name="license">Løyvet</string>
     <string name="general">Vanleg</string>
     <string name="unlimited_mode">Uendeleg modus</string>
     <string name="questions_delay">Tid mellom spørsmål</string>
@@ -71,7 +71,7 @@
     <string name="network_error">Nettverksmistak</string>
     <string name="default_tab">Byrjingsside</string>
     <string name="add">Legg til</string>
-    <string name="reset">Attendestill</string>
+    <string name="reset">Still attende</string>
     <string name="question">Spørsmål</string>
     <string name="correct_answer">Rett svar</string>
     <string name="save_quiz_message">Er du viss på at du vil gøyma kunnskapstevlinga\?</string>
