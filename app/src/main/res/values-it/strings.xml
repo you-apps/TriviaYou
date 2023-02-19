@@ -70,7 +70,7 @@
     <string name="library_empty">La libreria è vuota.</string>
     <!-- Download -->
     <string name="download">Scarica quiz</string>
-    <string name="none">Niente</string>
+    <string name="none">Nessuno</string>
     <!-- Risultati -->
     <string name="result_great">Ottimo lavoro!</string>
     <string name="result_average">Performance media</string>
