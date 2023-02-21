@@ -47,7 +47,7 @@
     <!-- Altre impostazioni -->
     <string name="reset_stats">Azzera statistiche</string>
     <string name="clear_library">Cancella la libreria</string>
-    <string name="irreversible">Sei sicuro/sicura\? Questo non può essere annullato!</string>
+    <string name="irreversible">Sei sicuro\? Quest\'azione non può essere annullata!</string>
     <string name="reset">Azzera</string>
     <!-- Quiz personalizzato -->
     <string name="create_quiz">Crea quiz</string>
