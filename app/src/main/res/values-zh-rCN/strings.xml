@@ -77,6 +77,6 @@
     <string name="labeled">已标记的</string>
     <string name="correct_answer">正确答案</string>
     <string name="clear_library">清除测验库</string>
-    <string name="irreversible">你确定吗？此操作无法逆转！</string>
+    <string name="irreversible">你确定吗？此操作无法撤销！</string>
     <string name="question">问题</string>
 </resources>
