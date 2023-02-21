@@ -70,9 +70,9 @@
     <string name="library_quizzes">Kitabxanadakı viktorinalar</string>
     <string name="result_stats">%1$s düzgün cavab</string>
     <string name="restart">Yenidən başlat</string>
-    <string name="rename">Adını dəyişdir</string>
+    <string name="rename">Adı dəyiş</string>
     <string name="library_empty">Kitabxana boşdur.</string>
-    <string name="none">Heç nə</string>
+    <string name="none">Heç biri</string>
     <string name="result_great">Əla İş!</string>
     <string name="result_fail">Uğursuz</string>
     <string name="retry">Təkrar cəhd et</string>
