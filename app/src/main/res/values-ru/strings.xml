@@ -60,7 +60,7 @@
     <string name="delete">Удалить</string>
     <string name="rename">Переименовать</string>
     <string name="restore_error">Ошибка при восстановлении тестов :(</string>
-    <string name="irreversible">Вы уверены\? Это действие нельзя будет отменить!</string>
+    <string name="irreversible">Вы уверены\? Это нельзя будет отменить!</string>
     <string name="incorrect_answers">Неправильные ответы</string>
     <string name="none">Ни одного</string>
     <string name="user_stats">Статистика пользователей</string>
