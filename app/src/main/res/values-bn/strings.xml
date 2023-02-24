@@ -18,4 +18,6 @@
     <string name="about">সম্পর্কে</string>
     <string name="irreversible">আপনি নিশ্চিত\? এটি আর পূর্বাবস্থায় ফেরত আনা যাবে না!</string>
     <string name="reset">রিসেট</string>
+    <string name="delete">মুছুন</string>
+    <string name="rename">পুণঃনামকরণ</string>
 </resources>
