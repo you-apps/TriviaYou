@@ -16,7 +16,7 @@
     <string name="license">লাইসেন্স</string>
     <string name="search">খুঁজুন</string>
     <string name="about">সম্পর্কে</string>
-    <string name="irreversible">আপনি নিশ্চিত\? এটি আর পূর্বাবস্থায় ফেরত আনা যাবে না!</string>
+    <string name="irreversible">আপনি নিশ্চিত\? এটি পূর্বাবস্থায় ফেরত নেয়া সম্ভব হবে না!</string>
     <string name="reset">রিসেট</string>
     <string name="delete">মুছুন</string>
     <string name="rename">পুণঃনামকরণ</string>
