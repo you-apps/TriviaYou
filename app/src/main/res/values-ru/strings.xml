@@ -62,7 +62,7 @@
     <string name="restore_error">Ошибка при восстановлении тестов :(</string>
     <string name="irreversible">Вы уверены\? Это нельзя будет отменить!</string>
     <string name="incorrect_answers">Неправильные ответы</string>
-    <string name="none">Ни одного</string>
+    <string name="none">Выкл</string>
     <string name="user_stats">Статистика пользователей</string>
     <string name="answered_questions">Ответы на вопросы</string>
     <string name="percentage_correct_answers">Количество правильных ответов</string>
