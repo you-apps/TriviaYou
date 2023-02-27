@@ -5,7 +5,7 @@
     <string name="about">O aplikaci</string>
     <string name="api_stats">Statistiky API</string>
     <string name="search">Vyhledávání</string>
-    <string name="home">Domovská obrazovka</string>
+    <string name="home">Domů</string>
     <string name="categories">Kategorie</string>
     <string name="library">Knihovna</string>
     <string name="github">GitHub</string>
@@ -61,7 +61,7 @@
     <string name="rename">Přejmenovat</string>
     <string name="library_empty">Knihovna je prázdná.</string>
     <string name="download">Stáhnout kvíz</string>
-    <string name="none">Žádné</string>
+    <string name="none">Žádný</string>
     <string name="result_great">Dobrá práce!</string>
     <string name="result_average">Průměrný výkon</string>
     <string name="result_fail">Selhání</string>
