@@ -46,8 +46,6 @@
 - [x] [The Trivia API](https://the-trivia-api.com/)
 - [x] [Open Trivia DB](https://opentdb.com/)
 
-## Contribution
-
 <!-- ---------- Contribution ---------- -->
 ## Feedback and contributions
 ***All contributions are very welcome!***
