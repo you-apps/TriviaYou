@@ -48,9 +48,13 @@
 
 ## Contribution
 
-All contributions are welcome!
-Feel free to suggest new features or new APIs that could be supported.
-If you are a developer and wish to contribute to the app, please to fork the project and submit a pull request.
+<!-- ---------- Contribution ---------- -->
+## Feedback and contributions
+***All contributions are very welcome!***
+
+* Feel free to join the [Matrix room](https://matrix.to/#/#you-apps:matrix.org) for discussions about the app.
+* Bug reports and feature requests can be submitted [here](https://github.com/Bnyro/TriviaYou/issues) (please make sure to fill out all the requested information properly!).
+* If you are a developer and wish to contribute to the app, please **fork** the project and submit a [**pull request**](https://help.github.com/articles/about-pull-requests/).
 
 ## Translation
 
