@@ -42,7 +42,7 @@
     <string name="save_quiz_message">Tem certeza que deseja salvar o questionário\?</string>
     <string name="questions">Perguntas: %1$s</string>
     <string name="edit">Editar</string>
-    <string name="delete">Excluir</string>
+    <string name="delete">Apagar</string>
     <string name="restart">Reiniciar</string>
     <string name="rename">Renomear</string>
     <string name="library_empty">A coleção está vazia.</string>
