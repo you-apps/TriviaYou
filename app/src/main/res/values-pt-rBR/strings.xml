@@ -30,7 +30,7 @@
     <string name="restore_error">Erro na restauração dos questionários :(</string>
     <string name="reset_stats">Zerar estatísticas</string>
     <string name="clear_library">Limpar coleção</string>
-    <string name="irreversible">Você tem certeza\? Isto não pode ser desfeito!</string>
+    <string name="irreversible">Você tem certeza\? Isso não pode ser desfeito!</string>
     <string name="reset">Reiniciar</string>
     <string name="name_empty">O nome não pode ser vazio!</string>
     <string name="item_empty">Por favor preencha todos os campos!</string>
@@ -42,7 +42,7 @@
     <string name="save_quiz_message">Tem certeza que deseja salvar o questionário\?</string>
     <string name="questions">Perguntas: %1$s</string>
     <string name="edit">Editar</string>
-    <string name="delete">Apagar</string>
+    <string name="delete">Excluir</string>
     <string name="restart">Reiniciar</string>
     <string name="rename">Renomear</string>
     <string name="library_empty">A coleção está vazia.</string>
