@@ -2,8 +2,8 @@
 <resources>
     <string name="quiz_name">الاسم</string>
     <string name="systemTheme">النظام</string>
-    <string name="about">حول التطبيق</string>
-    <string name="search">البحث</string>
+    <string name="about">عن التطبيق</string>
+    <string name="search">ابحث</string>
     <string name="home">الرئيسية</string>
     <string name="categories">الفئات</string>
     <string name="authors">المؤلفون</string>
@@ -30,7 +30,7 @@
     <string name="reset_stats">إعادة تعيين الإحصائيات</string>
     <string name="clear_library">مسح المكتبة</string>
     <string name="irreversible">أمتأكِّد؟ لا يمكن التراجع عن هذا!</string>
-    <string name="reset">اعادة تعيين</string>
+    <string name="reset">أعِد التعيين</string>
     <string name="item_empty">يرجى ملء جميع الحقول!</string>
     <string name="question">سؤال</string>
     <string name="incorrect_answers">إجابة غير صحيحة</string>
@@ -52,7 +52,7 @@
     <string name="created_questions">الأسئلة التي تم إنشاؤها</string>
     <string name="downloaded_quizzes">الاختبارات التي تم تنزيلها</string>
     <string name="downloaded_questions">الأسئلة التي تم تنزيلها</string>
-    <string name="settings">الاعدادات</string>
+    <string name="settings">الإعدادات</string>
     <string name="api_stats">احصائيات واجهة برمجة التطبيقات</string>
     <string name="name_empty">لا يمكن أن تكون خانة الاسم فارغةً!</string>
     <string name="library">المكتبة</string>
@@ -69,10 +69,10 @@
     <string name="correct_answer">اجابة صحيحة</string>
     <string name="restore_success">استعادة جميع الاختبارات بنجاح :)</string>
     <string name="edit">تعديل</string>
-    <string name="delete">حذف</string>
+    <string name="delete">احذف</string>
     <string name="library_empty">المكتبة فارغة.</string>
     <string name="save_quiz_message">هل أنت متأكد من أنك تريد حفظ الاختبار؟</string>
-    <string name="none">لاشيء</string>
+    <string name="none">لا شيء</string>
     <string name="library_questions">أسئلة في المكتبة</string>
     <string name="percentage_correct_answers">معدل الإجابات الصحيحة</string>
     <string name="library_quizzes">الاختبارات في المكتبة</string>
