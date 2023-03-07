@@ -69,7 +69,7 @@
     <string name="downloaded_questions">Questions téléchargées</string>
     <string name="network_error">Erreur de connexion</string>
     <string name="default_tab">Onglet par défaut</string>
-    <string name="selected">Choisi</string>
+    <string name="selected">Sélectionné</string>
     <string name="labeled">Étiquettes</string>
     <string name="unlabeled">Non étiqueté</string>
     <string name="restore">Restaurer</string>
