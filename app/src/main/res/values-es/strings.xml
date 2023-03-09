@@ -1,2 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="questions_delay">Tiempo entre preguntas</string>
+    <string name="app_name">Trivia You</string>
+    <string name="settings">Configuración</string>
+    <string name="about">Acerca de</string>
+    <string name="api_stats">Estadísticas de la API</string>
+    <string name="search">Buscar</string>
+    <string name="home">Inicio</string>
+    <string name="categories">Categorías</string>
+    <string name="library">Biblioteca</string>
+    <string name="github">Github</string>
+    <string name="authors">Autores</string>
+    <string name="license">Licencia</string>
+    <string name="api">API</string>
+    <string name="delay_infinite">Infinito</string>
+    <string name="general">General</string>
+    <string name="unlimited_mode">Modo ilimitado</string>
+    <string name="delay_auto">Automático</string>
+    <string name="sounds">Sonidos</string>
+</resources>
