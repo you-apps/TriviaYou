@@ -1,2 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="reset">Tetap semula</string>
+    <string name="about">Perihal</string>
+    <string name="license">Lesen</string>
+    <string name="none">Tiada</string>
+    <string name="rename">Nama semula</string>
+    <string name="retry">Cuba semula</string>
+    <string name="delete">Padam</string>
+</resources>
