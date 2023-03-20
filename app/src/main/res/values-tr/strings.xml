@@ -79,4 +79,5 @@
     <string name="downloaded_quizzes">İndirilen testler</string>
     <string name="downloaded_questions">İndirilen sorular</string>
     <string name="network_error">Ağ hatası</string>
+    <string name="unknown_error">Bilinmeyen hata</string>
 </resources>
