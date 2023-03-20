@@ -25,7 +25,9 @@ class CreateQuizDialog : DialogFragment() {
             .setPositiveButton(android.R.string.ok) { _, _ ->
                 if (binding.input.text.toString() != "") {
                     val createQuizFragment = CreateQuizFragment().apply {
-                        arguments = bundleOf(BundleArguments.quizName to binding.input.text.toString())
+                        arguments = bundleOf(
+                            BundleArguments.quizName to binding.input.text.toString()
+                        )
                     }
                     requireParentFragment().parentFragmentManager.navigate(
                         createQuizFragment,

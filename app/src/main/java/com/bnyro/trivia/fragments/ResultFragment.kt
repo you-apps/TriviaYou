@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.FragmentResultBinding
@@ -48,10 +49,11 @@ class ResultFragment : Fragment() {
             context?.getString(R.string.result_stats, "$correctAnswers/$totalQuestions")
 
         binding.retry.setOnClickListener {
-            val quizFragment = QuizFragment()
-            val bundle = Bundle()
-            if (libraryIndex != null) bundle.putInt(BundleArguments.quizIndex, libraryIndex!!)
-            quizFragment.arguments = bundle
+            val quizFragment = libraryIndex?.let {
+                OfflineQuizFragment().apply {
+                    arguments = bundleOf(BundleArguments.quizIndex to it)
+                }
+            } ?: OnlineQuizFragment()
             parentFragmentManager.navigate(quizFragment)
         }
     }

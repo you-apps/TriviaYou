@@ -10,7 +10,6 @@ import androidx.lifecycle.lifecycleScope
 import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.DialogDownloadBinding
 import com.bnyro.trivia.obj.Quiz
-import com.bnyro.trivia.util.ApiHelper
 import com.bnyro.trivia.util.ApiInstance
 import com.bnyro.trivia.util.PreferenceHelper
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -58,10 +57,10 @@ class DownloadDialog : DialogFragment() {
 
     private fun downloadQuestions(name: String, category: String?) {
         CoroutineScope(Dispatchers.IO).launch {
-            Log.e("category", category.toString())
             val questions = try {
-                ApiHelper().getQuestions(category)
+                ApiInstance.apiHelper.getQuestions(category)
             } catch (e: Exception) {
+                Log.e("download failed", e.toString())
                 return@launch
             }
             val quiz = Quiz(
@@ -69,6 +68,7 @@ class DownloadDialog : DialogFragment() {
                 creator = false,
                 questions = questions
             )
+            Log.e("quiz", quiz.toString())
             PreferenceHelper.saveQuiz(quiz)
         }
     }

@@ -3,7 +3,6 @@ package com.bnyro.trivia.fragments
 import android.content.Context
 import android.media.MediaPlayer
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,20 +17,21 @@ import com.bnyro.trivia.extensions.navigate
 import com.bnyro.trivia.extensions.showStyledSnackBar
 import com.bnyro.trivia.extensions.toHTML
 import com.bnyro.trivia.obj.Question
-import com.bnyro.trivia.obj.QuizType
-import com.bnyro.trivia.util.ApiInstance
 import com.bnyro.trivia.util.BundleArguments
 import com.bnyro.trivia.util.PreferenceHelper
 import com.bnyro.trivia.util.ThemeHelper
 import com.google.android.material.elevation.SurfaceColors
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
-class QuizFragment : Fragment() {
-    private lateinit var binding: FragmentQuizBinding
+abstract class QuizFragment : Fragment() {
+    lateinit var binding: FragmentQuizBinding
 
     private lateinit var optionButtons: List<Button>
-    private lateinit var questions: List<Question>
-    private var questionIndex = 0
+    lateinit var questions: MutableList<Question>
+    var questionIndex = 0
 
     private lateinit var answers: ArrayList<String>
     private var totalAnswersCount = 0
@@ -40,30 +40,12 @@ class QuizFragment : Fragment() {
     private var buttonTextColor = 0
     private var buttonBackgroundColor = 0
 
-    private var category: String? = null
-
-    private var quizType: Int = -1
-    private var libraryIndex: Int? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        category = arguments?.getString(BundleArguments.category)
-
-        // circumvent 0 being returned although it's null
-        libraryIndex = arguments?.getInt(BundleArguments.quizIndex, Int.MAX_VALUE)
-        if (libraryIndex == Int.MAX_VALUE) libraryIndex = null
-
-        quizType = if (libraryIndex != null) QuizType.OFFLINE else QuizType.ONLINE
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentQuizBinding.inflate(layoutInflater, container, false)
-        // Inflate the layout for this fragment
         return binding.root
     }
 
@@ -85,33 +67,23 @@ class QuizFragment : Fragment() {
         // gets the surface color of the bottom navigation view
         buttonBackgroundColor = SurfaceColors.getColorForElevation(requireContext(), 10F)
 
-        if (quizType == QuizType.OFFLINE) {
-            binding.progress.visibility = View.GONE
-            binding.questionLL.visibility = View.VISIBLE
-            val quiz = PreferenceHelper.getQuizzes()[libraryIndex!!]
-            questions = quiz.questions!!
-            questionIndex = quiz.position
-            loadQuestion()
-        } else {
-            fetchQuestions()
-        }
-    }
-
-    private fun fetchQuestions() {
-        lifecycleScope.launchWhenCreated {
-            questions = try {
-                ApiInstance.apiHelper.getQuestions(category)
-            } catch (e: Exception) {
-                Log.e(this::class.java.simpleName, e.toString())
-                binding.root.showStyledSnackBar(R.string.network_error)
-                return@launchWhenCreated
+        lifecycleScope.launch(Dispatchers.IO) {
+            questions = fetchQuestions().toMutableList()
+            withContext(Dispatchers.Main) {
+                loadQuestion()
             }
-            loadQuestion()
         }
     }
 
-    private fun loadQuestion() {
-        val question = questions[questionIndex]
+    abstract suspend fun fetchQuestions(): List<Question>
+
+    private fun loadQuestion(incrementIndex: Boolean = false) {
+        if (incrementIndex) questionIndex += 1
+
+        val question = questions.getOrNull(questionIndex) ?: run {
+            binding.root.showStyledSnackBar(R.string.unknown_error)
+            return
+        }
         binding.questionTV.text = question.question.toHTML()
 
         answers = arrayListOf(question.correctAnswer!!)
@@ -193,7 +165,9 @@ class QuizFragment : Fragment() {
                 // infinite delay
                 optionButtons.forEach {
                     it.setOnClickListener {
-                        loadNextQuestion()
+                        lifecycleScope.launchWhenCreated {
+                            loadNextQuestion()
+                        }
                     }
                 }
             } else {
@@ -204,41 +178,29 @@ class QuizFragment : Fragment() {
     }
 
     private fun loadNextQuestion() {
-        if (questionIndex + 1 != questions.size) {
-            // load next question
-            questionIndex += 1
-            if (quizType == QuizType.OFFLINE) {
-                PreferenceHelper.setQuizPosition(
-                    libraryIndex!!,
-                    questionIndex
-                )
-            }
-            loadQuestion()
-        } else {
-            questionIndex = 0
-            if (quizType == QuizType.OFFLINE) {
-                PreferenceHelper.setQuizPosition(
-                    libraryIndex!!,
-                    0
-                )
-            }
-            if (
-                quizType == QuizType.ONLINE &&
-                PreferenceHelper.isUnlimitedMode()
-            ) {
-                fetchQuestions()
+        lifecycleScope.launch(Dispatchers.IO) {
+            if (prepareNextQuestions()) {
+                withContext(Dispatchers.Main) {
+                    loadQuestion(true)
+                }
             } else {
-                showResultFragment()
+                withContext(Dispatchers.Main) {
+                    showResultFragment()
+                }
             }
         }
     }
+
+    abstract suspend fun prepareNextQuestions(): Boolean
 
     private fun showResultFragment() {
         val resultFragment = ResultFragment()
         val bundle = Bundle()
         bundle.putInt(BundleArguments.questionsCount, totalAnswersCount)
         bundle.putInt(BundleArguments.correctAnswers, correctAnswerCount)
-        if (libraryIndex != null) bundle.putInt(BundleArguments.quizIndex, libraryIndex!!)
+        (this as? OfflineQuizFragment)?.let {
+            bundle.putInt(BundleArguments.quizIndex, it.libraryIndex)
+        }
         resultFragment.arguments = bundle
         parentFragmentManager.navigate(resultFragment)
     }

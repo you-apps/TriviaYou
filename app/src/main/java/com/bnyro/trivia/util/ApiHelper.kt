@@ -6,16 +6,10 @@ import com.bnyro.trivia.obj.Question
 /**
  * API Scrapper
  */
-open class ApiHelper {
-    open suspend fun getQuestions(category: String?): List<Question> {
-        return listOf()
-    }
+abstract class ApiHelper {
+    abstract suspend fun getQuestions(category: String?): List<Question>
 
-    open suspend fun getCategories(): List<Category> {
-        return listOf()
-    }
+    abstract suspend fun getCategories(): List<Category>
 
-    open suspend fun getStats(): List<String> {
-        return listOf()
-    }
+    abstract suspend fun getStats(): List<String>
 }

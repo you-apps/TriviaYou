@@ -1,15 +1,15 @@
 package com.bnyro.trivia.adapters
 
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.bnyro.trivia.R
 import com.bnyro.trivia.databinding.RowQuizBinding
 import com.bnyro.trivia.dialogs.QuizOptionsDialog
 import com.bnyro.trivia.extensions.navigate
-import com.bnyro.trivia.fragments.QuizFragment
+import com.bnyro.trivia.fragments.OfflineQuizFragment
 import com.bnyro.trivia.obj.Quiz
 import com.bnyro.trivia.util.BundleArguments
 import com.bnyro.trivia.util.PreferenceHelper
@@ -31,7 +31,7 @@ class LibraryAdapter(
             quizName.text = quiz.name
             quizSize.text = root.context.getString(
                 R.string.questions,
-                quiz.questions?.size
+                quiz.questions?.size.toString()
             )
             quizType.setImageResource(
                 if (quiz.creator == true) {
@@ -41,11 +41,10 @@ class LibraryAdapter(
                 }
             )
             root.setOnClickListener {
-                val quizFragment = QuizFragment()
-                val bundle = Bundle()
-                val quizIndex = PreferenceHelper.getQuizzes().indexOf(quiz)
-                bundle.putInt(BundleArguments.quizIndex, quizIndex)
-                quizFragment.arguments = bundle
+                val quizFragment = OfflineQuizFragment().apply {
+                    val quizIndex = PreferenceHelper.getQuizzes().indexOf(quiz)
+                    arguments = bundleOf(BundleArguments.quizIndex to quizIndex)
+                }
                 parentFragment.parentFragmentManager.navigate(quizFragment)
             }
             root.setOnLongClickListener {

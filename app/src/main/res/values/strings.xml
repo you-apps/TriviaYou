@@ -92,4 +92,5 @@
     <string name="downloaded_questions">Downloaded questions</string>
     <!-- Internet -->
     <string name="network_error">Network error</string>
+    <string name="unknown_error">Unknown error</string>
 </resources>

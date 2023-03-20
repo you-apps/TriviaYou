@@ -2,11 +2,12 @@ package com.bnyro.trivia.dialogs
 
 import android.app.Dialog
 import android.os.Bundle
+import androidx.core.os.bundleOf
 import androidx.fragment.app.DialogFragment
 import com.bnyro.trivia.R
 import com.bnyro.trivia.extensions.navigate
 import com.bnyro.trivia.fragments.EditQuizFragment
-import com.bnyro.trivia.fragments.QuizFragment
+import com.bnyro.trivia.fragments.OfflineQuizFragment
 import com.bnyro.trivia.util.BundleArguments
 import com.bnyro.trivia.util.PreferenceHelper
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -32,10 +33,9 @@ class QuizOptionsDialog(
                 when (index) {
                     0 -> {
                         PreferenceHelper.setQuizPosition(libraryIndex, 0)
-                        val quizFragment = QuizFragment()
-                        val bundle = Bundle()
-                        bundle.putInt(BundleArguments.quizIndex, libraryIndex)
-                        quizFragment.arguments = bundle
+                        val quizFragment = OfflineQuizFragment().apply {
+                            arguments = bundleOf(BundleArguments.quizIndex to libraryIndex)
+                        }
                         requireParentFragment().parentFragmentManager.navigate(quizFragment)
                     }
                     1 -> {

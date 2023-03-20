@@ -60,7 +60,7 @@ class CategoriesFragment : Fragment() {
             binding.categoriesLV.visibility = View.VISIBLE
 
             binding.categoriesLV.onItemClickListener = OnItemClickListener { _, _, index, _ ->
-                val quizFragment = QuizFragment().apply {
+                val quizFragment = OnlineQuizFragment().apply {
                     arguments = bundleOf(BundleArguments.category to categoryQueries[index])
                 }
 

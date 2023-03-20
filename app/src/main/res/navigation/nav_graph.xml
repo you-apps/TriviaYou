@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.bnyro.trivia.fragments.QuizFragment"
+        android:name="com.bnyro.trivia.fragments.OnlineQuizFragment"
         android:label="@string/home"
         tools:layout="@layout/fragment_quiz" />
 
