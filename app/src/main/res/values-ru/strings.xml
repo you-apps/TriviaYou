@@ -46,7 +46,7 @@
     <string name="result_average">Средняя производительность</string>
     <string name="result_fail">Провал</string>
     <string name="result_stats">%1$s правильные ответы</string>
-    <string name="retry">Попробовать ещё раз</string>
+    <string name="retry">Заново</string>
     <string name="hard">Сложный</string>
     <string name="appearance">Внешний вид</string>
     <string name="medium">Средний</string>
@@ -62,7 +62,7 @@
     <string name="restore_error">Ошибка при восстановлении тестов :(</string>
     <string name="irreversible">Вы уверены\? Это нельзя будет отменить!</string>
     <string name="incorrect_answers">Неправильные ответы</string>
-    <string name="none">Выкл</string>
+    <string name="none">Ничего</string>
     <string name="user_stats">Статистика пользователей</string>
     <string name="answered_questions">Ответы на вопросы</string>
     <string name="percentage_correct_answers">Количество правильных ответов</string>
@@ -79,4 +79,5 @@
     <string name="library_quizzes">Викторины в библиотеке</string>
     <string name="downloaded_quizzes">Скачанные викторины</string>
     <string name="downloaded_questions">Загруженные вопросы</string>
+    <string name="unknown_error">Неизвестная ошибка</string>
 </resources>
