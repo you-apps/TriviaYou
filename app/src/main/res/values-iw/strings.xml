@@ -79,4 +79,5 @@
     <string name="restore">שחזור</string>
     <string name="restore_success">כל החידונים שוחזרו :)</string>
     <string name="restore_error">שחזור החידונים נכשל :(</string>
+    <string name="unknown_error">שגיאה לא ידועה</string>
 </resources>
