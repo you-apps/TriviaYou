@@ -79,4 +79,5 @@
     <string name="clear_library">清除测验库</string>
     <string name="irreversible">你确定吗？此操作无法撤销！</string>
     <string name="question">问题</string>
+    <string name="unknown_error">未知错误</string>
 </resources>
