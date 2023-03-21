@@ -79,4 +79,5 @@
     <string name="correct_answer">Respuesta correcta</string>
     <string name="questions">Preguntas: %1$s</string>
     <string name="downloaded_questions">Preguntas descargadas</string>
+    <string name="unknown_error">Error desconocido</string>
 </resources>
