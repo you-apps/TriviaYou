@@ -79,4 +79,5 @@
     <string name="retry">Försök igen</string>
     <string name="none">Ingen</string>
     <string name="result_great">Bra jobbat!</string>
+    <string name="unknown_error">Okänt fel</string>
 </resources>
