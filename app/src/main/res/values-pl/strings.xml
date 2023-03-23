@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="api_stats">Statystyki API</string>
-    <string name="search">Szukaj</string>
-    <string name="home">Ekran główny</string>
+    <string name="search">Wyszukaj</string>
+    <string name="home">Dom</string>
     <string name="categories">Kategorie</string>
     <string name="library">Biblioteka</string>
     <string name="github">Github</string>
@@ -29,7 +29,7 @@
     <string name="labeled">Widoczne</string>
     <string name="unlabeled">Niewidoczne</string>
     <string name="backup">Kopia zapasowa</string>
-    <string name="irreversible">Jesteś pewien\? Tej operacji nie można cofnąć!</string>
+    <string name="irreversible">Na pewno\? Nie można cofnąć tej akcji!</string>
     <string name="reset">Resetuj</string>
     <string name="create_quiz">Utwórz quiz</string>
     <string name="name_empty">Pole z nazwą nie może być puste!</string>
@@ -48,7 +48,7 @@
     <string name="rename">Zmień nazwę</string>
     <string name="library_empty">Biblioteka jest pusta.</string>
     <string name="download">Pobierz Quiz</string>
-    <string name="none">Żaden</string>
+    <string name="none">Brak</string>
     <string name="result_great">Dobra robota!</string>
     <string name="result_average">Przeciętny wynik</string>
     <string name="result_fail">Porażka</string>
@@ -65,7 +65,7 @@
     <string name="downloaded_quizzes">Pobrane quizy</string>
     <string name="downloaded_questions">Pobrane pytania</string>
     <string name="network_error">Błąd sieci</string>
-    <string name="about">O aplikacji</string>
+    <string name="about">O programie</string>
     <string name="easy">Łatwy</string>
     <string name="authors">Autorzy</string>
     <string name="limit">Limit</string>
@@ -79,4 +79,5 @@
     <string name="restore_error">Błąd w przywracaniu quizów :(</string>
     <string name="clear_library">Wyczyść bibliotekę</string>
     <string name="unlimited_mode">Nieograniczona ilość pytań</string>
+    <string name="unknown_error">Nieznany błąd</string>
 </resources>

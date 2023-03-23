@@ -92,4 +92,5 @@
     <string name="network_error">Errore di rete</string>
     <string name="delay_infinite">Infinito</string>
     <string name="sounds">Suoni</string>
+    <string name="unknown_error">Errore sconosciuto</string>
 </resources>
