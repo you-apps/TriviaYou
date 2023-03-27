@@ -30,7 +30,7 @@
     <string name="difficulty">Сложность</string>
     <string name="default_tab">Вкладка по умолчанию</string>
     <string name="labelVisibility">Видимость подписей</string>
-    <string name="selected">Выбранный</string>
+    <string name="selected">Выбран</string>
     <string name="labeled">Маркированный</string>
     <string name="unlabeled">Без маркировки</string>
     <string name="backup_restore">Резервное копирование и восстановление</string>
