@@ -79,4 +79,5 @@
     <string name="answered_questions">Întrebări la care s-a răspuns</string>
     <string name="percentage_correct_answers">Rata de răspuns corectă</string>
     <string name="correct_answers">Răspunsuri corecte</string>
+    <string name="unknown_error">Eroare necunoscută</string>
 </resources>
