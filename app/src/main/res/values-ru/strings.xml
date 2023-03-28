@@ -4,11 +4,11 @@
     <string name="search">Поиск</string>
     <string name="license">Лицензия</string>
     <string name="app_name">Trivia You</string>
-    <string name="home">Главная</string>
+    <string name="home">Главный экран</string>
     <string name="categories">Категории</string>
     <string name="github">Github</string>
     <string name="api_stats">API Статистика</string>
-    <string name="about">Информация</string>
+    <string name="about">О приложении</string>
     <string name="library">Библиотека</string>
     <string name="authors">Авторы</string>
     <string name="blackTheme">Чёрная</string>
@@ -30,7 +30,7 @@
     <string name="difficulty">Сложность</string>
     <string name="default_tab">Вкладка по умолчанию</string>
     <string name="labelVisibility">Видимость подписей</string>
-    <string name="selected">Выбранный</string>
+    <string name="selected">Выбран</string>
     <string name="labeled">Маркированный</string>
     <string name="unlabeled">Без маркировки</string>
     <string name="backup_restore">Резервное копирование и восстановление</string>

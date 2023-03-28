@@ -2,12 +2,12 @@
 <resources>
     <string name="api_stats">Statystyki API</string>
     <string name="search">Wyszukaj</string>
-    <string name="home">Dom</string>
+    <string name="home">Główny ekran</string>
     <string name="categories">Kategorie</string>
     <string name="library">Biblioteka</string>
     <string name="github">Github</string>
     <string name="license">Licencja</string>
-    <string name="general">Ogólne</string>
+    <string name="general">Główne</string>
     <string name="questions_delay">Czas pomiędzy pytaniami</string>
     <string name="delay_auto">Automatyczny</string>
     <string name="delay_infinite">Nieskończony</string>
@@ -30,7 +30,7 @@
     <string name="unlabeled">Niewidoczne</string>
     <string name="backup">Kopia zapasowa</string>
     <string name="irreversible">Na pewno\? Nie można cofnąć tej akcji!</string>
-    <string name="reset">Resetuj</string>
+    <string name="reset">Resetowanie</string>
     <string name="create_quiz">Utwórz quiz</string>
     <string name="name_empty">Pole z nazwą nie może być puste!</string>
     <string name="question">Pytanie</string>
