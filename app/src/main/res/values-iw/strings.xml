@@ -35,7 +35,7 @@
     <string name="library_empty">הספרייה ריקה.</string>
     <string name="reset_stats">איפוס הסטטיסטיקה</string>
     <string name="clear_library">פינוי הספרייה</string>
-    <string name="irreversible">להמשיך\? אי אפשר להתחרט אחר כך!</string>
+    <string name="irreversible">להמשיך\? זה בלתי הפיך!</string>
     <string name="reset">איפוס</string>
     <string name="create_quiz">יצירת חידון</string>
     <string name="quiz_name">שם</string>
@@ -48,7 +48,7 @@
     <string name="result_average">ביצועים ממוצעים</string>
     <string name="result_fail">נכשלת</string>
     <string name="result_stats">%1$s תשובות נכונות</string>
-    <string name="retry">לנסות שוב</string>
+    <string name="retry">ניסיון חוזר</string>
     <string name="user_stats">סטטיסטיקת משתמש</string>
     <string name="answered_questions">תשובות שנענו</string>
     <string name="correct_answers">תשובות נכונות</string>
