@@ -31,8 +31,8 @@
     <string name="restore_error">还原测验题时出错 :(</string>
     <string name="reset_stats">重设统计数据</string>
     <string name="quiz_name">名字</string>
-    <string name="name_empty">名字不能是空的！</string>
-    <string name="item_empty">请填写所有的字段！</string>
+    <string name="name_empty">请填写名称。</string>
+    <string name="item_empty">请填写所有的字段。</string>
     <string name="create_quiz">创建测验</string>
     <string name="incorrect_answers">错误答案</string>
     <string name="finish">完成</string>
