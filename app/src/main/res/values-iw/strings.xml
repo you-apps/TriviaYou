@@ -18,8 +18,8 @@
     <string name="blackTheme">שחורה</string>
     <string name="darkTheme">כהה</string>
     <string name="labelVisibility">חשיפת תוויות</string>
-    <string name="name_empty">השם לא יכול להיות ריק!</string>
-    <string name="item_empty">נא למלא את כל השדות!</string>
+    <string name="name_empty">למלא את השם.</string>
+    <string name="item_empty">נא למלא את כל השדות.</string>
     <string name="question">שאלה</string>
     <string name="correct_answer">תשובה נכונה</string>
     <string name="incorrect_answers">תשובות שגויות</string>
