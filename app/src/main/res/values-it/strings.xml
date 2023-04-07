@@ -4,7 +4,7 @@
     <string name="settings">Impostazioni</string>
     <string name="about">Informazioni</string>
     <string name="api_stats">Statistiche API</string>
-    <string name="search">Ricerca</string>
+    <string name="search">Cerca</string>
     <!-- Menù di navigazione in basso -->
     <string name="home">Schermo di casa</string>
     <string name="categories">Categorie</string>
@@ -42,8 +42,8 @@
     <string name="backup_restore">Backup e ripristino</string>
     <string name="backup">Backup</string>
     <string name="restore">Ripristina</string>
-    <string name="restore_success">Ripristinati tutti i quiz con successo :)</string>
-    <string name="restore_error">Errore durante il ripristino dei quiz :(</string>
+    <string name="restore_success">Ripristinati tutti i quiz :)</string>
+    <string name="restore_error">Impossibile ripristinare i quiz :(</string>
     <!-- Altre impostazioni -->
     <string name="reset_stats">Azzera statistiche</string>
     <string name="clear_library">Cancella la libreria</string>
@@ -52,15 +52,15 @@
     <!-- Quiz personalizzato -->
     <string name="create_quiz">Crea quiz</string>
     <string name="quiz_name">Nome</string>
-    <string name="name_empty">Il nome non può essere vuoto!</string>
-    <string name="item_empty">Per favore riempi tutti i campi!</string>
+    <string name="name_empty">Inserisci il nome.</string>
+    <string name="item_empty">Riempi tutti i campi.</string>
     <string name="question">Domanda</string>
     <string name="correct_answer">Risposta corretta</string>
     <string name="incorrect_answers">Risposte sbagliate</string>
     <string name="add">Aggiungi</string>
     <string name="finish">Finito</string>
     <string name="save_quiz">Salva quiz</string>
-    <string name="save_quiz_message">Sei sicuro di voler salvare il quiz?</string>
+    <string name="save_quiz_message">Salvare il quiz\?</string>
     <!-- Libreria -->
     <string name="questions">Domande: %1$s</string>
     <string name="edit">Modifica</string>
