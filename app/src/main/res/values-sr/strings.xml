@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Trivia You</string>
+    <string name="settings">Подешавања</string>
+    <string name="about">О</string>
+    <string name="api_stats">API статистика</string>
+    <string name="search">Претрага</string>
+    <!-- Bottom Navigation Menu -->
+    <string name="home">Почетни екран</string>
+    <string name="categories">Категорије</string>
+    <string name="library">Библиотека</string>
+    <!-- About -->
+    <string name="github" translatable="false">GitHub</string>
+    <string name="authors">Аутори</string>
+    <string name="license">Лиценца</string>
+    <!-- General Settings -->
+    <string name="general">Опште</string>
+    <string name="unlimited_mode">Бесконачни мод</string>
+    <string name="questions_delay">Време између питања</string>
+    <string name="delay_auto">Аутоматско</string>
+    <string name="delay_infinite">Бесконачно</string>
+    <string name="sounds">Звуци</string>
+    <!-- API Settings -->
+    <string name="api" translatable="false">API</string>
+    <string name="difficulty">Тежина</string>
+    <string name="random">Насумично</string>
+    <string name="easy">Лако</string>
+    <string name="medium">Средње</string>
+    <string name="hard">Тешко</string>
+    <string name="limit">Ограничење</string>
+    <!-- Appearance Settings -->
+    <string name="appearance">Изглед</string>
+    <string name="themeMode">Тема</string>
+    <string name="systemTheme">Системска</string>
+    <string name="lightTheme">Светла</string>
+    <string name="darkTheme">Тамна</string>
+    <string name="blackTheme">Црна</string>
+    <string name="default_tab">Подразумевани одељак</string>
+    <string name="labelVisibility">Видљивост ознаке</string>
+    <string name="selected">Изабрано</string>
+    <string name="labeled">Означено</string>
+    <string name="unlabeled">Неозначено</string>
+    <!-- Backup and restore -->
+    <string name="backup_restore">Резервне копије и њихово враћање</string>
+    <string name="backup">Изради резервну копију</string>
+    <string name="restore">Врати резервну копију</string>
+    <string name="restore_success">Сви квизови су враћени :)</string>
+    <string name="restore_error">Није могуће вратити квизове :(</string>
+    <!-- Other Settings -->
+    <string name="reset_stats">Ресетуј статистику</string>
+    <string name="clear_library">Испразни библиотеку</string>
+    <string name="irreversible">Да ли сте сигурни? Ово не може бити поништено!</string>
+    <string name="reset">Ресет</string>
+    <!-- Custom Quiz -->
+    <string name="create_quiz">Креирај квиз</string>
+    <string name="quiz_name">Име</string>
+    <string name="name_empty">Попуните име.</string>
+    <string name="item_empty">Молим вас попуните сва поља.</string>
+    <string name="question">Питање</string>
+    <string name="correct_answer">Тачан одговор</string>
+    <string name="incorrect_answers">Нетачни одговори</string>
+    <string name="add">Додај</string>
+    <string name="finish">Заврши</string>
+    <string name="save_quiz">Сачувај квиз</string>
+    <string name="save_quiz_message">Сачувати квиз\?</string>
+    <!-- Library -->
+    <string name="questions">Питања: %1$s</string>
+    <string name="edit">Измени</string>
+    <string name="delete">Избриши</string>
+    <string name="restart">Покрени поново</string>
+    <string name="rename">Преименуј</string>
+    <string name="library_empty">Библиотека је празна.</string>
+    <!-- Download -->
+    <string name="download">Преузми квиз</string>
+    <string name="none">Ништа</string>
+    <!-- Result -->
+    <string name="result_great">Одлично!</string>
+    <string name="result_average">Просечан учинак</string>
+    <string name="result_fail">Fail</string>
+    <string name="result_stats">%1$s тачних одговора</string>
+    <string name="retry">Покушајте поново</string>
+    <!-- User Stats -->
+    <string name="user_stats">Статистика о кориснику</string>
+    <string name="answered_questions">Одговорена питања</string>
+    <string name="correct_answers">Тачни одговори</string>
+    <string name="percentage_correct_answers">Проценат тачних одговора</string>
+    <string name="library_quizzes">Квизови у библиотеци</string>
+    <string name="library_questions">Питања у библиотеци</string>
+    <string name="created_quizzes">Креирани квизови</string>
+    <string name="created_questions">Креирана питања</string>
+    <string name="downloaded_quizzes">Преузети квизови</string>
+    <string name="downloaded_questions">Преузета питања</string>
+    <!-- Internet -->
+    <string name="network_error">Мрежна грешка</string>
+    <string name="unknown_error">Непозната грешка</string>
+</resources>
