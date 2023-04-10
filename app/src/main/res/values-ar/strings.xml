@@ -3,7 +3,7 @@
     <string name="quiz_name">الاسم</string>
     <string name="systemTheme">النظام</string>
     <string name="about">عن التطبيق</string>
-    <string name="search">ابحث</string>
+    <string name="search">البحث</string>
     <string name="home">الشاشة الرئيسة</string>
     <string name="categories">الفئات</string>
     <string name="authors">المؤلفون</string>
@@ -13,7 +13,7 @@
     <string name="questions_delay">الوقت بين الأسئلة</string>
     <string name="delay_infinite">لانهائي</string>
     <string name="sounds">الأصوات</string>
-    <string name="github">GitHub</string>
+    <string name="github">جيت هب</string>
     <string name="difficulty">الصعوبة</string>
     <string name="easy">سهل</string>
     <string name="hard">صعب</string>
