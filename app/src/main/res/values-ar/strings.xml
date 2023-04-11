@@ -3,7 +3,7 @@
     <string name="quiz_name">الاسم</string>
     <string name="systemTheme">النظام</string>
     <string name="about">عن التطبيق</string>
-    <string name="search">البحث</string>
+    <string name="search">ابحث</string>
     <string name="home">الشاشة الرئيسة</string>
     <string name="categories">الفئات</string>
     <string name="authors">المؤلفون</string>
@@ -68,7 +68,7 @@
     <string name="create_quiz">إنشاء اختبار</string>
     <string name="correct_answer">اجابة صحيحة</string>
     <string name="restore_success">استعادة جميع الاختبارات بنجاح :)</string>
-    <string name="edit">تعديل</string>
+    <string name="edit">حرِّر</string>
     <string name="delete">احذف</string>
     <string name="library_empty">المكتبة فارغة.</string>
     <string name="save_quiz_message">حفظ الاختبار؟</string>
