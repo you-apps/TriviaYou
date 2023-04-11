@@ -24,7 +24,7 @@
     <string name="darkTheme">Obscur</string>
     <string name="blackTheme">Noir</string>
     <string name="authors">Auteurs</string>
-    <string name="search">Recherche</string>
+    <string name="search">Rechercher</string>
     <string name="home">Écran d\'accueil</string>
     <string name="categories">Catégories</string>
     <string name="library">Bibliothèque</string>
@@ -34,16 +34,16 @@
     <string name="irreversible">Êtes vous sûr \? Cela ne peut pas être annulé !</string>
     <string name="create_quiz">Créer questions</string>
     <string name="reset">Réinitialiser</string>
-    <string name="name_empty">Le nom ne peut pas être vide !</string>
+    <string name="name_empty">Complétez le nom.</string>
     <string name="quiz_name">Nom</string>
-    <string name="item_empty">Veuillez remplir tous les champs !</string>
+    <string name="item_empty">Veuillez remplir tous les champs.</string>
     <string name="question">Question</string>
     <string name="correct_answer">Réponse correcte</string>
     <string name="add">Ajouter</string>
     <string name="incorrect_answers">Mauvaise réponse</string>
     <string name="finish">Terminer</string>
     <string name="save_quiz">Sauvegarder le quiz</string>
-    <string name="save_quiz_message">Êtes-vous sûr·e de vouloir sauvegarder le quiz \?</string>
+    <string name="save_quiz_message">Sauvegarder le quiz \?</string>
     <string name="questions">Questions : %1$s</string>
     <string name="edit">Modifier</string>
     <string name="delete">Supprimer</string>
@@ -75,8 +75,9 @@
     <string name="restore">Restaurer</string>
     <string name="backup_restore">Sauvegarder et restaurer</string>
     <string name="backup">Sauvegarder</string>
-    <string name="restore_success">Tous les quiz ont été restauré avec succès :)</string>
-    <string name="restore_error">Erreur durant la restauration des quiz :(</string>
+    <string name="restore_success">Tous les quiz ont été rétablis :)</string>
+    <string name="restore_error">Impossible de restaurer les quiz :(</string>
     <string name="reset_stats">Réinitialiser les statistiques</string>
     <string name="labelVisibility">Visibilité de l\'étiquette</string>
+    <string name="unknown_error">Erreur inconnue</string>
 </resources>
