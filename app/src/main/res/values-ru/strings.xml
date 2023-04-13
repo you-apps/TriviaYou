@@ -30,7 +30,7 @@
     <string name="difficulty">Сложность</string>
     <string name="default_tab">Вкладка по умолчанию</string>
     <string name="labelVisibility">Видимость подписей</string>
-    <string name="selected">Выбран</string>
+    <string name="selected">Выбрано</string>
     <string name="labeled">Маркированный</string>
     <string name="unlabeled">Без маркировки</string>
     <string name="backup_restore">Резервное копирование и восстановление</string>
@@ -40,7 +40,7 @@
     <string name="reset">Сброс</string>
     <string name="create_quiz">Создать викторину</string>
     <string name="quiz_name">Имя</string>
-    <string name="name_empty">Впишите имя викторины</string>
+    <string name="name_empty">Введите имя викторины.</string>
     <string name="item_empty">Пожалуйста, заполните все поля.</string>
     <string name="question">Вопрос</string>
     <string name="result_average">Средняя производительность</string>

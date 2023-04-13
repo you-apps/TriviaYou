@@ -32,8 +32,8 @@
     <string name="unlabeled">Neetichetat</string>
     <string name="backup">Backup</string>
     <string name="restore">Restaura</string>
-    <string name="restore_success">A restaurat cu succes toate chestionarele :)</string>
-    <string name="restore_error">Eroare la restabilirea chestionarelor :(</string>
+    <string name="restore_success">Restorat toate testele:)</string>
+    <string name="restore_error">Nu s-a putut restaura chestionarele :(</string>
     <string name="reset_stats">Resetarea statisticilor</string>
     <string name="clear_library">Ștergeți biblioteca</string>
     <string name="irreversible">Eşti sigur\? Acest lucru nu poate fi anulat!</string>
@@ -66,11 +66,11 @@
     <string name="reset">Resetați</string>
     <string name="create_quiz">Creați un chestionar</string>
     <string name="quiz_name">Nume</string>
-    <string name="name_empty">Numele nu poate fi gol!</string>
-    <string name="item_empty">Vă rugăm să completați toate câmpurile!</string>
+    <string name="name_empty">Completați numele.</string>
+    <string name="item_empty">Vă rugăm să completați toate câmpurile.</string>
     <string name="correct_answer">Răspuns corect</string>
     <string name="incorrect_answers">Răspunsuri incorecte</string>
-    <string name="save_quiz_message">Ești sigur că vrei să salvezi testul\?</string>
+    <string name="save_quiz_message">Salvați testul\?</string>
     <string name="delete">Șterge</string>
     <string name="questions">Întrebări: %1$s</string>
     <string name="none">Niciunul</string>
