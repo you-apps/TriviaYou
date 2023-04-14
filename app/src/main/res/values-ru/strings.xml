@@ -15,7 +15,7 @@
     <string name="finish">Финиш</string>
     <string name="edit">Изменить</string>
     <string name="correct_answers">Правильные ответы</string>
-    <string name="general">Общее</string>
+    <string name="general">Основные</string>
     <string name="random">Случайный</string>
     <string name="easy">Лёгкий</string>
     <string name="themeMode">Тема</string>
@@ -30,7 +30,7 @@
     <string name="difficulty">Сложность</string>
     <string name="default_tab">Вкладка по умолчанию</string>
     <string name="labelVisibility">Видимость подписей</string>
-    <string name="selected">Выбрано</string>
+    <string name="selected">Текущая</string>
     <string name="labeled">Маркированный</string>
     <string name="unlabeled">Без маркировки</string>
     <string name="backup_restore">Резервное копирование и восстановление</string>
