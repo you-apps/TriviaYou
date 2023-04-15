@@ -34,7 +34,7 @@
     <string name="rename">Перейменувати</string>
     <string name="library_empty">Бібліотека порожня.</string>
     <string name="download">Завантажити вікторину</string>
-    <string name="none">Жодного</string>
+    <string name="none">Вимк.</string>
     <string name="result_great">Гарна робота!</string>
     <string name="result_average">Середня продуктивність</string>
     <string name="result_fail">Помилка</string>
