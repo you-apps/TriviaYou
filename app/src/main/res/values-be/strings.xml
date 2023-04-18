@@ -1,2 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="library">Бібліятэка</string>
+    <string name="api_stats">Статыстыка API</string>
+    <string name="search">Пошук</string>
+    <string name="categories">Катэгорыі</string>
+    <string name="authors">Аўтары</string>
+    <string name="license">Ліцэнзія</string>
+    <string name="general">Асноўныя</string>
+    <string name="unlimited_mode">Неабмежаваны рэжым</string>
+    <string name="questions_delay">Час паміж пытаннямі</string>
+    <string name="delay_auto">Аўто</string>
+    <string name="sounds">Гукі</string>
+    <string name="difficulty">Цяжкасць</string>
+    <string name="random">Выпадковы</string>
+    <string name="easy">Лёгка</string>
+    <string name="hard">Цяжка</string>
+    <string name="limit">Ліміт</string>
+    <string name="themeMode">Тэма</string>
+    <string name="systemTheme">Сістэмная</string>
+    <string name="lightTheme">Светлая</string>
+    <string name="darkTheme">Цёмная</string>
+    <string name="blackTheme">Чорная</string>
+    <string name="default_tab">Укладка па змаўчанні</string>
+    <string name="labelVisibility">Назвы ўкладак</string>
+    <string name="selected">Бягучая</string>
+    <string name="unlabeled">Без маркіроўкі</string>
+    <string name="backup_restore">Рэзервовае капіраванне і аднаўленне</string>
+    <string name="backup">Рэзервовае капіраванне</string>
+    <string name="reset">Скід</string>
+    <string name="edit">Рэдагаваць</string>
+    <string name="retry">Паўтарыць</string>
+    <string name="rename">Перайменаваць</string>
+    <string name="settings">Налады</string>
+    <string name="about">Аб праграме</string>
+    <string name="home">Галоўны экран</string>
+    <string name="delay_infinite">Бясконцы</string>
+    <string name="medium">Сярэдні</string>
+    <string name="appearance">Знешні выгляд</string>
+    <string name="labeled">Пазначаны</string>
+    <string name="none">Адкл.</string>
+    <string name="irreversible">Вы ўпэўнены\? Гэтае дзеянне немагчыма адмяніць!</string>
+    <string name="delete">Выдаліць</string>
+</resources>

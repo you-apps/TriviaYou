@@ -52,7 +52,7 @@
     <string name="created_questions">الأسئلة التي تم إنشاؤها</string>
     <string name="downloaded_quizzes">الاختبارات التي تم تنزيلها</string>
     <string name="downloaded_questions">الأسئلة التي تم تنزيلها</string>
-    <string name="settings">الإعدادات</string>
+    <string name="settings">الاعدادات</string>
     <string name="api_stats">احصائيات واجهة برمجة التطبيقات</string>
     <string name="name_empty">الرجاء ملء خانة الاسم.</string>
     <string name="library">المكتبة</string>

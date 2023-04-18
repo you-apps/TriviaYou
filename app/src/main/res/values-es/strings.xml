@@ -2,7 +2,7 @@
 <resources>
     <string name="questions_delay">Tiempo entre preguntas</string>
     <string name="app_name">Trivia You</string>
-    <string name="settings">Configuración</string>
+    <string name="settings">Ajustes</string>
     <string name="about">Acerca de</string>
     <string name="api_stats">Estadísticas de la API</string>
     <string name="search">Buscar</string>
