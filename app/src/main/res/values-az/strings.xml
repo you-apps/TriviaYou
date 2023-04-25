@@ -6,7 +6,7 @@
     <string name="authors">Müəlliflər</string>
     <string name="app_name">Trivia You</string>
     <string name="license">Lisenziya</string>
-    <string name="api_stats">API Statistikası</string>
+    <string name="api_stats">API statistikası</string>
     <string name="search">Axtarış</string>
     <string name="home">Əsas ekran</string>
     <string name="library">Kitabxana</string>
@@ -19,13 +19,13 @@
     <string name="difficulty">Çətinlik</string>
     <string name="random">Təsadüfi</string>
     <string name="easy">Asan</string>
-    <string name="appearance">Görünüş</string>
+    <string name="appearance">Xarici Görünüş</string>
     <string name="labelVisibility">Etiket görünməsi</string>
     <string name="selected">Seçildi</string>
     <string name="create_quiz">Viktorina yarat</string>
     <string name="add">Əlavə et</string>
     <string name="save_quiz">Viktorinanı saxla</string>
-    <string name="save_quiz_message">Viktorinanı saxlamaq istədiyinizə əminsiniz\?</string>
+    <string name="save_quiz_message">Viktorina saxlanılsın\?</string>
     <string name="questions">Suallar: %1$s</string>
     <string name="edit">Redaktə et</string>
     <string name="delete">Sil</string>
@@ -41,7 +41,7 @@
     <string name="downloaded_quizzes">Yüklənmiş viktorinalar</string>
     <string name="downloaded_questions">Yüklənmiş suallar</string>
     <string name="network_error">Şəbəkə xətası</string>
-    <string name="restore_success">Bütün viktorinalar uğurla bərpa edildi :)</string>
+    <string name="restore_success">Bütün viktorinalar bərpa edildi :)</string>
     <string name="categories">Kateqoriyalar</string>
     <string name="unlimited_mode">Limitsiz rejim</string>
     <string name="systemTheme">Sistem</string>
@@ -55,12 +55,12 @@
     <string name="restore">Bərpa et</string>
     <string name="unlabeled">Etiketsiz</string>
     <string name="backup_restore">Yedəklə və bərpa et</string>
-    <string name="restore_error">Viktorinaları bərpa edərkən xəta oldu :(</string>
+    <string name="restore_error">Viktorinaları bərpa etmək mümkün olmadı :(</string>
     <string name="reset_stats">Statistikanı sıfırla</string>
     <string name="irreversible">Siz əminsiniz\? Bu geri qaytarıla bilməz!</string>
     <string name="reset">Sıfırla</string>
-    <string name="name_empty">Ad boş ola bilməz!</string>
-    <string name="item_empty">Zəhmət olmasa, bütün sahələri doldurun!</string>
+    <string name="name_empty">Adı doldur.</string>
+    <string name="item_empty">Zəhmət olmasa, bütün sahələri doldur.</string>
     <string name="finish">Bitir</string>
     <string name="quiz_name">Ad</string>
     <string name="question">Sual</string>
@@ -79,4 +79,5 @@
     <string name="result_average">Orta performans</string>
     <string name="created_quizzes">Yaradılmış viktorinalar</string>
     <string name="library_questions">Kitabxanadakı suallar</string>
+    <string name="unknown_error">Naməlum xəta</string>
 </resources>
