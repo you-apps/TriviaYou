@@ -39,7 +39,7 @@
     <string name="backup">Trygdkopier</string>
     <string name="restore">Attendestill</string>
     <string name="restore_success">Stilte attende alle kunnskapstevlingar</string>
-    <string name="restore_error">Kunne ikkje stilla attende kunnskapstevlingar</string>
+    <string name="restore_error">Kunne ikkje stilla attende kunnskapstevlingane</string>
     <string name="reset_stats">Attendestill samandrag</string>
     <string name="irreversible">Er du viss\? Dette kan ikkje verta angra.</string>
     <string name="create_quiz">Lag kunnskapstevling</string>
@@ -74,9 +74,10 @@
     <string name="reset">Still attende</string>
     <string name="question">Spørsmål</string>
     <string name="correct_answer">Rett svar</string>
-    <string name="save_quiz_message">Er du viss på at du vil gøyma kunnskapstevlinga\?</string>
+    <string name="save_quiz_message">Gøym kunnskapstevlinga\?</string>
     <string name="none">Ingen</string>
     <string name="correct_answers">Rette svar</string>
     <string name="answered_questions">Svara spørsmål</string>
     <string name="created_quizzes">Laga kunnskapstevlingar</string>
+    <string name="unknown_error">Ukjent mistak</string>
 </resources>

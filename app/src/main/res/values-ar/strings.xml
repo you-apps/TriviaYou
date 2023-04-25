@@ -2,7 +2,7 @@
 <resources>
     <string name="quiz_name">الاسم</string>
     <string name="systemTheme">النظام</string>
-    <string name="about">عن التطبيق</string>
+    <string name="about">حول التطبيق</string>
     <string name="search">ابحث</string>
     <string name="home">الشاشة الرئيسة</string>
     <string name="categories">الفئات</string>
