@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="about">ପ୍ରୋଗ୍ରାମ୍ ବିଷୟରେ</string>
+    <string name="about">ଵିଷୟରେ</string>
     <string name="app_name">Trivia You</string>
-    <string name="settings">ସେଟିଂସମୂହ</string>
+    <string name="settings">ସେଟିଂ</string>
     <string name="unlimited_mode">ଅସୀମିତ ମୋଡ୍</string>
     <string name="questions_delay">ପ୍ରଶ୍ନଗୁଡିକ ମଧ୍ୟରେ ସମୟ</string>
     <string name="delay_auto">ସ୍ଵତଃ</string>
@@ -63,7 +63,7 @@
     <string name="incorrect_answers">ଭୁଲ୍ ଉତ୍ତର ଗୁଡ଼ିକ</string>
     <string name="save_quiz_message">ଆପଣ ନିଶ୍ଚିତ କି ଆପଣ କୁଇଜ୍ ସଞ୍ଚୟ କରିବାକୁ ଚାହୁଁଛନ୍ତି \?</string>
     <string name="rename">ନାମ ପରିବର୍ତ୍ତନ କରନ୍ତୁ</string>
-    <string name="edit">ସମ୍ପାଦନ କରନ୍ତୁ</string>
+    <string name="edit">ସମ୍ପାଦନା</string>
     <string name="library_empty">ଲାଇବ୍ରେରୀ ଖାଲି ଅଛି ।</string>
     <string name="delete">ବିଲୋପ କରନ୍ତୁ</string>
     <string name="restart">ପୁନଃପ୍ରାରମ୍ଭ କରନ୍ତୁ</string>
