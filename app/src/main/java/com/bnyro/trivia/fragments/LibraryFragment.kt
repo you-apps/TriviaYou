@@ -16,12 +16,6 @@ import com.bnyro.trivia.util.PreferenceHelper
 class LibraryFragment : Fragment() {
     private lateinit var binding: FragmentLibraryBinding
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-        }
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
